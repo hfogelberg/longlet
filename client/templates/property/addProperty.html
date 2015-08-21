@@ -1,0 +1,168 @@
+<template name='addProperty'>
+	<div class='well'>
+		<h1>Add Property</h1>
+	</div>
+
+	<form class='addDogForm form-horizontal'>
+		<div class='well'>
+			<h2>Where is the property?</h2>
+			<div class='form-group'>
+				<label for='island' class='col-sm-2'>Island</label>
+				<div class='col-sm-10'>
+	        <input 	class="form-control typeahead island" name="island" type="text"
+	        				autocomplete="off" spellcheck="off"
+	                data-source="islands"/>
+				</div>
+			</div>
+			
+			<div class='form-group'>
+				<label for='city' class='col-sm-2'>City</label>
+				<div class='col-sm-10'>
+	        <input 	class="form-control typeahead city" name="city" type="text"
+	                autocomplete="off" spellcheck="off"
+	                data-source="cities"/>
+				</div>
+			</div>
+		</div>
+
+		<div class='well'>
+			<h2>Describe the area</h2>
+
+			<div class='form-group'>
+				<label for='noise' class='col-sm-2'>Noise</label>
+				<div class='col-sm-10'>
+					<label class='radio-inline'>
+					  <input type='radio' class='quiet' value='quiet'>Quiet
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='someDisturbances' value='rockBeach'>Some disturbances
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='lively' value='lively'>Lively
+					</label>
+				</div>
+			</div>
+		
+			<div class='form-group'>
+				<label for='description' class='col-sm-2'>Area description</label>
+				<div class='col-sm-10'>
+					<textarea class='form-control description' rows='5' name='areaDescription'></textarea>
+				</div> 
+			</div>
+
+			<div class='form-group'>
+				<label for='areaType' class='col-sm-2'>Area type</label>
+				<div class='col-sm-10'>
+					<label class='checkbox-inline'>
+					  <input type='checkbox' class='cityLocation' value='cityLocation'>City
+					</label>
+					<label class='checkbox-inline'>
+					  <input type='checkbox' class='villageLocation' value='villageLocation'>Village
+					</label>
+					<label class='checkbox-inline'>
+					  <input type='checkbox' class='mountainLocation' value='mountainLocation'>Mountain
+					</label>
+					<label class='checkbox-inline'>
+					  <input type='checkbox' class='seaLocation' value='seaLocation'>Sea
+					</label>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='carRecomended' class='col-sm-2'>Car necessary</label>
+				<div class='col-sm-10'>
+					<label class='radio-inline'>
+					  <input type='radio' class='noCarNecessary' value='noCar'>Not necessary
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='carNecessary' value='carNecessary'>Necessary
+					</label>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='distanceToSea' class='col-sm-2'>Distance to sea</label>
+				<div class='col-sm-10'>
+					<input type='number' class='form-control distanceToSea' placeholder='meters'/>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='distanceToBeach' class='col-sm-2'>Distance to beach</label>
+				<div class='col-sm-10'>
+					<input type='number' class='form-control distanceToBeach' placeholder='meters'/>
+				</div>
+			</div>
+
+
+			<div class='form-group'>
+				<label for='beachType' class='col-sm-2'>Type of beach</label>
+				<div class='col-sm-10'>
+					<label class='radio-inline'>
+					  <input type='radio' class='sandBeach' value='sandBeach'>Sand beach
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='rockBeach' value='rockBeach'>Rock beach
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='pebbleBeach' value='pebbleBeach'>Pebble beach
+					</label>
+				</div>
+			</div>
+		</div>  <!-- well -->
+
+		<div class='well'>
+			<h2>Describe the Property</h2>
+		
+			<div class='form-group'>
+				<label for='numBedRooms' class='col-sm-2'>Bed rooms</label>
+				<div class='col-sm-10'>
+					<input type='number' class='form-control numBedRooms' min='0'>
+				</div>
+			</div>
+			
+			<div class='form-group'>
+				<label for='numBathRooms' class='col-sm-2'>Bath rooms</label>
+				<div class='col-sm-10'>
+					<input type='number' class='form-control numBathRooms' min='0'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='description' class='col-sm-2'>Property description</label>
+				<div class='col-sm-10'>
+					<textarea class='form-control description' rows='5' name='aptDescription'></textarea>
+				</div> 
+			</div>
+
+			<div class='form-group'>
+				<label for='pool' class='col-sm-2'>Pool</label>
+				<div class='col-sm-10'>
+					<label class='radio-inline'>
+					  <input type='radio' class='noPoolOption' value='noPool'>No Pool
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='sharedPoolOption' value='sharedPool'>Shared Pool
+					</label>
+					<label class='radio-inline'>
+					  <input type='radio' class='ownPoolOption' value='ownPool'>Own Pool
+					</label>
+				</div>
+			</div>
+
+		</div>  <!-- well -->
+
+
+
+
+
+		<div class='col-sm-offset-2 col-sm-2'>
+			<div>
+				<input type='button' class='btnCancel btn btn-danger' value='Cancel'>
+				<span>
+					<input type='button' class='btnAddProperty btn btn-primary' value='Save'>
+				</span>
+			</div>
+		</div>
+	</form>
+</template>
