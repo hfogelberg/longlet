@@ -1,5 +1,5 @@
 if Locations.find().count() == 0
-	console.dir 'Beginning seed'
+	console.dir 'Seeding locations'
 
 	Locations.insert
 		islandEn: 'Tenerife'
@@ -38,9 +38,8 @@ if Locations.find().count() == 0
 		islandEn: 'Lanzarote'
 		city: 'La Santa'
 
-
 	Locations.insert
 		islandEn: 'Lanzarote'
 		city: 'Marina Rubicon'
 else
-	console.dir 'No need to seed'
+	console.dir 'No need to seed locations'

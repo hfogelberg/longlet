@@ -50,7 +50,6 @@ Template.addProperty.events
 		if template.find('').checked = true then petsConsidered = true
 		petComment = template.find('.petComment').value
 
-
 		suitableForElderly = false
 		if template.find('.elderlyCheck').checked = true then suitableForElderly = true
 

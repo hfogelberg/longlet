@@ -14,7 +14,7 @@ Meteor.startup ->
 		Properties.find({}, {limit: limit})
 
 Meteor.methods
-	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username) ->
+	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly) ->
 		console.dir 'createProperty'
 
 		console.dir island
@@ -34,8 +34,11 @@ Meteor.methods
 			numBathRooms: numBathRooms
 			aptDescription: aptDescription
 			pool: pool
+			petsConsidered: petsConsidered
+			petComment: petComment
+			suitableForChildren: suitableForChildren
+			suitableForHandicapped: suitableForHandicapped
+			suitableForElderly: suitableForElderly
 			username: username
 			dateCreated: new Date()
 			status: STATUS_CREATED
-
-
