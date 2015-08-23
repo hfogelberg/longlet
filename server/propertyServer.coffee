@@ -6,6 +6,13 @@ Meteor.startup ->
 		Properties.find({username: username})
 
 
+	Meteor.publish 'getHeadlineProperties', (limit) ->
+		console.dir 'getHeadlineProperties'
+		console.dir 'Properties found: ' + Properties.find().count()
+		if limit > Properties.find().count()
+			limit = 0
+		Properties.find({}, {limit: limit})
+
 Meteor.methods
 	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username) ->
 		console.dir 'createProperty'
