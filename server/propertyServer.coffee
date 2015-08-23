@@ -2,15 +2,30 @@ Meteor.startup ->
 	Meteor.publish 'getLocations', ->
 		Locations.find()
 
-	# Meteor.publish 'getUserProfile', (usenName) ->
-	# 	console.dir 'getUserProfile'
-	# 	console.dir username
-	# 	UserProfiles.find({userName: username}, {limit: 1})
 
-	# Meteor.publish 'getMyDogs', (username) ->
-	# 	console.dir 'getMyDogs'
-	# 	Dogs.find({username: username})
+Meteor.methods
+	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username) ->
+		console.dir 'createProperty'
 
-	# Meteor.publish 'getDogOverView', (dogId) ->
-	# 	console.dir 'getDogOverview ' + dogId
-	# 	Dogs.find({'_id': dogId})
+		console.dir island
+		console.dir city
+
+		Properties.insert
+			island: island
+			city: city
+			disturbance: disturbance
+			loactionType: loactionType
+			carNecessary: carNecessary
+			distanceToSea: distanceToSea
+			distanceToBeach: distanceToBeach
+			beachType: beachType
+			areaDescription: areaDescription
+			numBedRooms: numBedRooms
+			numBathRooms: numBathRooms
+			aptDescription: aptDescription
+			pool: pool
+			username: username
+			dateCreated: new Date()
+			status: STATUS_CREATED
+
+

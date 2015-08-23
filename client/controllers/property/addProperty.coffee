@@ -5,7 +5,50 @@ Template.addProperty.rendered = ->
 Template.addProperty.events
 	'click .btnAddProperty': (event, template) ->
 		event.preventDefault
-		alert 'click'
+
+		island = template.find('#island').value
+		city = template.find('#city').value
+
+		console.log island
+		console.log city
+
+		disturbance = ''
+		if template.find('.quietOption').checked = true then disturbance = template.find('.quietOption').value
+		if template.find('.someDisturbancesOption').checked = true then disturbance = template.find('.quietOption').value
+		if template.find('.livelyOption').checked = true then disturbance = template.find('.quietOption').value
+
+		loactionType = ''
+		if template.find('.cityLocation').checked = true then loactionType = template.find('.cityLocation').value
+		if template.find('.villageLocation').checked = true then loactionType = template.find('.villageLocation').value
+		if template.find('.mountainLocation').checked = true then loactionType = template.find('.mountainLocation').value
+		if template.find('.seaLocation').checked = true then loactionType = template.find('.seaLocation').value
+
+		carNecessary = ''
+		if template.find('.noCarNecessaryOption').checked = true then carNecessary = template.find('.noCarNecessaryOption').value
+		if template.find('.carRecomendedOption').checked = true then carNecessary = template.find('.carRecomendedOption').value
+		if template.find('.carNecessaryOption').checked = true then carNecessary = template.find('.carNecessaryOption').value
+
+		distanceToSea = template.find('.distanceToSea').value
+		distanceToBeach = template.find('.distanceToBeach').value
+
+		beachType = ''
+		if template.find('.sandBeachOption').checked = true then beachType = template.find('.sandBeachOption').value
+		if template.find('.rockBeachOption').checked = true then beachType = template.find('.rockBeachOption').value
+		if template.find('.pebbleBeachOption').checked = true then beachType = template.find('.pebbleBeachOption').value
+
+		areaDescription = template.find('.areaDescription').value
+		numBedRooms = template.find('.numBedRooms').value
+		numBathRooms = template.find('.numBathRooms').value
+		aptDescription = template.find('.aptDescription').value
+
+		pool = ''
+		if template.find('.noPoolOption').checked = true then pool = template.find('.noPoolOption').value
+		if template.find('.sharedPoolOption').checked = true then pool = template.find('.sharedPoolOption').value
+		if template.find('.privatePoolOption').checked = true then pool = template.find('.privatePoolOption').value
+
+		username = Meteor.user().username
+
+		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, (error) ->
 
 Template.addProperty.helpers 
   islands: ->
