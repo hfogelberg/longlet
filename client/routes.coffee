@@ -18,6 +18,15 @@ Router.map ->
     data: islands: ->
       Locations.find()
 
+  @route 'myPropertiesList',
+    template: 'myPropertiesList',
+    route: 'myPropertiesList'
+    waitOn: ->
+      @subscribe 'getMyPropertiesList', Meteor.user().username
+    data: myProperties: ->
+      Properties.find()
+
+
 
   # @route 'editUserProfile',
   #   template: 'editUserProfile',

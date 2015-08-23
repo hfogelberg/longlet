@@ -46,9 +46,23 @@ Template.addProperty.events
 		if template.find('.sharedPoolOption').checked = true then pool = template.find('.sharedPoolOption').value
 		if template.find('.privatePoolOption').checked = true then pool = template.find('.privatePoolOption').value
 
+		petsConsidered = false
+		if template.find('').checked = true then petsConsidered = true
+		petComment = template.find('.petComment').value
+
+
+		suitableForElderly = false
+		if template.find('.elderlyCheck').checked = true then suitableForElderly = true
+
+		suitableForHandicapped = false
+		if template.find('.motionCheck').checked = true then suitableForHandicapped = true
+
+		suitableForChildren = false
+		if template.find('.childrenCheck').checked = true then suitableForChildren = true
+
 		username = Meteor.user().username
 
-		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, (error) ->
+		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, (error) ->
 
 Template.addProperty.helpers 
   islands: ->

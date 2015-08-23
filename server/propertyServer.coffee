@@ -2,6 +2,9 @@ Meteor.startup ->
 	Meteor.publish 'getLocations', ->
 		Locations.find()
 
+	Meteor.publish 'getMyPropertiesList', (username) ->
+		Properties.find({username: username})
+
 
 Meteor.methods
 	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username) ->
