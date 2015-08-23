@@ -18,10 +18,5 @@ Template.headlineProperties.created = ->
     return
   return
 
-# Template.artworksTemplate.events 
-#   'click .more': (event) ->
-#     incrementLimit()
-#     return
-
 Template.headlineProperties.helpers headlinePropertiesList: ->
   Properties.find {}, limit: Session.get('limit')
