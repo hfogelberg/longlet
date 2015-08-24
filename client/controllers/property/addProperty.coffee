@@ -61,9 +61,24 @@ Template.addProperty.events
 		suitableForChildren = 'Not suitable for children'
 		if template.find('.childrenCheck').checked = true then suitableForChildren = 'Suitable for children'
 
+		propertyType = ''
+		if template.find('.apartmentOption').checked = true then propertyType = template.find('.apartmentOption').value
+		if template.find('.bungalowOption').checked = true then propertyType = template.find('.bungalowOption').value
+		if template.find('.townHouseOption').checked = true then propertyType = template.find('.townHouseOption').value
+		if template.find('.villaOption').checked = true then propertyType = template.find('.villaOption').value
+		if template.find('.fincaOption').checked = true then propertyType = template.find('.fincaOption').value
+
+		floor = template.find('.floor').value
+
+		gardenType = ''
+		if template.find('.hasGarden').checked = true then gardenType = 'Has garden'
+		if template.find('.hasVeranda').checked = true then gardenType = 'Has veranda or patio'
+		if template.find('.hasBalcony').checked = true then gardenType = 'Has balcony'
+
+
 		username = Meteor.user().username
 
-		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, (error) ->
+		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, propertyType, floor, gardenType, (error) ->
 		Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 

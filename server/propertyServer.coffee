@@ -38,7 +38,7 @@ Meteor.methods
 				city: city
 
 Meteor.methods
-	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly) ->
+	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, propertyType, floor, gardenType) ->
 		console.dir 'createProperty'
 
 		Properties.insert
@@ -61,5 +61,8 @@ Meteor.methods
 			suitableForHandicapped: suitableForHandicapped
 			suitableForElderly: suitableForElderly
 			username: username
+			propertyType: propertyType
+			floor: floor
+			gardenType: gardenType
 			dateCreated: new Date()
 			status: STATUS_CREATED
