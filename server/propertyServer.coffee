@@ -41,9 +41,6 @@ Meteor.methods
 	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly) ->
 		console.dir 'createProperty'
 
-		console.dir island
-		console.dir city
-
 		Properties.insert
 			island: island
 			city: city

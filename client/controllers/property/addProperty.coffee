@@ -46,22 +46,24 @@ Template.addProperty.events
 		if template.find('.sharedPoolOption').checked = true then pool = template.find('.sharedPoolOption').value
 		if template.find('.privatePoolOption').checked = true then pool = template.find('.privatePoolOption').value
 
-		petsConsidered = false
-		if template.find('.petsConsideredCheck').checked = true then petsConsidered = true
+		petsConsidered = 'No pets'
+		if template.find('.petsConsidered').checked = true then petsConsidered = 'Pets considered'
 		petComment = template.find('.petComment').value
 
-		suitableForElderly = false
-		if template.find('.elderlyCheck').checked = true then suitableForElderly = true
+		console.log 'Pets considered: ' + petsConsidered
 
-		suitableForHandicapped = false
-		if template.find('.motionCheck').checked = true then suitableForHandicapped = true
+		suitableForElderly = 'Not suitable for elderly'
+		if template.find('.elderlyCheck').checked = true then suitableForElderly = 'Suitable for elderly'
 
-		suitableForChildren = false
-		if template.find('.childrenCheck').checked = true then suitableForChildren = true
+		suitableForHandicapped = 'Not suitable for handicapped'
+		if template.find('.motionCheck').checked = true then suitableForHandicapped = 'Suitable for handicapped'
+
+		suitableForChildren = 'Not suitable for children'
+		if template.find('.childrenCheck').checked = true then suitableForChildren = 'Suitable for children'
 
 		username = Meteor.user().username
 
-		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, (error) -
+		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, (error) ->
 		Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 
