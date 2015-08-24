@@ -1,0 +1,7 @@
+<template name='citiesList'>
+	<div class='btn-group btn-group-justified' role='group'>
+		{{#each citiesOnIslandList}}
+			<a href='/propertiesByCity/{{island}}/{{city}}' class='btn btn-default'>{{city}}</a>
+		{{/each}}
+	</div>
+</template>

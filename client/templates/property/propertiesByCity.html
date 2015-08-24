@@ -1,0 +1,10 @@
+<template name='propertiesByCity'>
+	<h2>Properties in {{city}}</h2>
+	{{>islands}}
+	<br />
+	{{>citiesList}}
+	<hr />
+	{{#each propertiesByCityList}}
+		{{>property}}
+	{{/each}}
+</template>

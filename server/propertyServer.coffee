@@ -22,10 +22,13 @@ Meteor.startup ->
 		console.dir 'Found ' + Properties.find({island: island}, {limit: limit}).count()
 		Properties.find({island: island}, {limit: limit})
 
-
 	Meteor.publish 'getCitiesOnIsland', (island) ->
 		console.dir 'getCitiesOnIsland ' + island
 		Locations.find({islandEn: island}, {islandEn: 1})
+
+	Meteor.publish 'getPropertiesByCity', (limit, island, city) ->
+		console.dir 'getPropertiesByCity ' + island + ' ' + city
+		Properties.find({island: island, city: city}, {limit: limit})
 
 Meteor.methods 
 	createLocation: (island, city) ->

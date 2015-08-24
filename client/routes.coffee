@@ -39,4 +39,20 @@ Router.map ->
     data: citiesOnIslandList: ->
       Locations.find()
 
+  @route 'propertiesByCity',
+    template: 'propertiesByCity',
+    path: 'propertiesByCity/:island/:city'
+    onBeforeAction: ->
+        Session.set('island', @params.island)
+        Session.set('city', @params.city)
+        console.log @params.city
+        Session.setDefault 'limit', ITEMS_INCREMENT
+        this.next()
+      waitOn: ->
+        Meteor.subscribe 'getPropertiesByCity', Session.get('limit'), Session.get('island'), Session.get('city')
+        Meteor.subscribe 'getCitiesOnIsland', Session.get('island')
+      data: citiesOnIslandList: ->
+        Locations.find()
+
+
   return
