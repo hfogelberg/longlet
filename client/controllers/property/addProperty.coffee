@@ -47,7 +47,7 @@ Template.addProperty.events
 		if template.find('.privatePoolOption').checked = true then pool = template.find('.privatePoolOption').value
 
 		petsConsidered = false
-		if template.find('').checked = true then petsConsidered = true
+		if template.find('.petsConsideredCheck').checked = true then petsConsidered = true
 		petComment = template.find('.petComment').value
 
 		suitableForElderly = false
@@ -61,7 +61,8 @@ Template.addProperty.events
 
 		username = Meteor.user().username
 
-		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, (error) ->
+		Meteor.call 'createProperty', island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool,username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, (error) -
+		Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 
   islands: ->
