@@ -22,7 +22,7 @@ Template.propertiesByIsland.helpers
 	propertiesByIslandList: ->
 		limit = Session.get('limit')
 		island = Session.get('island')
-		Properties.find()
+		Properties.find({island: island}, {limit: limit})
 
 	island: ->
 		Session.get 'island'
