@@ -35,5 +35,8 @@ Router.map ->
       this.next()
     waitOn: ->
       Meteor.subscribe 'getPropertiesByIsland', Session.get('limit'), Session.get('island')
+      Meteor.subscribe 'getCitiesOnIsland', Session.get('island')
+    data: citiesOnIslandList: ->
+      Locations.find()
 
   return

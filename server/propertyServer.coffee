@@ -23,6 +23,10 @@ Meteor.startup ->
 		Properties.find({island: island}, {limit: limit})
 
 
+	Meteor.publish 'getCitiesOnIsland', (island) ->
+		console.dir 'getCitiesOnIsland ' + island
+		Locations.find({islandEn: island}, {islandEn: 1})
+
 Meteor.methods 
 	createLocation: (island, city) ->
 		if Locations.find({island: island, city: city}) == 0

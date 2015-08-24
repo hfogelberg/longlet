@@ -41,6 +41,14 @@ if Locations.find().count() is 0
 	Locations.insert
 		islandEn: 'Lanzarote'
 		city: 'Marina Rubicon'
+
+	Locations.insert
+		islandEn: 'Fuerteventura'
+		city: 'Gran Tarajal'
+
+	Locations.insert
+		islandEn: 'Fuerteventura'
+		city: 'Costa Calma'
 else
 	console.dir 'No need to seed locations'
 
