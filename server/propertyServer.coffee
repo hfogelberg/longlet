@@ -30,6 +30,10 @@ Meteor.startup ->
 		console.dir 'getPropertiesByCity ' + island + ' ' + city
 		Properties.find({island: island, city: city}, {limit: limit})
 
+	Meteor.publish 'getPropertyDetails', (id) ->
+		console.dir 'getPropertyDetails ' + id
+		Properties.find({'_id': id})
+
 Meteor.methods 
 	createLocation: (island, city) ->
 		if Locations.find({island: island, city: city}).count() == 0

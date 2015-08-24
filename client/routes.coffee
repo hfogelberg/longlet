@@ -34,8 +34,8 @@ Router.map ->
       Session.setDefault 'limit', ITEMS_INCREMENT
       this.next()
     waitOn: ->
-      Meteor.subscribe 'getPropertiesByIsland', Session.get('limit'), Session.get('island')
-      Meteor.subscribe 'getCitiesOnIsland', Session.get('island')
+      @subscribe 'getPropertiesByIsland', Session.get('limit'), Session.get('island')
+      @subscribe 'getCitiesOnIsland', Session.get('island')
     data: citiesOnIslandList: ->
       Locations.find()
 
@@ -49,10 +49,19 @@ Router.map ->
         Session.setDefault 'limit', ITEMS_INCREMENT
         this.next()
       waitOn: ->
-        Meteor.subscribe 'getPropertiesByCity', Session.get('limit'), Session.get('island'), Session.get('city')
-        Meteor.subscribe 'getCitiesOnIsland', Session.get('island')
+        @subscribe 'getPropertiesByCity', Session.get('limit'), Session.get('island'), Session.get('city')
+        @subscribe 'getCitiesOnIsland', Session.get('island')
       data: citiesOnIslandList: ->
         Locations.find()
 
-
+  @route 'propertyDetails',
+    template: 'propertyDetails',
+    path: 'propertyDetails/:_id'
+    onBeforeAction: ->
+      Session.set('propertyId', @params._id)
+      this.next()
+    waitOn: ->
+      @subscribe 'getPropertyDetails', Session.get('propertyId')
+    data: details: ->
+      Properties.findOne({'_id': Session.get('propertyId')})
   return
