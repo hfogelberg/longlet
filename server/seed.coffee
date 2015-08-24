@@ -1,4 +1,4 @@
-if Locations.find().count() == 0
+if Locations.find().count() is 0
 	console.dir 'Seeding locations'
 
 	Locations.insert
@@ -43,3 +43,32 @@ if Locations.find().count() == 0
 		city: 'Marina Rubicon'
 else
 	console.dir 'No need to seed locations'
+
+
+
+if Islands.find().count() is 0
+	console.dir	 'Seeding islands'
+
+	Islands.insert
+		name: 'Tenerife'
+
+	Islands.insert
+		name: 'Gran Canaria'
+
+	Islands.insert
+		name: 'Lanzarote'
+
+	Islands.insert
+		name: 'Fuerteventura'
+
+	Islands.insert
+		name: 'La Gomera'
+
+	Islands.insert
+		name: 'La Palma'
+
+	Islands.insert
+		name: 'El Hiero'
+
+else
+	console.dir 'No need to seed islands'

@@ -26,19 +26,14 @@ Router.map ->
     data: myProperties: ->
       Properties.find()
 
+  @route 'propertiesByIsland',
+    template: 'propertiesByIsland',
+    path: 'propertiesByIsland/:island'
+    onBeforeAction: ->
+      Session.set('island', @params.island)
+      Session.setDefault 'limit', ITEMS_INCREMENT
+      this.next()
+    waitOn: ->
+      Meteor.subscribe 'getPropertiesByIsland', Session.get('limit'), Session.get('island')
 
-
-  # @route 'editUserProfile',
-  #   template: 'editUserProfile',
-  #   path: '/editUserProfile/:username'
-  #   onBeforeAction: ->
-  #     console.log  @params.username
-  #     Session.set 'userNameToEdit', @params.username
-  #     this.next()
-  #   waitOn: ->
-  #     @subscribe 'getUserProfile', @params.username
-  #   data: userToEdit: ->
-  #     UserProfiles.findOne({userName: Session.get('userNameToEdit')})
-
-      
   return

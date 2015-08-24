@@ -1,0 +1,7 @@
+<template name='islands'>
+	<div class='btn-group btn-group-justified' role='group'>
+		{{#each islandsList}}
+			<a href='propertiesByIsland/{{name}}' class='btn btn-default'>{{name}}</a>
+		{{/each}}
+	</div>
+</template>
