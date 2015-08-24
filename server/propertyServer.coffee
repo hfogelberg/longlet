@@ -32,13 +32,13 @@ Meteor.startup ->
 
 Meteor.methods 
 	createLocation: (island, city) ->
-		if Locations.find({island: island, city: city}) == 0
+		if Locations.find({island: island, city: city}).count() == 0
 			Locations.insert
 				islandEn: island
 				city: city
 
 Meteor.methods
-	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, propertyType, floor, gardenType) ->
+	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, propertyType, floor, gardenType, address) ->
 		console.dir 'createProperty'
 
 		Properties.insert
@@ -64,5 +64,6 @@ Meteor.methods
 			propertyType: propertyType
 			floor: floor
 			gardenType: gardenType
+			address: address
 			dateCreated: new Date()
 			status: STATUS_CREATED
