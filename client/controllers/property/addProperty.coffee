@@ -13,9 +13,9 @@ Template.addProperty.events
 		console.log city
 
 		disturbance = ''
-		if template.find('.quietOption').checked then disturbance = 'Quiet'
+		if template.find('.quietOption').checked then disturbance = 'Quiet areA'
 		if template.find('.someDisturbancesOption').checked then disturbance = 'Some disturbance'
-		if template.find('.livelyOption').checked then disturbance = 'Lively'
+		if template.find('.livelyOption').checked then disturbance = 'Lively area'
 
 		loactionType = ''
 		if template.find('.cityLocation').checked then loactionType = 'City'

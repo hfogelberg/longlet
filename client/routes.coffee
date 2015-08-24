@@ -64,4 +64,10 @@ Router.map ->
       @subscribe 'getPropertyDetails', Session.get('propertyId')
     data: details: ->
       Properties.findOne({'_id': Session.get('propertyId')})
+
   return
+
+
+
+
+  

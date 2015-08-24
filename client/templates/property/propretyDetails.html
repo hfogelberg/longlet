@@ -1,5 +1,39 @@
 <template name='propertyDetails'>
 	{{#with details}}
 		<h2>{{city}}, {{island}}</h2>
+		
+		<div class='well'>
+			<h3>Property</h3>
+			<div>{{propertyType}}</div>
+			<div>Floor {{floor}}</div>
+			<div>{{numBedRooms}} bed rooms</div>
+			<div>{{numBathRooms}} bath rooms</div>
+			<div>{{aptDescription}}</div>
+			<div>{{gardenType}}</div>
+			<div>{{pool}}</div>
+			<hr>
+			
+			<h3>Area</h3>
+			<div>{{loactionType}}</div>
+			<div>{{disturbance}}</div>
+			<div>{{areaDescription}}</div>
+			<div>Distance to sea {{distanceToSea}} m</div>
+			<div>Distance to beach {{distanceToBeach}}</div>
+			<div>{{beachType}}</div>	
+			<hr>
+		
+			<h3>Pets</h3>
+			<div>{{petsConsidered}}</div>
+			<div>{{petComment}}</div>
+			<hr>
+
+			<h3>Suitability</h3>
+			<div>{{suitableForChildren}}</div>
+			<div>{{suitableForHandicapped}}</div>
+			<div>{{suitableForElderly}}</div>
+			<hr>
+	
+			<div>{{username}} {{dateCreated}}</div>
+		</div>
 	{{/with}}
 </template>
