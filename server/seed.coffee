@@ -61,7 +61,7 @@ if Islands.find().count() is 0
 		name: 'Tenerife'
 
 	Islands.insert
-		name: 'Gran Canaria'
+		name: 'Gran Canary'
 
 	Islands.insert
 		name: 'Lanzarote'
