@@ -12,7 +12,6 @@ Template.addProperty.events
 		address = template.find('#propertyAddress').value
 		floor = template.find('.floor').value
 
-
 		# Area
 		areaType = 'City'
 		if template.find('.villageLocation').checked then areaType = 'Villa'
@@ -121,10 +120,22 @@ Template.addProperty.events
 		suitableForChildren = 'Not suitable for children'
 		if template.find('.childrenCheck').checked = true then suitableForChildren = 'Suitable for children'
 
+		# Price
+		pricePerMonth = template.find('.pricePerMonth').value
+		aditionalWeekPrice = template.find('.aditionalWeekPrice').value
+		aditionalDayPrice = template.find('.aditionalDayPrice').value
+		minimumStay = template.find('.minimumStay').value
+		waterIncluded = template.find('.waterIncluded').value
+		electricityIncluded = template.find('.electricityIncluded').value
+		discounts = template.find('.discounts').value
+		priceComment = template.find('.priceComment').value
+
 		username = Meteor.user().username
 
+
 		Meteor.call 'createLocation', island, city, (error) ->
-		Meteor.call 'createProperty', island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, (error) ->
+		console.log 'Calling createProperty'
+		Meteor.call 'createProperty', island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, (error) ->
 		Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 

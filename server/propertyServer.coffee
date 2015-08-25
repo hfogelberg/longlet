@@ -42,7 +42,7 @@ Meteor.methods
 				city: city
 
 Meteor.methods
-	createProperty: (island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username) ->
+	createProperty: (island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment) ->
 		console.dir 'createProperty'
 
 		Properties.insert
@@ -89,6 +89,14 @@ Meteor.methods
 			suitableForElderly: suitableForElderly
 			suitableForHandicapped: suitableForHandicapped
 			suitableForChildren: suitableForChildren
+			pricePerMonth: pricePerMonth
+			aditionalWeekPrice: aditionalWeekPrice
+			aditionalDayPrice: aditionalDayPrice
+			minimumStay: minimumStay
+			waterIncluded: waterIncluded
+			electricityIncluded: electricityIncluded
+			discounts: discounts
+			priceComment: priceComment
 			username: username
 			dateCreated: new Date()
 			status: STATUS_CREATED

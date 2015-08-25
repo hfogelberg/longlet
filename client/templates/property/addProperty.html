@@ -261,13 +261,29 @@
 
 		<!-- INTERNET -->
 		<div class='well'>
-			<h1>Internet and communication</h1>
+			<h2>Internet and communication</h2>
 
-			<ul class='list-unstyled'>
-				<li><label><input type='checkbox' class='hasSatCable'> Satelite or cable</label></li>
-				<li><label><input type='checkbox' class='hasDsl'> DSL</label></li>
-				<li><label><input type='checkbox' class='hasFibre'> Fibre connection</label></li>
-			</ul>
+
+			<div class='form-group'>
+				<label class='col-sm-2'>Satelite or cable</label>
+				<div class='col-sm-2'>
+					<input type='checkbox' class='hasSatCable'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label class='col-sm-2'>DSL</label>
+				<div class='col-sm-2'>
+					<input type='checkbox' class='hasDsl'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label class='col-sm-2'>High speed fibre</label>
+				<div class='col-sm-2'>
+					<input type='checkbox' class='hasFibre'>
+				</div>
+			</div>
 
 			<div class='form-group'>
 				<label for='internetComment' class='col-sm-2'>Comment</label>
@@ -280,20 +296,20 @@
 
 		<!-- PHOTOS -->
 		<div class='well'>
-			<h1>Photos</h1>
-			<h2>Of the surroundings</h2>
+			<h2>Photos</h2>
+			<h3>Of the surroundings</h3>
 			<bold>(at least one)</bold>
 
-			<h2>Exterior</h2>
+			<h3>Exterior</h3>
 			<bold>(at least one)</bold>
 
-			<h2>Interior</h2>
+			<h3>Interior</h3>
 			<bold>(at least one per room)</bold>
 		</div> <!-- Photos well -->
 
 		<!-- PETS -->
 		<div class='well'>
-			<h1>Pets</h1>
+			<h2>Pets</h2>
 			<div class='form-group'>
 				<label for='pets' class='col-sm-2'>Pets considered</label>
 				<div class='col-sm-10'>
@@ -310,7 +326,7 @@
 
 		<!-- SUITABILITY -->
 		<div class='well'>
-			<h1>Suitability</h1>
+			<h2>Suitability</h2>
 
  			<div class='form-group'>
 				<label for='motion' class='col-sm-2'>Motion handicapped</label>
@@ -333,6 +349,66 @@
 				</div>
 			</div> 
 		</div> <!-- Suitability well --> 
+
+		<!-- PRICE -->
+		<div class='well'>
+			<h2>Price</h2>
+			<div class='form-group'>
+				<label for='pricePerMonth' class='col-sm-2'>Price per month</label>
+				<div class='col-sm-10'>
+					<input type='number' class='pricePerMonth' placeholder='Euros'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='aditionalWeek' class='col-sm-2'>Aditional week</label>
+				<div class='col-sm-10'>
+					<input type='number' class='aditionalWeekPrice' placeholder='Euros'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='aditionalDay' class='col-sm-2'>Aditional day</label>
+				<div class='col-sm-10'>
+					<input type='number' class='aditionalDayPrice' placeholder='Euros'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='minimumStay' class='col-sm-2'>Minimum stay</label>
+				<div class='col-sm-10'>
+					<input type='number' class='minimumStay' min='1' placeholder='months'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='waterIncluded' class='col-sm-2'>Water included</label>
+				<div class='col-sm-10'>
+					<input type='checkbox' class='waterIncluded'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='electricityIncluded' class='col-sm-2'>Electricity included</label>
+				<div class='col-sm-10'>
+					<input type='checkbox' class='electricityIncluded'>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='discounts' class='col-sm-2'>Discounts</label>
+				<div class='col-sm-10'>			
+					<textarea class='form-control discounts' rows='5' name='discounts'></textarea>
+				</div>
+			</div>
+
+			<div class='form-group'>
+				<label for='priceComment' class='col-sm-2'>Comment</label>
+				<div class='col-sm-10'>			
+					<textarea class='form-control priceComment' rows='5' name='priceComment'></textarea>
+				</div>
+			</div>
+		</div>  <!-- Price well -->
 
 		<div class='col-sm-offset-2 col-sm-2'>
 			<div>
