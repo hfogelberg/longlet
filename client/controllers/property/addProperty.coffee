@@ -14,9 +14,9 @@ Template.addProperty.events
 
 		# Area
 		areaType = 'City'
-		if template.find('.villageLocation').checked then areaType = 'Villa'
+		if template.find('.villageLocation').checked then areaType = 'Village'
 		if template.find('.ruralLocation').checked then areaType = 'Rural'
-		if template.find('.seaLocation').checked then areaType = 'Sea'
+		if template.find('.seaLocation').checked then areaType = 'Seaside'
 
 		closestMini = template.find('.closestMini').value
 		closestSuper = template.find('.closestSuper').value
@@ -93,7 +93,7 @@ Template.addProperty.events
 		if template.find('.hasDishWasher').checked then hasDishWasher = 'Dish washer'
 		if template.find('.hasOven').checked then hasOven = 'Oven'
 		if template.find('.hasMicro').checked then hasMicro = 'Micro wave'
-		if template.find('.hasHob').checked then hasHob = 'Oven'
+		if template.find('.hasHob').checked then hasHob = 'Hob'
 		equipmentComment = template.find('.equipmentComment').value
 
 		# Internet and communicatuion
@@ -112,13 +112,13 @@ Template.addProperty.events
 
 		# Suitability
 		suitableForElderly = 'Not suitable for elderly'
-		if template.find('.elderlyCheck').checked = true then suitableForElderly = 'Suitable for elderly'
+		if template.find('.elderlyCheck').checked then suitableForElderly = 'Suitable for elderly'
 
 		suitableForHandicapped = 'Not suitable for handicapped'
-		if template.find('.motionCheck').checked = true then suitableForHandicapped = 'Suitable for handicapped'
+		if template.find('.motionCheck').checked then suitableForHandicapped = 'Suitable for handicapped'
 
 		suitableForChildren = 'Not suitable for children'
-		if template.find('.childrenCheck').checked = true then suitableForChildren = 'Suitable for children'
+		if template.find('.childrenCheck').checke then suitableForChildren = 'Suitable for children'
 
 		# Price
 		pricePerMonth = template.find('.pricePerMonth').value
