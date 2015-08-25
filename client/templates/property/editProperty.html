@@ -1,0 +1,427 @@
+<template name='editProperty'>
+	{{#with details}}
+		<div class='well'>
+			<h1>Edit property</h1>
+		</div>
+
+		<form class='addProperty form-horizontal'>
+			<!-- LOCATION -->
+			<div class='well'>
+				<h2>Where is the property?</h2>
+				<div class='form-group'>
+					<label for='island' class='col-sm-2'>Island</label>
+					<div class='col-sm-10'>
+		        <input 	class="form-control typeahead" id="island"
+		        				name="island" type="text"
+		        				autocomplete="off" spellcheck="off"
+		                data-source="islands"
+		                value="{{island}}"/>
+					</div>
+				</div>
+				
+				<div class='form-group'>
+					<label for='city' class='col-sm-2'>City</label>
+					<div class='col-sm-10'>
+		        <input 	class="form-control typeahead" id="city" name="city" type="text"
+		                autocomplete="off" spellcheck="off"
+		                data-source="cities"
+		                value="{{city}}"/>
+					</div>
+				</div>
+
+				<h2>Postal address</h2>
+				<div class='form-group'>
+					<label for='street' class='col-sm-2'>Adress</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control' id='propertyAddress' rows='5' name='adress' value="{{address}}"></textarea>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='floor' class='col-sm-2'>Which floor?</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control floor' min='0' value="{{floor}}">
+					</div>
+				</div>
+
+				<h2>Pin point on map</h2>
+			</div>	<!-- Location well -->
+
+			<!-- AREA -->
+			<div class='well'>
+				<h2>Describe the area</h2>
+
+				<div class='form-group'>
+					<label for='areaType' class='col-sm-2'>Area type</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'>
+						  <input type='radio' class='cityLocation'>City
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='villageLocation'>Village
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='ruralLocation'>Rural
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='seaLocation'>Sea
+						</label>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='closestMini' class='col-sm-2'>Closest mini market</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control closestMini' placeholder='Meters'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='closestMini' class='col-sm-2'>Closest super market</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control closestSuper' placeholder='Meters'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='carRecomended' class='col-sm-2'>Car necessary</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'>
+						  <input type='radio' class='noCarNecessaryOption'>Not necessary
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='carRecomendedOption'>Recomended
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='carNecessaryOption'>Necessary
+						</label>
+					</div>
+				</div>
+
+				<!--  Sea and beach -->
+				<div class='form-group'>
+					<label for='distanceToSea' class='col-sm-2'>Distance to sea</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control distanceToSea' placeholder='meters'/>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='distanceToBeach' class='col-sm-2'>Distance to beach</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control distanceToBeach' placeholder='meters'/>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='beachType' class='col-sm-2'>Type of beach</label>
+					<div class='col-sm-10'>			
+						<label class='radio-inline'>
+						  <input type='radio' class='noBeachOption' checked>No beach
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='sandBeachOption'>Sand beach
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='rockBeachOption'>Rock beach
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='pebbleBeachOption'>Pebble beach
+						</label>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='noise' class='col-sm-2'>Noise</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'>
+						  <input type='radio' class='quietOption'>Quiet
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='someDisturbancesOption'>Some disturbances
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='livelyOption'>Lively
+						</label>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='description' class='col-sm-2'>In your own words</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control areaDescription' rows='5' name='areaDescription'></textarea>
+					</div> 
+				</div>
+			</div>  <!-- Area well -->
+
+			<!-- PROPERTY DESCRIPTION -->
+			<div class='well'>
+				<h2>Describe the Property</h2>
+
+				<div class='form-group'>
+					<label for='propertyType' class='col-sm-2'>Property type</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'><input type='radio' class='apartmentOption'>Apartment</label>
+						<label class='radio-inline'><input type='radio' class='bungalowOption'>Bungalow</label>
+						<label class='radio-inline'><input type='radio' class='townHouseOption'>Town house</label>
+						<label class='radio-inline'><input type='radio' class='villaOption'>Villa</label>
+						<label class='radio-inline'><input type='radio' class='fincaOption'>Finca</label>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='isStudio' class='col-sm-2'>Studio</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='isStudio'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='numBedRooms' class='col-sm-2'>Bed rooms</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control numBedRooms' min='0'>
+					</div>
+				</div>
+				
+				<div class='form-group'>
+					<label for='numBathRooms' class='col-sm-2'>Bath rooms</label>
+					<div class='col-sm-10'>
+						<input type='number' class='form-control numBathRooms' min='0'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='floor' class='col-sm-2'>Exterior</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'><input type='radio' class='hasGarden'>Garden</label>
+						<label class='radio-inline'><input type='radio' class='hasVeranda'>Veranda</label>
+						<label class='radio-inline'><input type='radio' class='hasBalcony'>Balcony</label>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='pool' class='col-sm-2'>Pool</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'>
+						  <input type='radio' class='noPoolOption'>No Pool
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='sharedPoolOption'>Shared Pool
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' class='privatePoolOption'>Private Pool
+						</label>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='description' class='col-sm-2'>Property description</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control description aptDescription' rows='5' name='aptDescription'></textarea>
+					</div> 
+				</div>
+			</div>  <!-- Prop description well -->
+
+			<!-- EQUIPMENT -->
+			<div class='well'>
+				<h2>Equipment</h2>
+
+				<div class='row'>
+					<div class='col-sm-4'>
+						<ul class='list-unstyled'>
+							<li><label><input type='checkbox' class='hasAC'> Air conditioning</label></li>
+							<li><label><input type='checkbox' class='hasCeilingFan'> Ceiling fan</label></li>
+							<li><label><input type='checkbox' class='hasTV'> TV</label></li>
+							<li><label><input type='checkbox' class='hasDvd'> DVD</label></li>
+						</ul>
+					</div>
+					<div class='col-sm-4'>
+						<ul class='list-unstyled'>
+							<li><label><input type='checkbox' class='hasCoffeeMaker'> Coffee maker</label></li>
+							<li><label><input type='checkbox' class='hasKettle'> Kettle</label></li>
+							<li><label><input type='checkbox' class='hasFridge'> Fridge</label></li>
+							<li><label><input type='checkbox' class='hasFreezer'> Freezer</label></li>
+							<li><label><input type='checkbox' class='hasWashMachine'> Washing machine</label></li>
+						</ul>
+					</div>
+					<div class='col-sm-4'>
+						<ul class='list-unstyled'> 
+							<li><label><input type='checkbox' class='hasDishWasher'> Dish washer</label></li>
+							<li><label><input type='checkbox' class='hasOven'> Oven</label></li>
+							<li><label><input type='checkbox' class='hasMicro'> Microwave</label></li>
+							<li><label><input type='checkbox' class='hasHob'> Hob</label></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='equipmentComment' class='col-sm-2'>Comment</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control equipmentComment' rows='5' name='areaDescription'></textarea>
+					</div>
+				</div>
+			</div> <!-- Equipment well -->
+
+			<!-- INTERNET -->
+			<div class='well'>
+				<h2>Internet and communication</h2>
+
+
+				<div class='form-group'>
+					<label class='col-sm-2'>Satelite or cable</label>
+					<div class='col-sm-2'>
+						<input type='checkbox' class='hasSatCable'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label class='col-sm-2'>DSL</label>
+					<div class='col-sm-2'>
+						<input type='checkbox' class='hasDsl'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label class='col-sm-2'>High speed fibre</label>
+					<div class='col-sm-2'>
+						<input type='checkbox' class='hasFibre'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='internetComment' class='col-sm-2'>Comment</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control internetComment' rows='5' name='areaDescription'></textarea>
+					</div>
+				</div>
+			</div> 
+			<!-- Internet well -->
+
+			<!-- PHOTOS -->
+			<div class='well'>
+				<h2>Photos</h2>
+				<h3>Of the surroundings</h3>
+				<bold>(at least one)</bold>
+
+				<h3>Exterior</h3>
+				<bold>(at least one)</bold>
+
+				<h3>Interior</h3>
+				<bold>(at least one per room)</bold>
+			</div> <!-- Photos well -->
+
+			<!-- PETS -->
+			<div class='well'>
+				<h2>Pets</h2>
+				<div class='form-group'>
+					<label for='pets' class='col-sm-2'>Pets considered</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='petsConsidered'>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label for='petsComment' class='col-sm-2'>Comment</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control petComment' rows='5' name='petComment'></textarea>
+					</div>
+				</div>
+			</div>  <!-- Pets well -->
+
+			<!-- SUITABILITY -->
+			<div class='well'>
+				<h2>Suitability</h2>
+
+	 			<div class='form-group'>
+					<label for='motion' class='col-sm-2'>Motion handicapped</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='motionCheck'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='motion' class='col-sm-2'>Elderly</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='elderlyCheck'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='motion' class='col-sm-2'>Children</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='childrenCheck'>
+					</div>
+				</div> 
+			</div> <!-- Suitability well --> 
+
+			<!-- PRICE -->
+			<div class='well'>
+				<h2>Price</h2>
+				<div class='form-group'>
+					<label for='pricePerMonth' class='col-sm-2'>Price per month</label>
+					<div class='col-sm-10'>
+						<input type='number' class='pricePerMonth' placeholder='Euros'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='aditionalWeek' class='col-sm-2'>Aditional week</label>
+					<div class='col-sm-10'>
+						<input type='number' class='aditionalWeekPrice' placeholder='Euros'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='aditionalDay' class='col-sm-2'>Aditional day</label>
+					<div class='col-sm-10'>
+						<input type='number' class='aditionalDayPrice' placeholder='Euros'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='minimumStay' class='col-sm-2'>Minimum stay</label>
+					<div class='col-sm-10'>
+						<input type='number' class='minimumStay' min='1' placeholder='months'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='waterIncluded' class='col-sm-2'>Water included</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='waterIncluded'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='electricityIncluded' class='col-sm-2'>Electricity included</label>
+					<div class='col-sm-10'>
+						<input type='checkbox' class='electricityIncluded'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='discounts' class='col-sm-2'>Discounts</label>
+					<div class='col-sm-10'>			
+						<textarea class='form-control discounts' rows='5' name='discounts'></textarea>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='priceComment' class='col-sm-2'>Comment</label>
+					<div class='col-sm-10'>			
+						<textarea class='form-control priceComment' rows='5' name='priceComment'></textarea>
+					</div>
+				</div>
+
+			</div>  <!-- Price well -->
+
+			<div class='col-sm-offset-2 col-sm-2'>
+				<div>
+					<input type='button' class='btnCancel btn btn-danger' value='Cancel'>
+					<span>
+						<input type='button' class='btnAddProperty btn btn-primary' value='Save'>
+					</span>
+				</div>
+			</div>
+		</form>
+	{{/with}}
+</template>

@@ -71,6 +71,30 @@ Router.map ->
         Locations.find() 
       islands: ->
         Locations.find()
+
+    @route 'editProperty',
+      template: 'editProperty',
+      path: 'editProperty/:id'
+      onBeforeAction: ->
+        console.log 'editProperty'
+        console.log @params.id
+        Session.set('propertyId', @params.id)
+        this.next()
+      waitOn: ->
+        @subscribe 'getPropertyDetails', Session.get('propertyId')
+      data: details: ->
+        Properties.findOne({'_id': Session.get('propertyId')})
+
+    @route 'search',
+      template: 'search',
+      path: 'search'
+    waitOn: ->
+      @subscribe 'getPropertiesByIsland', Session.get('limit'), Session.get('island')
+      @subscribe 'getCitiesOnIsland', Session.get('island')
+    data: citiesOnIslandList: ->
+      Locations.find()
+      
+
   return
 
 
