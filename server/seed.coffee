@@ -355,3 +355,220 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
+
+	Properties.insert
+		island: "Fuerteventura"
+		city: "Costa Calma"
+		address: ""
+		floor: 1
+		areaType: "Resort"
+		closestMini: 200
+		closestSuper: 800
+		carNecessary: "No car needed"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: ""
+		disturbance: "Quiet"
+		areaDescription: "Nice beach"
+		propertyType: "Sea"
+		isStudio: true
+		numBedRooms: 0
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "Own pool"
+		aptDescription: "Very light"
+		hasAC: "Has Air conditioning"
+		hasCeilingFan: "Ceiling fan"
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: "Washing machine"
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Small kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: "DSL"
+		internetComment: ""
+		petsConsidered: "No pets"
+		petComment: ""
+		suitableForElderly: "Suitable for elderly"
+		suitableForHandicapped: "Suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 550
+		aditionalWeekPrice: 100
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
+	Properties.insert
+		island: "Gran Canary"
+		city: "San Agustin"
+		address: ""
+		floor: 2
+		areaType: "Sea"
+		closestMini: 100
+		closestSuper: 600
+		carNecessary: "No car needed"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: ""
+		disturbance: "Quiet"
+		areaDescription: "Nice beach"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 1
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "Shared pool"
+		aptDescription: "Simple bu nice"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: ""
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Small kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: ""
+		internetComment: ""
+		petsConsidered: "No pets"
+		petComment: ""
+		suitableForElderly: "Suitable for elderly"
+		suitableForHandicapped: "Suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 550
+		aditionalWeekPrice: 100
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
+	Properties.insert
+		island: "Gran Canary"
+		city: "San Agustin"
+		address: ""
+		floor: 2
+		areaType: "Sea"
+		closestMini: 100
+		closestSuper: 600
+		carNecessary: "No car needed"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: ""
+		disturbance: "Quiet"
+		areaDescription: "Nice beach"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 1
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "Shared pool"
+		aptDescription: "Simple bu nice"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: ""
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Small kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: ""
+		internetComment: ""
+		petsConsidered: "No pets"
+		petComment: ""
+		suitableForElderly: "Suitable for elderly"
+		suitableForHandicapped: "Suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 550
+		aditionalWeekPrice: 100
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
+
+	Properties.insert
+		island: "Gran Canary"
+		city: "Play Anglesia"
+		address: ""
+		floor: 2
+		areaType: "Sea"
+		closestMini: 100
+		closestSuper: 600
+		carNecessary: "No car needed"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: ""
+		disturbance: "Quiet"
+		areaDescription: "Nice beach"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 1
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "Shared pool"
+		aptDescription: "Simple bu nice"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: ""
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Small kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: ""
+		internetComment: ""
+		petsConsidered: "No pets"
+		petComment: ""
+		suitableForElderly: "Suitable for elderly"
+		suitableForHandicapped: "Suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 550
+		aditionalWeekPrice: 100
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
