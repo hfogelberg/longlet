@@ -42,32 +42,53 @@ Meteor.methods
 				city: city
 
 Meteor.methods
-	createProperty: (island, city, disturbance, loactionType, carNecessary, distanceToSea, distanceToBeach, beachType, areaDescription, numBedRooms, numBathRooms, aptDescription, pool, username, petsConsidered, petComment, suitableForChildren, suitableForHandicapped, suitableForElderly, propertyType, floor, gardenType, address) ->
+	createProperty: (island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username) ->
 		console.dir 'createProperty'
 
 		Properties.insert
 			island: island
 			city: city
-			disturbance: disturbance
-			loactionType: loactionType
+			address: address
+			floor: floor
+			areaType: areaType
+			closestMini: closestMini
+			closestSuper: closestSuper
 			carNecessary: carNecessary
 			distanceToSea: distanceToSea
 			distanceToBeach: distanceToBeach
 			beachType: beachType
+			disturbance: disturbance
 			areaDescription: areaDescription
+			propertyType: propertyType
+			isStudio: isStudio
 			numBedRooms: numBedRooms
 			numBathRooms: numBathRooms
-			aptDescription: aptDescription
+			gardenType: gardenType
 			pool: pool
+			aptDescription: aptDescription
+			hasAC: hasAC
+			hasCeilingFan: hasCeilingFan
+			hasTV: hasTV
+			hasDvd: hasDvd
+			hasCoffeeMaker: hasCoffeeMaker
+			hasKettle: hasKettle
+			hasFridge: hasFridge
+			hasFreezer: hasFreezer
+			hasWashMachine: hasWashMachine
+			hasDishWasher: hasDishWasher
+			hasOven: hasOven
+			hasMicro: hasMicro
+			hasHob: hasHob
+			equipmentComment: equipmentComment
+			hasSatCable: hasSatCable
+			hasDsl: hasDsl
+			hasFibre: hasFibre
+			internetComment: internetComment
 			petsConsidered: petsConsidered
 			petComment: petComment
-			suitableForChildren: suitableForChildren
-			suitableForHandicapped: suitableForHandicapped
 			suitableForElderly: suitableForElderly
+			suitableForHandicapped: suitableForHandicapped
+			suitableForChildren: suitableForChildren
 			username: username
-			propertyType: propertyType
-			floor: floor
-			gardenType: gardenType
-			address: address
 			dateCreated: new Date()
 			status: STATUS_CREATED
