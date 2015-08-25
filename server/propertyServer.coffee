@@ -35,13 +35,16 @@ Meteor.startup ->
 		Properties.find({'_id': id})
 
 Meteor.methods 
+	searchProperties: (island, city, minBeds, minBath, pets, maxPrice, fromDate, endDate) ->
+		console.dir 'searchProperties'
+		
+
 	createLocation: (island, city) ->
 		if Locations.find({island: island, city: city}).count() == 0
 			Locations.insert
 				islandEn: island
 				city: city
 
-Meteor.methods
 	createProperty: (island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment) ->
 		console.dir 'createProperty'
 

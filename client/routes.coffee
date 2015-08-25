@@ -88,12 +88,10 @@ Router.map ->
     @route 'search',
       template: 'search',
       path: 'search'
-    waitOn: ->
-      @subscribe 'getPropertiesByIsland', Session.get('limit'), Session.get('island')
-      @subscribe 'getCitiesOnIsland', Session.get('island')
-    data: citiesOnIslandList: ->
-      Locations.find()
-      
+      waitOn: ->
+        @subscribe 'getLocations'
+      data: islands: ->
+        Locations.find()
 
   return
 

@@ -53,7 +53,6 @@ else
 	console.dir 'No need to seed locations'
 
 
-
 if Islands.find().count() is 0
 	console.dir	 'Seeding islands'
 
@@ -735,3 +734,5 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
+else
+	console.dir 'No need to seed properties'
