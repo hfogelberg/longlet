@@ -1,39 +1,86 @@
 <template name='propertyDetails'>
 	{{#with details}}
 		<h2>{{city}}, {{island}}</h2>
-		
-		<div class='well'>
-			<h3>Property</h3>
-			<div>{{propertyType}}</div>
-			<div>Floor {{floor}}</div>
-			<div>{{numBedRooms}} bed rooms</div>
-			<div>{{numBathRooms}} bath rooms</div>
-			<div>{{aptDescription}}</div>
-			<div>{{gardenType}}</div>
-			<div>{{pool}}</div>
-			<hr>
-			
-			<h3>Area</h3>
-			<div>{{loactionType}}</div>
-			<div>{{disturbance}}</div>
-			<div>{{areaDescription}}</div>
-			<div>Distance to sea {{distanceToSea}} m</div>
-			<div>Distance to beach {{distanceToBeach}}</div>
-			<div>{{beachType}}</div>	
-			<hr>
-		
-			<h3>Pets</h3>
-			<div>{{petsConsidered}}</div>
-			<div>{{petComment}}</div>
-			<hr>
-
-			<h3>Suitability</h3>
-			<div>{{suitableForChildren}}</div>
-			<div>{{suitableForHandicapped}}</div>
-			<div>{{suitableForElderly}}</div>
-			<hr>
-	
-			<div>{{username}} {{dateCreated}}</div>
-		</div>
+		<ul class='list-unstyled'>
+			<li>Address: {{address}}</li>
+			<li>floor: {{floor}}</li>
+		</ul>
+		<hr>
+		<h3>Area</h3>
+		<ul class='list-unstyled'>
+			<li>Type of area: {{areaType}}</li>
+			<li>Closest mini market: {{closestMini}}</li>
+			<li>Closest super market: {{closestSuper}}</li>
+			<li>Car: {{carNecessary}}</li>
+			<li>Distance to sea: {{distanceToSea}}</li>
+			<li>Distance to beach: {{distanceToBeach}}</li>
+			<li>Type of beach: {{beachType}}</li>
+			<li>Disturnaces: {{disturbance}}</li>
+			<li>Description of area: {{areaDescription}}</li>
+		</ul>
+		<hr>
+		<h3>Property</h3>
+		<ul class='list-unstyled'>
+			<li>Type of proprety: {{propertyType}}</li>
+			<li>Studio: {{isStudio}}</li>
+			<li>Number of bed rooms: {{numBedRooms}}</li>
+			<li>Number of bath rooms: {{numBathRooms}}</li>
+			<li>Exterior: {{gardenType}}</li>
+			<li>Pool: {{pool}}</li>
+			<li>Description: {{aptDescription}}</li>
+		</ul>
+		<hr>
+		<h3>Equipment</h3>
+		<ul class='list-unstyled'>
+			<li>{{hasAC}}</li>
+			<li>{{hasCeilingFan}}</li>
+			<li>{{hasTV}}</li>
+			<li>{{hasDvd}}</li>
+			<li>{{hasCoffeeMaker}}</li>
+			<li>{{hasKettle}}</li>
+			<li>{{hasFridge}}</li>
+			<li>{{hasFreezer}}</li>
+			<li>{{hasWashMachine}}</li>
+			<li>{{hasDishWasher}}</li>
+			<li>{{hasOven}}</li>
+			<li>{{hasMicro}}</li>
+			<li>{{hasHob}}</li>
+			<li>Comment: {{equipmentComment}}</li>
+		</ul>
+		<hr>
+		<h3>Technology</h3>
+		<ul class='list-unstyled'>
+			<li>{{hasSatCable}}</li>
+			<li>{{hasDsl}}</li>
+			<li>{{hasFibre}}</li>
+			<li>Comment: {{internetComment}}</li>
+		</ul>
+		<hr>
+		<h3>Pets</h3>
+		<ul class='list-unstyled'>
+			<li>{{petsConsidered}}</li>
+			<li>{{petComment}}</li>
+		</ul>
+		<hr>
+		<h3>Suitability</h3>
+		<ul class='list-unstyled'>
+			<li>{{suitableForElderly}}</li>
+			<li>{{suitableForHandicapped}}</li>
+			<li>{{suitableForChildren}}</li>
+		</ul>
+		<hr>
+		<h3>Price</h3>
+		<ul class='list-unstyled'>
+			<li>Price per month: € {{pricePerMonth}}</li>
+			<li>Additional week: € {{aditionalWeekPrice}}</li>
+			<li>Additional day: € {{aditionalDayPrice}}</li>
+			<li>Electricity included: {{electricityIncluded}}</li>
+			<li>Water included: {{waterIncluded}}</li>
+			<li>Minimum stay: {{minimumStay}} months</li>
+			<li>Discounts: {{discounts}}</li>
+			<li>Comment: {{priceComment}}</li>
+		</ul>
+		<hr>
+		<div>{{username}} {{dateCreated}}</div>
 	{{/with}}
 </template>
