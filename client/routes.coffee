@@ -62,9 +62,15 @@ Router.map ->
       this.next()
     waitOn: ->
       @subscribe 'getPropertyDetails', Session.get('propertyId')
-    data: details: ->
-      Properties.findOne({'_id': Session.get('propertyId')})
-
+      @subscribe 'getPropertiesByCity', Session.get('limit'), Session.get('island'), Session.get('city')
+      @subscribe 'getCitiesOnIsland', Session.get('island')
+    data:
+      details: ->
+        Properties.findOne({'_id': Session.get('propertyId')})
+      citiesOnIslandList: ->
+        Locations.find() 
+      islands: ->
+        Locations.find()
   return
 
 

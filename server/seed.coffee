@@ -193,6 +193,169 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "henfo"
 
+
+	Properties.insert
+		island: "Tenerife"
+		city: "Los Cristianos"
+		address: "By the square"
+		floor: 1
+		areaType: "Residential"
+		closestMini: 50
+		closestSuper: 100
+		carNecessary: "Car not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand beach"
+		disturbance: "Lively"
+		areaDescription: "Plenty of people around"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 2
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "No pool"
+		aptDescription: "Needs a make over"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: "Washing machine"
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Well equiped kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: ""
+		internetComment: ""
+		petsConsidered: "Pets considered"
+		petComment: "Only small ones"
+		suitableForElderly: "Not suitable for elderly"
+		suitableForHandicapped: "Not suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 900
+		aditionalWeekPrice: 300
+		aditionalDayPrice: 100
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
+	Properties.insert
+		island: "Tenerife"
+		city: "Playa del las Americas"
+		address: ""
+		floor: 1
+		areaType: "Resort"
+		closestMini: 200
+		closestSuper: 800
+		carNecessary: "Car not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand beach"
+		disturbance: "Some disturbances"
+		areaDescription: "Beautiful view"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 2
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "No pool"
+		aptDescription: "Newly built"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: "Washing machine"
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Well equiped kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: ""
+		internetComment: ""
+		petsConsidered: "Pets considered"
+		petComment: "Only rhinos"
+		suitableForElderly: "Not suitable for elderly"
+		suitableForHandicapped: "Not suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 900
+		aditionalWeekPrice: 300
+		aditionalDayPrice: 100
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
+	Properties.insert
+		island: "Tenerife"
+		city: "Palmar"
+		address: ""
+		floor: 1
+		areaType: "Resort"
+		closestMini: 200
+		closestSuper: 800
+		carNecessary: "Car not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand beach"
+		disturbance: "Some disturbances"
+		areaDescription: "Beautiful view"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 2
+		numBathRooms: 1
+		gardenType: "Has balcony"
+		pool: "No pool"
+		aptDescription: "Newly built"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: "Washing machine"
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Well equiped kitchen"
+		hasSatCable: ""
+		hasDsl: ""
+		hasFibre: ""
+		internetComment: ""
+		petsConsidered: "Pets considered"
+		petComment: "Only rhinos"
+		suitableForElderly: "Not suitable for elderly"
+		suitableForHandicapped: "Not suitable for handicapped"
+		suitableForChildren: "Suitable for children"
+		pricePerMonth: 900
+		aditionalWeekPrice: 300
+		aditionalDayPrice: 100
+		minimumStay: 2
+		waterIncluded: "on"
+		electricityIncluded: "on"
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
 	Properties.insert
 		island: "Tenerife"
 		city: "Valle San Lorenzo"
