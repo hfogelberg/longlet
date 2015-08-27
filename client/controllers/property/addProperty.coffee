@@ -39,6 +39,7 @@ Template.addProperty.events
 
 		isStudio = false
 		if template.find('.isStudio').checked then isStudio = true
+		alert isStudio
 
 		numBedRooms = template.find('.numBedRooms').value
 		numBathRooms = template.find('.numBathRooms').value
@@ -87,7 +88,6 @@ Template.addProperty.events
 
 		internetELem = template.find('input:radio[name=internet]:checked')
 		internet = $(internetELem).val()
-		alert internet
 
 		# Pets
 		petsConsidered = 'No pets'
