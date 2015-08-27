@@ -13,41 +13,29 @@ Template.addProperty.events
 		floor = template.find('.floor').value
 
 		# Area
-		areaType = 'City'
-		if template.find('.villageLocation').checked then areaType = 'Village'
-		if template.find('.ruralLocation').checked then areaType = 'Rural'
-		if template.find('.seaLocation').checked then areaType = 'Seaside'
+		locationElem = template.find('input:radio[name=locationType]:checked')
+		locationType = $(locationElem).val()
 
 		closestMini = template.find('.closestMini').value
 		closestSuper = template.find('.closestSuper').value
 
-		carNecessary = 'Car not necessary'
-		if template.find('.carRecomendedOption').checked then carNecessary = 'Car recomended'
-		if template.find('.carNecessaryOption').checked then carNecessary = 'Car not necessary'
+		carElem = template.find('input:radio[name=car]:checked')
+		carNecessary = $(carElem).val()
 
 		distanceToSea = template.find('.distanceToSea').value
 		distanceToBeach = template.find('.distanceToBeach').value
 
-		beachType = 'No beach'
-		if template.find('.sandBeachOption').checked then beachType = 'Sand beach'
-		if template.find('.rockBeachOption').checked then beachType = 'Rocky beach'
-		if template.find('.pebbleBeachOption').checked then beachType = 'Pebble beach'
+		beachElem = template.find('input:radio[name=beachType]:checked')
+		beachType = $(beachElem).val()
 
-		disturbance = 'Quiet area'
-		if template.find('.someDisturbancesOption').checked then disturbance = 'Some disturbances'
-		if template.find('.livelyOption').checked then disturbance = 'Lively area'
-
+		noiseElem = template.find('input:radio[name=noise]:checked')
+		disturbance = $(noiseElem).val()
 
 		areaDescription = template.find('.areaDescription').value
 
-
 		# Property
-		propertyType = 'Apartment'
-		if template.find('.bungalowOption').checked = true then propertyType = 'Bungalow'
-		if template.find('.townHouseOption').checked = true then propertyType = 'Town house'
-		if template.find('.villaOption').checked = true then propertyType = 'Villa'
-		if template.find('.fincaOption').checked = true then propertyType = 'Finca'
-
+		propertyElem = template.find('input:radio[name=propertyType]:checked')
+		propertyType = $(propertyElem).val()
 
 		isStudio = false
 		if template.find('.isStudio').checked then isStudio = true
@@ -55,14 +43,11 @@ Template.addProperty.events
 		numBedRooms = template.find('.numBedRooms').value
 		numBathRooms = template.find('.numBathRooms').value
 
-		gardenType = 'No balcony or garden'
-		if template.find('.hasGarden').checked = true then gardenType = 'Has garden'
-		if template.find('.hasVeranda').checked = true then gardenType = 'Has veranda or patio'
-		if template.find('.hasBalcony').checked = true then gardenType = 'Has balcony'
-		
-		pool = 'No pool'
-		if template.find('.sharedPoolOption').checked then pool = 'Shared pool'
-		if template.find('.privatePoolOption').checked then pool = 'Private pool'
+		externalElem = template.find('input:radio[name=externalSpace]:checked')
+		gardenType = $(externalElem).val()
+
+		poolElem = template.find('input:radio[name=pool]:checked')
+		pool = $(poolElem).val()
 
 		aptDescription = template.find('.aptDescription').value
 
@@ -98,12 +83,11 @@ Template.addProperty.events
 
 		# Internet and communicatuion
 		hasSatCable = ''
-		hasDsl = ''
-		hasFibre = ''
 		if template.find('.hasSatCable').checked then hasSatCable = 'Satelite or cable TV'
-		if template.find('.hasDsl').checked then hasDsl = 'DSL Internet'
-		if template.find('.hasFibre').checked then hasFibre = 'High speed Internet'
-		internetComment = template.find('.internetComment').value
+
+		internetELem = template.find('input:radio[name=internet]:checked')
+		internet = $(internetELem).val()
+		alert internet
 
 		# Pets
 		petsConsidered = 'No pets'
@@ -133,10 +117,10 @@ Template.addProperty.events
 		username = Meteor.user().username
 
 
-		Meteor.call 'createLocation', island, city, (error) ->
-		console.log 'Calling createProperty'
-		Meteor.call 'createProperty', island, city, address, floor, areaType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, hasDsl, hasFibre , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, (error) ->
-		Router.go('/myPropertiesList')
+		# Meteor.call 'createLocation', island, city, (error) ->
+		# console.log 'Calling createProperty'
+		# Meteor.call 'createProperty', island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, (error) ->
+		# Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 
   islands: ->

@@ -49,19 +49,19 @@
 			<h2>Describe the area</h2>
 
 			<div class='form-group'>
-				<label for='areaType' class='col-sm-2'>Area type</label>
+				<label for='areaType' class='col-sm-2'>Location</label>
 				<div class='col-sm-10'>
 					<label class='radio-inline'>
-					  <input type='radio' class='cityLocation'>City
+					  <input type='radio' value='City' name='locationType'>City
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='villageLocation'>Village
+					  <input type='radio' value='Village' name='locationType'>Village
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='ruralLocation'>Rural
+					  <input type='radio' value='Rural' name='locationType'>Rural
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='seaLocation'>Sea
+					  <input type='radio' value='Seaside' name='locationType'>Sea
 					</label>
 				</div>
 			</div>
@@ -81,16 +81,16 @@
 			</div>
 
 			<div class='form-group'>
-				<label for='carRecomended' class='col-sm-2'>Car necessary</label>
+				<label for='carRecomended' class='col-sm-2'>Car</label>
 				<div class='col-sm-10'>
 					<label class='radio-inline'>
-					  <input type='radio' class='noCarNecessaryOption'>Not necessary
+					  <input type='radio' value='No car necessary' name='car'>Not necessary
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='carRecomendedOption'>Recomended
+					  <input type='radio' value='Car recomended' name='car'>Recomended
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='carNecessaryOption'>Necessary
+					  <input type='radio' value='Car necessary' name='car'>Necessary
 					</label>
 				</div>
 			</div>
@@ -114,16 +114,16 @@
 				<label for='beachType' class='col-sm-2'>Type of beach</label>
 				<div class='col-sm-10'>			
 					<label class='radio-inline'>
-					  <input type='radio' class='noBeachOption' checked>No beach
+					  <input type='radio' value='No beach' name='beachType'>No beach
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='sandBeachOption'>Sand beach
+					  <input type='radio' value='Sand beach' name='beachType'>Sand beach
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='rockBeachOption'>Rock beach
+					  <input type='radio' value='Rock beach' name='beachType'>Rock beach
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='pebbleBeachOption'>Pebble beach
+					  <input type='radio' value='Pebble beach' name='beachType'>Pebble beach
 					</label>
 				</div>
 			</div>
@@ -132,13 +132,13 @@
 				<label for='noise' class='col-sm-2'>Noise</label>
 				<div class='col-sm-10'>
 					<label class='radio-inline'>
-					  <input type='radio' class='quietOption'>Quiet
+					  <input type='radio' value='Quiet' name='noise'>Quiet
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='someDisturbancesOption'>Some disturbances
+					  <input type='radio' value='Some disturbances' name='noise'>Some disturbances
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='livelyOption'>Lively
+					  <input type='radio' value='Lively' name='noise'>Lively
 					</label>
 				</div>
 			</div>
@@ -158,11 +158,11 @@
 			<div class='form-group'>
 				<label for='propertyType' class='col-sm-2'>Property type</label>
 				<div class='col-sm-10'>
-					<label class='radio-inline'><input type='radio' class='apartmentOption'>Apartment</label>
-					<label class='radio-inline'><input type='radio' class='bungalowOption'>Bungalow</label>
-					<label class='radio-inline'><input type='radio' class='townHouseOption'>Town house</label>
-					<label class='radio-inline'><input type='radio' class='villaOption'>Villa</label>
-					<label class='radio-inline'><input type='radio' class='fincaOption'>Finca</label>
+					<label class='radio-inline'><input type='radio' value='Apartment' name='propertyType'>Apartment</label>
+					<label class='radio-inline'><input type='radio' value='Bungalow' name='propertyType'>Bungalow</label>
+					<label class='radio-inline'><input type='radio' value='Town house' name='propertyType'>Town house</label>
+					<label class='radio-inline'><input type='radio' value='Villa' name='propertyType'>Villa</label>
+					<label class='radio-inline'><input type='radio' value='Finca' name='propertyType'>Finca</label>
 				</div>
 			</div>
 
@@ -188,11 +188,12 @@
 			</div>
 
 			<div class='form-group'>
-				<label for='floor' class='col-sm-2'>Exterior</label>
+				<label for='externalSpace' class='col-sm-2'>Exterior</label>
 				<div class='col-sm-10'>
-					<label class='radio-inline'><input type='radio' class='hasGarden'>Garden</label>
-					<label class='radio-inline'><input type='radio' class='hasVeranda'>Veranda</label>
-					<label class='radio-inline'><input type='radio' class='hasBalcony'>Balcony</label>
+					<label class='radio-inline'><input type='radio' value='No external space' name='externalSpace'>No external space</label>
+					<label class='radio-inline'><input type='radio' value='Garden' name='externalSpace'>Garden</label>
+					<label class='radio-inline'><input type='radio' value='Veranda' name='externalSpace'>Veranda</label>
+					<label class='radio-inline'><input type='radio' value='Balcony' name='externalSpace'>Balcony</label>
 				</div>
 			</div>
 
@@ -200,13 +201,13 @@
 				<label for='pool' class='col-sm-2'>Pool</label>
 				<div class='col-sm-10'>
 					<label class='radio-inline'>
-					  <input type='radio' class='noPoolOption'>No Pool
+					  <input type='radio' value='No pool' name='pool'>No Pool
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='sharedPoolOption'>Shared Pool
+					  <input type='radio' value='Shared pool' name='pool'>Shared Pool
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' class='privatePoolOption'>Private Pool
+					  <input type='radio' value='Private pool' name='pool'>Private Pool
 					</label>
 				</div>
 			</div>
@@ -261,8 +262,7 @@
 
 		<!-- INTERNET -->
 		<div class='well'>
-			<h2>Internet and communication</h2>
-
+			<h2>Communication</h2>
 
 			<div class='form-group'>
 				<label class='col-sm-2'>Satelite or cable</label>
@@ -272,16 +272,11 @@
 			</div>
 
 			<div class='form-group'>
-				<label class='col-sm-2'>DSL</label>
-				<div class='col-sm-2'>
-					<input type='checkbox' class='hasDsl'>
-				</div>
-			</div>
-
-			<div class='form-group'>
-				<label class='col-sm-2'>High speed fibre</label>
-				<div class='col-sm-2'>
-					<input type='checkbox' class='hasFibre'>
+				<label class='col-sm-2'>Internet</label>
+				<div class='col-sm-10'>
+					<label class='radio-inline'><input type='radio' value='No Internet' name='internet'>No internet</label>
+					<label class='radio-inline'><input type='radio' value='DSL' name='internet'>DSL</label>
+					<label class='radio-inline'><input type='radio' value='Fibre' name='internet'>Fibre</label>
 				</div>
 			</div>
 
