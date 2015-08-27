@@ -1,80 +1,74 @@
 <template name='search'>
-
-
 	<h1>Search</h1>
 
 	<div class='row'>
 		<div class='col-sm-3'>
-			<form class='searchForm form-horizontal'>
+			<form class='searchForm'>
 				<div class='form-group'>
-					<label for='island' class='col-sm-2'>Island</label>
-					<div class='col-sm-10'>
-		        <input 	class="form-control typeahead" id="island"
-		        				name="island" type="text"
-		        				autocomplete="off" spellcheck="off"
-		                data-source="islands"/>
+					<label for='island'>Island</label>
+	        <input 	class="typeahead" id="island"
+	        				name="island" type="text"
+	        				autocomplete="off" spellcheck="off"
+	                data-source="islands"/>
 					</div>
-				</div>
 				
 				<div class='form-group'>
-					<label for='city' class='col-sm-2'>City</label>
-					<div class='col-sm-10'>
-		        <input 	class="form-control typeahead" id="city" name="city" type="text"
-		                autocomplete="off" spellcheck="off"
-		                data-source="cities"/>
-					</div>
+					<label for='city'>City</label>
+	        <input 	class="typeahead" id="city" name="city" type="text"
+	                autocomplete="off" spellcheck="off"
+	                data-source="cities"/>
 				</div>
 
 				<div class='form-group'>
-					<label for='minBedrooms' class='col-sm-2'>Minimum bed rooms</label>
-					<div class='col-sm-10'>
-						<input class='minBedRooms' type='number'>
-					</div>
+					<label for='minBedrooms'>Minimum bed rooms</label>
+					<input class='minBedRooms' type='number'>
 				</div>
 
 				<div class='form-group'>
-					<label for='minBedrooms' class='col-sm-2'>Minimum bath rooms</label>
-					<div class='col-sm-10'>
-						<input class='minBathRooms' type='number'>
-					</div>
+					<label for='minBedrooms'>Minimum bath rooms</label>
+					<input class='minBathRooms' type='number'>
 				</div>
 
 				<div class='form-group'>
-					<label for='minBedrooms' class='col-sm-2'>Pets possible</label>
-					<div class='col-sm-10'>
-						<input class='petsPossible' type='checkbox'>
-					</div>
+					<label for='petsPossible'>Pets possible</label>
+					<input class='petsPossible' type='checkbox'>
 				</div>
 
 				<div class='form-group'>
-					<label for='maxPrice' class='col-sm-2'>Maximum price/month</label>
-					<div class='col-sm-10'>
-						<input class='maxPrice' type='number' placeholder='Euros'>
-					</div>
+					<label for='maxPrice'>Maximum price/month</label>
+					<input class='maxPrice' type='number' placeholder='Euros'>
 				</div>
 
 				<div class='form-group'>
-					<label for='startDate' class='col-sm-2'>From date</label>
-					<div class='col-sm-10'>
-						<input class='fromDate' type='date'>
-					</div>
+					<label for='startDate'>From date</label>
+					<input class='fromDate' type='date'>
 				</div>
 
 				<div class='form-group'>
-					<label for='endDate' class='col-sm-2'>End date date</label>
-					<div class='col-sm-10'>
-						<input class='endDate' type='date'>
-					</div>
+					<label for='endDate'>End date date</label>
+					<input class='endDate' type='date'>
 				</div>
 
-				<div class='col-sm-offset-2 col-sm-2'>
+				<div>
 					<input type='button' class='btnSearch btn btn-primary' value='Search'>
 				</div>
 			</form>
 		</div>
-
-		<div class='col-sm-8'>
+		<div class='col-sm-9'>
+			{{>searchResult}}
 		</div>
 	</div>
-
 </template>
+
+
+
+<template name='searchResult'>
+	{{#each foundProperties}}
+		{{>property}}
+	{{/each}}
+</template>
+
+
+
+
+
