@@ -2,7 +2,6 @@ Location (RB)
 	City
 	Village
 	Rural
-	Seaside
 
 Car (RB)
 	Necessary
@@ -15,9 +14,9 @@ Type of beach (RB)
 	Rocks
 	Pebbles
 
-Noise (RB)
+Disturbances (RB)
 	Lively
-	Some disturbances
+	Some
 	Quiet
 
 Property type (RB)
@@ -26,7 +25,6 @@ Property type (RB)
 	Town house
 	Villa
 	Finca
-
 
 Studio  (CB)
 

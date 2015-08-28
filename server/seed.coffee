@@ -89,51 +89,50 @@ if Properties.find().count() is 0
 		city: "Playa Blanca"
 		address: "By the beach"
 		floor: 0
-		areaType: "Villa"
+		locationType: "Village"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "Car not necessary"
+		carNecessary: "Not necessary"
 		distanceToSea: 50
 		distanceToBeach: 50
-		beachType: "Sand beach"
-		disturbance: "Quiet area"
+		beachType: "Sand"
+		disturbance: "Quiet"
 		areaDescription: "Beautiful"
-		propertyType: "Finca"
+		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "Shared pool"
+		gardenType: "Balcony"
+		pool: "Shared"
 		aptDescription: "Well kept"
-		hasAC: ""
-		hasCeilingFan: "Ceiling fan"
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: "Kettle"
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: "Oven"
-		hasMicro: "Micro wave"
-		hasHob: "Oven"
+		hasAC: false
+		hasCeilingFan: true
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: true
+		hasDishWasher: false
+		hasOven: true
+		hasMicro: true
+		hasHob: true
 		equipmentComment: "Well equiped kitchen"
-		hasSatCable: ""
-		hasDsl: "DSL Internet"
-		hasFibre: ""
+		hasSatCable: false
+		internet: "DSL"
 		internetComment: ""
-		petsConsidered: "Pets considered"
+		petsConsidered: true
 		petComment: "Only if it's dangerous"
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -143,53 +142,52 @@ if Properties.find().count() is 0
 		city: "Los Cristianos"
 		address: "Calle la Montana 30"
 		floor: 1
-		areaType: "Residential"
+		locationType: "City"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "Car not necessary"
+		carNecessary: "Not necessary"
 		distanceToSea: 300
 		distanceToBeach: 300
-		beachType: "Sand beach"
-		disturbance: "Some disturbances"
+		beachType: "Sand"
+		disturbance: "Some"
 		areaDescription: "Beautiful view"
 		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "No pool"
+		gardenType: "Balcony"
+		pool: "None"
 		aptDescription: "Needs a make over"
-		hasAC: ""
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: true
+		hasWashMachine: true
+		hasDishWasher: true
+		hasOven: true
+		hasMicro: true
+		hasHob: true
 		equipmentComment: "Well equiped kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		hasSatCable: true
+		internet: "None"
 		internetComment: ""
-		petsConsidered: "Pets considered"
+		petsConsidered: true
 		petComment: "Only small ones"
-		suitableForElderly: "Not suitable for elderly"
-		suitableForHandicapped: "Not suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: false
+		suitableForHandicapped: false
+		suitableForChildren: true
 		pricePerMonth: 900
 		aditionalWeekPrice: 300
 		aditionalDayPrice: 100
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
-		priceComment: "price comments"
+		priceComment: "Bills up to €50 per month included"
 		username: "henfo"
 
 
@@ -198,51 +196,50 @@ if Properties.find().count() is 0
 		city: "Los Cristianos"
 		address: "By the square"
 		floor: 1
-		areaType: "Residential"
+		locationType: "City"
 		closestMini: 50
 		closestSuper: 100
-		carNecessary: "Car not necessary"
+		carNecessary: "Not necessary"
 		distanceToSea: 300
 		distanceToBeach: 300
-		beachType: "Sand beach"
+		beachType: "Sand"
 		disturbance: "Lively"
 		areaDescription: "Plenty of people around"
 		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "No pool"
+		gardenType: "Balcony"
+		pool: "None"
 		aptDescription: "Needs a make over"
-		hasAC: ""
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: true
+		hasCoffeeMaker: true
+		hasKettle: true
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: true
+		hasDishWasher: true
+		hasOven: true
+		hasMicro: false
+		hasHob: true
 		equipmentComment: "Well equiped kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		hasSatCable: false
+		internet: "None"
 		internetComment: ""
 		petsConsidered: "Pets considered"
 		petComment: "Only small ones"
-		suitableForElderly: "Not suitable for elderly"
-		suitableForHandicapped: "Not suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: false
+		suitableForHandicapped: false
+		suitableForChildren: true
 		pricePerMonth: 900
 		aditionalWeekPrice: 300
 		aditionalDayPrice: 100
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: false
+		electricityIncluded: false
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -252,51 +249,50 @@ if Properties.find().count() is 0
 		city: "Playa del las Americas"
 		address: ""
 		floor: 1
-		areaType: "Resort"
+		locationType: "City"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "Car not necessary"
+		carNecessary: "Not necessary"
 		distanceToSea: 300
 		distanceToBeach: 300
-		beachType: "Sand beach"
-		disturbance: "Some disturbances"
+		beachType: "Sand"
+		disturbance: "Some"
 		areaDescription: "Beautiful view"
 		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "No pool"
+		gardenType: "Balcony"
+		pool: "Shared"
 		aptDescription: "Newly built"
-		hasAC: ""
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
+		hasAC: true
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: false
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: true
 		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasDishWasher: true
+		hasOven: true
+		hasMicro: true
+		hasHob: false
 		equipmentComment: "Well equiped kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		hasSatCable: true
+		internet: "DSL"
 		internetComment: ""
-		petsConsidered: "Pets considered"
+		petsConsidered: true
 		petComment: "Only rhinos"
-		suitableForElderly: "Not suitable for elderly"
-		suitableForHandicapped: "Not suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: false
+		suitableForHandicapped: false
+		suitableForChildren: true
 		pricePerMonth: 900
 		aditionalWeekPrice: 300
 		aditionalDayPrice: 100
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -306,51 +302,50 @@ if Properties.find().count() is 0
 		city: "Palmar"
 		address: ""
 		floor: 1
-		areaType: "Resort"
+		locationType: "Village"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "Car not necessary"
+		carNecessary: "Recomended"
 		distanceToSea: 300
 		distanceToBeach: 300
-		beachType: "Sand beach"
-		disturbance: "Some disturbances"
+		beachType: "Rocks"
+		disturbance: "Some"
 		areaDescription: "Beautiful view"
-		propertyType: "Apartment"
+		propertyType: "Villa"
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "No pool"
+		gardenType: "Garden"
+		pool: "Private"
 		aptDescription: "Newly built"
-		hasAC: ""
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: true
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: true
+		hasDishWasher: false
+		hasOven: true
+		hasMicro: false
+		hasHob: true
 		equipmentComment: "Well equiped kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		hasSatCable: true
+		internet: "Fibre"
 		internetComment: ""
-		petsConsidered: "Pets considered"
+		petsConsidered: true
 		petComment: "Only rhinos"
-		suitableForElderly: "Not suitable for elderly"
-		suitableForHandicapped: "Not suitable for handicapped"
-		suitableForChildren: "Suitable for children"
-		pricePerMonth: 900
-		aditionalWeekPrice: 300
-		aditionalDayPrice: 100
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
+		pricePerMonth: 700
+		aditionalWeekPrice: 200
+		aditionalDayPrice: 35
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -360,51 +355,50 @@ if Properties.find().count() is 0
 		city: "Valle San Lorenzo"
 		address: "In the mountains"
 		floor: 0
-		areaType: "Residential"
+		locationType: "Village"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "Car recomended"
+		carNecessary: "Recomended"
 		distanceToSea: ""
 		distanceToBeach: ""
-		beachType: ""
-		disturbance: "Quiet area"
+		beachType: "None"
+		disturbance: "Quiet"
 		areaDescription: "Beautiful view"
-		propertyType: "Villa"
+		propertyType: "Finca"
 		isStudio: false
 		numBedRooms: 3
 		numBathRooms: 1
-		gardenType: "Has garden"
-		pool: "No pool"
+		gardenType: "Garden"
+		pool: "None"
 		aptDescription: "Well kept"
-		hasAC: ""
-		hasCeilingFan: "Ceiling fan"
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: "Oven"
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: true
+		hasFridge: true
+		hasFreezer: true
+		hasWashMachine: true
+		hasDishWasher: false
+		hasOven: true
+		hasMicro: true
+		hasHob: true
 		equipmentComment: "Well equiped kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		hasSatCable: false
+		internet: "none"
 		internetComment: ""
-		petsConsidered: "Pets considered"
+		petsConsidered: false
 		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -414,51 +408,50 @@ if Properties.find().count() is 0
 		city: "Santa Cruz"
 		address: "In the middle"
 		floor: 5
-		areaType: "Residential"
+		locationType: "City"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "No car needed"
+		carNecessary: "Not necessary"
 		distanceToSea: 800
-		distanceToBeach: 1200
-		beachType: ""
+		distanceToBeach: ''
+		beachType: "None"
 		disturbance: "Lively"
 		areaDescription: "Plenty of shops"
-		propertyType: "City"
+		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "Shared pool"
+		gardenType: "Balcony"
+		pool: "Shared"
 		aptDescription: "Dark and gloomy"
-		hasAC: "Has Air conditioning"
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: "Oven"
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasAC: true
+		hasCeilingFan: false
+		hasTV: false
+		hasDvd: false
+		hasCoffeeMaker: false
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: true
+		hasDishWasher: false
+		hasOven: false
+		hasMicro: true
+		hasHob: false
 		equipmentComment: "Large kitchen table"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: "High speed fibre"
+		hasSatCable: false
+		internet: "None"
 		internetComment: ""
-		petsConsidered: "No pets"
+		petsConsidered: false
 		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: false
+		electricityIncluded: false
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -469,51 +462,50 @@ if Properties.find().count() is 0
 		city: "Costa Calma"
 		address: ""
 		floor: 5
-		areaType: "Resort"
+		locationType: "Village"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "No car needed"
-		distanceToSea: 800
+		carNecessary: "Not necessary"
+		distanceToSea: 200
 		distanceToBeach: 1200
-		beachType: ""
+		beachType: "Pebbles"
 		disturbance: "Quiet"
-		areaDescription: "Good surfing"
-		propertyType: "Sea"
+		areaDescription: "Good diving"
+		propertyType: "Bungalow"
 		isStudio: true
 		numBedRooms: 0
 		numBathRooms: 1
 		gardenType: "Has balcony"
-		pool: "Shared pool"
-		aptDescription: "Dark and gloomy"
-		hasAC: "Has Air conditioning"
-		hasCeilingFan: "Ceiling fan"
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		pool: "Shared"
+		aptDescription: "Very beautiful"
+		hasAC: true
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: false
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: true
+		hasDishWasher: false
+		hasOven: false
+		hasMicro: true
+		hasHob: true
 		equipmentComment: "Small kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: "DSL"
+		hasSatCable: false
+		internet: "None"
 		internetComment: ""
-		petsConsidered: "No pets"
+		petsConsidered: false
 		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: false
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -523,51 +515,50 @@ if Properties.find().count() is 0
 		city: "Costa Calma"
 		address: ""
 		floor: 1
-		areaType: "Resort"
+		locationType: "Village"
 		closestMini: 200
 		closestSuper: 800
-		carNecessary: "No car needed"
+		carNecessary: "Not necessary"
 		distanceToSea: 300
 		distanceToBeach: 300
 		beachType: ""
 		disturbance: "Quiet"
 		areaDescription: "Nice beach"
-		propertyType: "Sea"
+		propertyType: "Bungalow"
 		isStudio: true
 		numBedRooms: 0
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "Own pool"
+		gardenType: "Balcony"
+		pool: "Private"
 		aptDescription: "Very light"
-		hasAC: "Has Air conditioning"
-		hasCeilingFan: "Ceiling fan"
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: "Washing machine"
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
-		equipmentComment: "Small kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: "DSL"
+		hasAC: true
+		hasCeilingFan: true
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: true
+		hasDishWasher: false
+		hasOven: false
+		hasMicro: true
+		hasHob: true
+		equipmentComment: true
+		hasSatCable: false
+		internet: "None"
 		internetComment: ""
-		petsConsidered: "No pets"
+		petsConsidered: false
 		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "henfo"
@@ -577,22 +568,75 @@ if Properties.find().count() is 0
 		city: "San Agustin"
 		address: ""
 		floor: 2
-		areaType: "Sea"
+		locationType: "City"
 		closestMini: 100
 		closestSuper: 600
-		carNecessary: "No car needed"
+		carNecessary: "Not necessary"
 		distanceToSea: 300
 		distanceToBeach: 300
-		beachType: ""
+		beachType: "Sand"
 		disturbance: "Quiet"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "Shared pool"
-		aptDescription: "Simple bu nice"
+		gardenType: "Balcony"
+		pool: "Shared"
+		aptDescription: "Simple but nice"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: false
+		hasDishWasher: false
+		hasOven: false
+		hasMicro: true
+		hasHob: true
+		equipmentComment: "Small kitchen"
+		hasSatCable: false
+		internet: "DSL"
+		internetComment: ""
+		petsConsidered: false
+		petComment: ""
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
+		pricePerMonth: 550
+		aditionalWeekPrice: 100
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: true
+		electricityIncluded: true
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "henfo"
+
+	Properties.insert
+		island: "Gran Canary"
+		city: "San Agustin"
+		address: ""
+		floor: 2
+		locationType: "Sea"
+		closestMini: City
+		closestSuper: 600
+		carNecessary: "Not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand"
+		disturbance: "Quiet"
+		areaDescription: "Nice beach"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 1
+		numBathRooms: 1
+		gardenType: "Balcony"
+		pool: "Shared"
+		aptDescription: "Simple but nice"
 		hasAC: ""
 		hasCeilingFan: ""
 		hasTV: "TV"
@@ -608,68 +652,13 @@ if Properties.find().count() is 0
 		hasHob: "Has hob"
 		equipmentComment: "Small kitchen"
 		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		internet: "None"
 		internetComment: ""
 		petsConsidered: "No pets"
 		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
-		pricePerMonth: 550
-		aditionalWeekPrice: 100
-		aditionalDayPrice: 25
-		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
-		discounts: "discounts"
-		priceComment: "price comments"
-		username: "henfo"
-
-	Properties.insert
-		island: "Gran Canary"
-		city: "San Agustin"
-		address: ""
-		floor: 2
-		areaType: "Sea"
-		closestMini: 100
-		closestSuper: 600
-		carNecessary: "No car needed"
-		distanceToSea: 300
-		distanceToBeach: 300
-		beachType: ""
-		disturbance: "Quiet"
-		areaDescription: "Nice beach"
-		propertyType: "Apartment"
-		isStudio: false
-		numBedRooms: 1
-		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "Shared pool"
-		aptDescription: "Simple bu nice"
-		hasAC: ""
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: ""
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
-		equipmentComment: "Small kitchen"
-		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
-		internetComment: ""
-		petsConsidered: "No pets"
-		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
@@ -686,22 +675,22 @@ if Properties.find().count() is 0
 		city: "Play Anglesia"
 		address: ""
 		floor: 2
-		areaType: "Sea"
+		locationType: "City"
 		closestMini: 100
 		closestSuper: 600
-		carNecessary: "No car needed"
+		carNecessary: "Not necessary"
 		distanceToSea: 300
 		distanceToBeach: 300
-		beachType: ""
-		disturbance: "Quiet"
+		beachType: "Sand"
+		disturbance: "Some"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
-		gardenType: "Has balcony"
-		pool: "Shared pool"
-		aptDescription: "Simple bu nice"
+		gardenType: "Balcony"
+		pool: "Shared"
+		aptDescription: "Simple but nice"
 		hasAC: ""
 		hasCeilingFan: ""
 		hasTV: "TV"
@@ -717,14 +706,13 @@ if Properties.find().count() is 0
 		hasHob: "Has hob"
 		equipmentComment: "Small kitchen"
 		hasSatCable: ""
-		hasDsl: ""
-		hasFibre: ""
+		internet: "Fibre"
 		internetComment: ""
 		petsConsidered: "No pets"
 		petComment: ""
-		suitableForElderly: "Suitable for elderly"
-		suitableForHandicapped: "Suitable for handicapped"
-		suitableForChildren: "Suitable for children"
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
 		pricePerMonth: 550
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25

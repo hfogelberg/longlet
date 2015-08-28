@@ -53,33 +53,33 @@ Template.addProperty.events
 		aptDescription = template.find('.aptDescription').value
 
 		# Equipment
-		hasAC = ''
-		hasCeilingFan = ''
-		hasTV = ''
-		hasDvd = ''
-		hasCoffeeMaker = ''
-		hasKettle = ''
-		hasFridge = ''
-		hasFreezer = ''
-		hasWashMachine = ''
-		hasDishWasher = ''
-		hasOven = ''
-		hasMicro = ''
-		hasHob = ''
+		hasAC = false
+		hasCeilingFan = false
+		hasTV = false
+		hasDvd = false
+		hasCoffeeMaker = false
+		hasKettle = false
+		hasFridge = false
+		hasFreezer = false
+		hasWashMachine = false
+		hasDishWasher = false
+		hasOven = false
+		hasMicro = false
+		hasHob = false
 		
-		if template.find('.hasAC').checked then hasAC = 'Air conditioning'
-		if template.find('.hasCeilingFan').checked then hasCeilingFan = 'Ceiling fan'
-		if template.find('.hasTV').checked then hasTV = 'TV'
-		if template.find('.hasDvd').checked then hasDvd = 'DVD or Blue ray player'
-		if template.find('.hasCoffeeMaker').checked then hasCoffeeMaker = 'Coffee maker'
-		if template.find('.hasKettle').checked then hasKettle = 'Kettle'
-		if template.find('.hasFridge').checked then hasFridge = 'Fridge'
-		if template.find('.hasFreezer').checked then hasFreezer = 'Freezer'
-		if template.find('.hasWashMachine').checked then hasWashMachine = 'Washing machine'
-		if template.find('.hasDishWasher').checked then hasDishWasher = 'Dish washer'
-		if template.find('.hasOven').checked then hasOven = 'Oven'
-		if template.find('.hasMicro').checked then hasMicro = 'Micro wave'
-		if template.find('.hasHob').checked then hasHob = 'Hob'
+		if template.find('.hasAC').checked then hasAC = true
+		if template.find('.hasCeilingFan').checked then hasCeilingFan = true
+		if template.find('.hasTV').checked then hasTV = true
+		if template.find('.hasDvd').checked then hasDvd = true
+		if template.find('.hasCoffeeMaker').checked then hasCoffeeMaker = true
+		if template.find('.hasKettle').checked then hasKettle = true
+		if template.find('.hasFridge').checked then hasFridge = true
+		if template.find('.hasFreezer').checked then hasFreezer = true
+		if template.find('.hasWashMachine').checked then hasWashMachine = true
+		if template.find('.hasDishWasher').checked then hasDishWasher = true
+		if template.find('.hasOven').checked then hasOven = true
+		if template.find('.hasMicro').checked then hasMicro = true
+		if template.find('.hasHob').checked then hasHob = true
 		equipmentComment = template.find('.equipmentComment').value
 
 		# Internet and communicatuion
@@ -90,27 +90,31 @@ Template.addProperty.events
 		internet = $(internetELem).val()
 
 		# Pets
-		petsConsidered = 'No pets'
-		if template.find('.petsConsidered').checked then petsConsidered = 'Pets considered'
+		petsConsidered = false
+		if template.find('.petsConsidered').checked then petsConsidered = true
 		petComment = template.find('.petComment').value
 
 		# Suitability
-		suitableForElderly = 'Not suitable for elderly'
-		if template.find('.elderlyCheck').checked then suitableForElderly = 'Suitable for elderly'
+		suitableForElderly = false
+		if template.find('.elderlyCheck').checked then suitableForElderly = true
 
-		suitableForHandicapped = 'Not suitable for handicapped'
-		if template.find('.motionCheck').checked then suitableForHandicapped = 'Suitable for handicapped'
+		suitableForHandicapped = false
+		if template.find('.motionCheck').checked then suitableForHandicapped = true
 
-		suitableForChildren = 'Not suitable for children'
-		if template.find('.childrenCheck').checke then suitableForChildren = 'Suitable for children'
+		suitableForChildren = false
+		if template.find('.childrenCheck').checke then suitableForChildren = true
 
 		# Price
 		pricePerMonth = template.find('.pricePerMonth').value
 		aditionalWeekPrice = template.find('.aditionalWeekPrice').value
 		aditionalDayPrice = template.find('.aditionalDayPrice').value
 		minimumStay = template.find('.minimumStay').value
-		waterIncluded = template.find('.waterIncluded').value
-		electricityIncluded = template.find('.electricityIncluded').value
+
+		waterIncluded = false
+		if template.find('.waterIncluded').checked then waterIncluded = true
+
+		electricityIncluded = false
+		if template.find('.electricityIncluded').checked then	electricityIncluded = true
 		discounts = template.find('.discounts').value
 		priceComment = template.find('.priceComment').value
 
