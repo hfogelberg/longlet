@@ -1,0 +1,71 @@
+Location (RB)
+	City
+	Village
+	Rural
+	Seaside
+
+Car (RB)
+	Necessary
+	Recomended
+	Not necessary
+
+Type of beach (RB)
+	None
+	Sand
+	Rocks
+	Pebbles
+
+Noise (RB)
+	Lively
+	Some disturbances
+	Quiet
+
+Property type (RB)
+	Apartment
+	Bungalow
+	Town house
+	Villa
+	Finca
+
+
+Studio  (CB)
+
+Exterior (RB)
+	None
+	Garden
+	Veranda
+	Balcony
+
+Pool (RB)
+	None
+	Shared
+	Private
+
+
+Air conditioning (CB)
+Ceiling fan (CB)
+TV (CB)
+DVD (CB)
+Coffee maker (CB)
+Kettle (CB)
+Fridge (CB)
+Freezer (CB)
+Washing machine (CB)
+Dish washer (CB)
+Oven (CB)
+Microwave (CB)
+Hob (CB)
+
+Internet (RB)
+	None
+	DSL
+	Fibre
+
+Pets considered (CB)
+
+Motion handicapped (CB)
+Elderly (CB)
+Children (CB)
+
+Water included (CB)
+Electricity included (CB)

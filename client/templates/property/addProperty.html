@@ -26,9 +26,8 @@
 				</div>
 			</div>
 
-			<h2>Postal address</h2>
 			<div class='form-group'>
-				<label for='street' class='col-sm-2'>Adress</label>
+				<label for='street' class='col-sm-2'>Postal adress</label>
 				<div class='col-sm-10'>
 					<textarea class='form-control' id='propertyAddress' rows='5' name='adress'></textarea>
 				</div>
@@ -37,7 +36,7 @@
 			<div class='form-group'>
 				<label for='floor' class='col-sm-2'>Which floor?</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control floor' min='0'>
+					<input type='number' class='floor' min='0'>
 				</div>
 			</div>
 
@@ -69,14 +68,14 @@
 			<div class='form-group'>
 				<label for='closestMini' class='col-sm-2'>Closest mini market</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control closestMini' placeholder='Meters'>
+					<input type='number' class='closestMini' placeholder='Meters'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='closestMini' class='col-sm-2'>Closest super market</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control closestSuper' placeholder='Meters'>
+					<input type='number' class='closestSuper' placeholder='Meters'>
 				</div>
 			</div>
 
@@ -84,13 +83,13 @@
 				<label for='carRecomended' class='col-sm-2'>Car</label>
 				<div class='col-sm-10'>
 					<label class='radio-inline'>
-					  <input type='radio' value='Car necessary' name='car' checked>Necessary
+					  <input type='radio' value='Necessary' name='car' checked>Necessary
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='Car recomended' name='car'>Recomended
+					  <input type='radio' value='Recomended' name='car'>Recomended
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='No car necessary' name='car'>Not necessary
+					  <input type='radio' value='Not necessary' name='car'>Not necessary
 					</label>
 				</div>
 			</div>
@@ -99,14 +98,14 @@
 			<div class='form-group'>
 				<label for='distanceToSea' class='col-sm-2'>Distance to sea</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control distanceToSea' placeholder='meters'/>
+					<input type='number' class='distanceToSea' placeholder='Meters'/>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='distanceToBeach' class='col-sm-2'>Distance to beach</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control distanceToBeach' placeholder='meters'/>
+					<input type='number' class='distanceToBeach' placeholder='Meters'/>
 				</div>
 			</div>
 
@@ -114,16 +113,16 @@
 				<label for='beachType' class='col-sm-2'>Type of beach</label>
 				<div class='col-sm-10'>			
 					<label class='radio-inline'>
-					  <input type='radio' value='No beach' name='beachType' checked>No beach
+					  <input type='radio' value='None' name='beachType' checked>None
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='Sand beach' name='beachType'>Sand beach
+					  <input type='radio' value='Sand' name='beachType'>Sand
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='Rock beach' name='beachType'>Rock beach
+					  <input type='radio' value='Rocks' name='beachType'>Rocks
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='Pebble beach' name='beachType'>Pebble beach
+					  <input type='radio' value='Pebbles' name='beachType'>Pebbles
 					</label>
 				</div>
 			</div>
@@ -176,21 +175,21 @@
 			<div class='form-group'>
 				<label for='numBedRooms' class='col-sm-2'>Bed rooms</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control numBedRooms' min='0'>
+					<input type='number' class='numBedRooms' min='0'>
 				</div>
 			</div>
 			
 			<div class='form-group'>
 				<label for='numBathRooms' class='col-sm-2'>Bath rooms</label>
 				<div class='col-sm-10'>
-					<input type='number' class='form-control numBathRooms' min='0'>
+					<input type='number' class='numBathRooms' min='0'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='externalSpace' class='col-sm-2'>Exterior</label>
 				<div class='col-sm-10'>
-					<label class='radio-inline'><input type='radio' value='No external space' name='externalSpace' checked>No external space</label>
+					<label class='radio-inline'><input type='radio' value='None' name='externalSpace' checked>No external space</label>
 					<label class='radio-inline'><input type='radio' value='Garden' name='externalSpace'>Garden</label>
 					<label class='radio-inline'><input type='radio' value='Veranda' name='externalSpace'>Veranda</label>
 					<label class='radio-inline'><input type='radio' value='Balcony' name='externalSpace'>Balcony</label>
@@ -201,13 +200,13 @@
 				<label for='pool' class='col-sm-2'>Pool</label>
 				<div class='col-sm-10'>
 					<label class='radio-inline'>
-					  <input type='radio' value='No pool' name='pool' checked>No Pool
+					  <input type='radio' value='None' name='pool' checked>No Pool
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='Shared pool' name='pool'>Shared Pool
+					  <input type='radio' value='Shared' name='pool'>Shared Pool
 					</label>
 					<label class='radio-inline'>
-					  <input type='radio' value='Private pool' name='pool'>Private Pool
+					  <input type='radio' value='Private' name='pool'>Private Pool
 					</label>
 				</div>
 			</div>
@@ -225,37 +224,39 @@
 			<h2>Equipment</h2>
 
 			<div class='row'>
-				<div class='col-sm-4'>
-					<ul class='list-unstyled'>
-						<li><label><input type='checkbox' class='hasAC'> Air conditioning</label></li>
-						<li><label><input type='checkbox' class='hasCeilingFan'> Ceiling fan</label></li>
-						<li><label><input type='checkbox' class='hasTV'> TV</label></li>
-						<li><label><input type='checkbox' class='hasDvd'> DVD</label></li>
-					</ul>
-				</div>
-				<div class='col-sm-4'>
-					<ul class='list-unstyled'>
-						<li><label><input type='checkbox' class='hasCoffeeMaker'> Coffee maker</label></li>
-						<li><label><input type='checkbox' class='hasKettle'> Kettle</label></li>
-						<li><label><input type='checkbox' class='hasFridge'> Fridge</label></li>
-						<li><label><input type='checkbox' class='hasFreezer'> Freezer</label></li>
-						<li><label><input type='checkbox' class='hasWashMachine'> Washing machine</label></li>
-					</ul>
-				</div>
-				<div class='col-sm-4'>
-					<ul class='list-unstyled'> 
-						<li><label><input type='checkbox' class='hasDishWasher'> Dish washer</label></li>
-						<li><label><input type='checkbox' class='hasOven'> Oven</label></li>
-						<li><label><input type='checkbox' class='hasMicro'> Microwave</label></li>
-						<li><label><input type='checkbox' class='hasHob'> Hob</label></li>
-					</ul>
+				<div class='form-group'>
+					<div class='col-sm-offset-2 col-sm-3'>
+						<ul class='list-unstyled'>
+							<li><label><input type='checkbox' class='hasAC'> Air conditioning</label></li>
+							<li><label><input type='checkbox' class='hasCeilingFan'> Ceiling fan</label></li>
+							<li><label><input type='checkbox' class='hasTV'> TV</label></li>
+							<li><label><input type='checkbox' class='hasDvd'> DVD</label></li>
+						</ul>
+					</div>
+					<div class='col-sm-3'>
+						<ul class='list-unstyled'>
+							<li><label><input type='checkbox' class='hasCoffeeMaker'> Coffee maker</label></li>
+							<li><label><input type='checkbox' class='hasKettle'> Kettle</label></li>
+							<li><label><input type='checkbox' class='hasFridge'> Fridge</label></li>
+							<li><label><input type='checkbox' class='hasFreezer'> Freezer</label></li>
+							<li><label><input type='checkbox' class='hasWashMachine'> Washing machine</label></li>
+						</ul>
+					</div>
+					<div class='col-sm-3'>
+						<ul class='list-unstyled'> 
+							<li><label><input type='checkbox' class='hasDishWasher'> Dish washer</label></li>
+							<li><label><input type='checkbox' class='hasOven'> Oven</label></li>
+							<li><label><input type='checkbox' class='hasMicro'> Microwave</label></li>
+							<li><label><input type='checkbox' class='hasHob'> Hob</label></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='equipmentComment' class='col-sm-2'>Comment</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control equipmentComment' rows='5' name='areaDescription'></textarea>
+					<textarea class='form-control equipmentComment' rows='5' name='equipmentComment'></textarea>
 				</div>
 			</div>
 		</div> <!-- Equipment well -->
@@ -274,7 +275,7 @@
 			<div class='form-group'>
 				<label class='col-sm-2'>Internet</label>
 				<div class='col-sm-10'>
-					<label class='radio-inline'><input type='radio' value='No Internet' name='internet' checked>No internet</label>
+					<label class='radio-inline'><input type='radio' value='None' name='internet' checked>No internet</label>
 					<label class='radio-inline'><input type='radio' value='DSL' name='internet'>DSL</label>
 					<label class='radio-inline'><input type='radio' value='Fibre' name='internet'>Fibre</label>
 				</div>
@@ -283,7 +284,7 @@
 			<div class='form-group'>
 				<label for='internetComment' class='col-sm-2'>Comment</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control internetComment' rows='5' name='areaDescription'></textarea>
+					<textarea class='form-control internetComment' rows='5' name='internetComment'></textarea>
 				</div>
 			</div>
 		</div> 
@@ -372,7 +373,7 @@
 			<div class='form-group'>
 				<label for='minimumStay' class='col-sm-2'>Minimum stay</label>
 				<div class='col-sm-10'>
-					<input type='number' class='minimumStay' min='1' placeholder='months'>
+					<input type='number' class='minimumStay' min='1' placeholder='Months'>
 				</div>
 			</div>
 
