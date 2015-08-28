@@ -2,7 +2,11 @@
 	<div class='well'>
 		<h3>{{island}}</h3> 
 		<h4>{{city}}</h4>
-		<p>{{numBedRooms}} bed rooms</p>
+		{{#if isStudio}}
+			<p>Studio apartment</p>
+		{{else}}		
+			<p>{{numBedRooms}} bed rooms</p>
+		{{/if}}
 		<p>{{numBathRooms}} bath rooms</p>
 
 		<a href='/showProprety/{{_id}}' class='btn btn-primary btn-large'>Show more</a>

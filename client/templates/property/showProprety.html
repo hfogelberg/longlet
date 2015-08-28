@@ -4,10 +4,11 @@
 	{{>citiesList}}
 	<hr />
 	{{#with details}}
+		{{_id}}
 		<h2>{{city}}, {{island}}</h2>
 		<ul class='list-unstyled'>
 			<li>Address: {{address}}</li>
-			<li>floor: {{floor}}</li>
+			<li>Floor: {{floor}}</li>
 		</ul>
 		<hr>
 		<h3>Area</h3>
@@ -26,51 +27,91 @@
 		<h3>Property</h3>
 		<ul class='list-unstyled'>
 			<li>Type of proprety: {{propertyType}}</li>
-			<li>Studio: {{isStudio}}</li>
-			<li>Number of bed rooms: {{numBedRooms}}</li>
+			{{#if isStudio}}
+				<li>Studio apartment</li>
+			{{else}}
+				<li>Number of bed rooms: {{numBedRooms}}</li>
+			{{/if}}
 			<li>Number of bath rooms: {{numBathRooms}}</li>
-			<li>Exterior: {{gardenType}}</li>
+			<li>Balcony or garden: {{gardenType}}</li>
 			<li>Pool: {{pool}}</li>
-			<li>Description: {{aptDescription}}</li>
+			<li>{{aptDescription}}</li>
 		</ul>
 		<hr>
 		<h3>Equipment</h3>
 		<ul class='list-unstyled'>
-			<li>{{hasAC}}</li>
-			<li>{{hasCeilingFan}}</li>
-			<li>{{hasTV}}</li>
-			<li>{{hasDvd}}</li>
-			<li>{{hasCoffeeMaker}}</li>
-			<li>{{hasKettle}}</li>
-			<li>{{hasFridge}}</li>
-			<li>{{hasFreezer}}</li>
-			<li>{{hasWashMachine}}</li>
-			<li>{{hasDishWasher}}</li>
-			<li>{{hasOven}}</li>
-			<li>{{hasMicro}}</li>
-			<li>{{hasHob}}</li>
-			<li>Comment: {{equipmentComment}}</li>
+			{{#if hasAC}}
+				<li>Air conditioning</li>
+			{{/if}}
+			{{#if hasCeilingFan}}
+				<li>Ceiling fan</li>
+			{{/if}}
+			{{#if hasTV}}
+				<li>TV</li>
+			{{/if}}
+			{{#if hasDvd}}
+				<li>DVD or Blue ray</li>
+			{{/if}}
+			{{#if hasCoffeeMaker}}
+				<li>Coffee maker</li>
+			{{/if}}
+			{{#if hasKettle}}
+				<li>Kettle</li>
+			{{/if}}
+			{{#if hasFridge}}
+				<li>Fridge</li>
+			{{/if}}
+			{{#if hasFreezer}}
+				<li>Freezer</li>
+			{{/if}}
+			{{#if hasWashMachine}}
+				<li>Washing machine</li>
+			{{/if}}
+			{{#if hasDishWasher}}
+				<li>Dish washer</li>
+			{{/if}}
+			{{#if hasOven}}
+				<li>Oven</li>
+			{{/if}}
+			{{#if hasMicro}}
+				<li>Micro wave</li>
+			{{/if}}
+			{{#if hasHob}}
+				<li>Hob</li>
+			{{/if}}
+			<li>{{equipmentComment}}</li>
 		</ul>
 		<hr>
-		<h3>Technology</h3>
+		<h3>Internet andd communications</h3>
 		<ul class='list-unstyled'>
-			<li>{{hasSatCable}}</li>
-			<li>{{hasDsl}}</li>
-			<li>{{hasFibre}}</li>
-			<li>Comment: {{internetComment}}</li>
+			{{#if hasSatCable}}
+				<li>Satelite or cable TV</li>
+			{{/if}}
+			<li>Internet connection: {{internet}}</li>
+			<li>{{internetComment}}</li>
 		</ul>
 		<hr>
 		<h3>Pets</h3>
 		<ul class='list-unstyled'>
-			<li>{{petsConsidered}}</li>
-			<li>{{petComment}}</li>
+			{{#if petsConsidered}}
+				<li>Pets considered on request</li>
+				<li>{{petComment}}</li>
+			{{else}}
+				<li>No pets allowed</li>
+			{{/if}}
 		</ul>
 		<hr>
 		<h3>Suitability</h3>
 		<ul class='list-unstyled'>
-			<li>{{suitableForElderly}}</li>
-			<li>{{suitableForHandicapped}}</li>
-			<li>{{suitableForChildren}}</li>
+			{{#if suitableForElderly}}
+				<li>Suitable for elderly</li>
+			{{/if}}
+			{{#if suitableForHandicapped}}
+				<li>Suitable for handicapped with mobility problems</li>
+			{{/if}}
+			{{#if suitableForChildren}}
+				<li>Suitable for smaller children</li>
+			{{/if}}
 		</ul>
 		<hr>
 		<h3>Price</h3>
@@ -78,8 +119,16 @@
 			<li>Price per month: € {{pricePerMonth}}</li>
 			<li>Additional week: € {{aditionalWeekPrice}}</li>
 			<li>Additional day: € {{aditionalDayPrice}}</li>
-			<li>Electricity included: {{electricityIncluded}}</li>
-			<li>Water included: {{waterIncluded}}</li>
+			{{#if electricityIncluded}}
+				<li>Electricity included</li>
+			{{else}}
+				<li>Electricity not included</li>
+			{{/if}}
+			{{#if waterIncluded}}
+				<li>Water included</li>
+			{{else}}
+				<li>Water not included</li>
+			{{/if}}
 			<li>Minimum stay: {{minimumStay}} months</li>
 			<li>Discounts: {{discounts}}</li>
 			<li>Comment: {{priceComment}}</li>
