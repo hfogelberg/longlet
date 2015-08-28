@@ -622,7 +622,7 @@ if Properties.find().count() is 0
 		address: ""
 		floor: 2
 		locationType: "Sea"
-		closestMini: City
+		closestMini: 200
 		closestSuper: 600
 		carNecessary: "Not necessary"
 		distanceToSea: 300
