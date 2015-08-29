@@ -93,9 +93,28 @@ Router.map ->
       data: islands: ->
         Locations.find()
 
+    @route 'contactOwner',
+      template: 'contactOwner',
+      path: 'contactOwner/:propertyId'
+      onBeforeAction: ->
+        console.log 'sendRequest'
+        console.log @params.propertyId
+        Session.set 'contactPropertyId', @params.propertyId
+        this.next()
+      waitOn: ->
+        @subscribe 'getPropertyDetails', Session.get('contactPropertyId')    
+      data: property: ->
+        Properties.findOne({'_id': Session.get('contactPropertyId')})
+
+    @route 'myContactRequests',
+      template: 'myContactRequests',
+      path: 'myContactRequests'
+      waitOn: ->
+        @subscribe 'myContactRequests', Meteor.user().username
+      data: requests: ->
+        Contacts.find()
+
   return
-
-
 
 
   

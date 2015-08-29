@@ -1,0 +1,76 @@
+<template name='contactOwner'>
+	<form class='addProperty form-horizontal'>
+		<div class='well'>
+			<h2>Contact owner</h2>	
+			{{#with property}}
+				<div class='form-group'>
+					<div class='property'>
+						<h4>{{island}}, {{city}}</h4>
+						{{#if isStudio}}
+							<p>Studio apartment</p>
+						{{else}}		
+							<p>{{numBedRooms}} bed rooms</p>
+						{{/if}}
+						<p>{{numBathRooms}} bath rooms</p>
+						<hr>
+					</div>
+					<div class='col-sm-offset-2 col-sm-10'>
+						<h4>Contact the owner {{username}}</h4>
+						<br>
+					</div>
+
+					<label for='firstName' class='col-sm-2'>First name</label>
+					<div class='col-sm-10'>
+		        <input 	class="form-control firstName" name="firstName" type="text"/>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='lastName' class='col-sm-2'>Last name</label>
+					<div class='col-sm-10'>
+		        <input 	class="form-control lastName" name="lastName" type="text"/>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='email' class='col-sm-2'>Email</label>
+					<div class='col-sm-10'>
+		        <input 	class="form-control email" name="email" type="email"/>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='email' class='col-sm-2'>Message</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control message' rows='7' name='message'></textarea>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='startDate' class='col-sm-2'>From</label>
+					<div class='col-sm-10'>
+						<input class='fromDate' type='date'>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='endDate' class='col-sm-2'>To</label>
+					<div class='col-sm-10'>
+						<input class='endDate' type='date'>
+					</div>
+				</div>
+
+				<input type='text' class='hidden username' value={{username}}>
+				<input type='text' class='hidden island' value={{island}}>
+				<input type='text' class='hidden city' value={{city}}>
+				<input type='text' class='hidden address' value={{addres}}>
+
+				<div class='col-sm-offset-2 col-sm-10'>
+					<input type='submit' class='btn btn-md btn-primary contactBtn' value='Send message'>
+				</div>
+			{{/with}}
+			<br>
+			<br>
+		</div>
+	</form>
+</template>

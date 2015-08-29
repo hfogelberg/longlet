@@ -35,35 +35,7 @@ Meteor.startup ->
 		Properties.find({'_id': id})
 
 Meteor.methods 
-
-	# 'foo': ->
-	# 	return Properties.find({island: 'Lanzarote'}, {limit: 10})
-
-	# 'searchProperties': (island, city, minBeds, minBath, pets, maxPrice, fromDate, endDate) ->
-	# 	console.dir '********* searchProperties ************'
-	# 	console.dir 'island: ' + island
-	# 	console.dir 'city: ' + city
-
-	# 	# searchString = 
-	# 	# 	'island': island
-	# 	# 	'city': city
-
-	# 	# console.dir searchString
-	# 	# console.dir Properties.find(searchString).count()
-
-	# 	# searchString = ''
-	# 	# searchString = 'island:' + island unless island is ''
-	# 	# if city != ''
-	# 	# 	searchString = searchString + ', city: ' + city
-
-	# 	# searchString = '{' + searchString + '}'
-	# 	# console.dir searchString
-
-	# 	console.dir Properties.find({'island': 'Lanzarote', 'city': 'Playa Blanca'}).count()
-
 	searchProperties: (island, city, minBeds, minBath, pets, maxPrice, fromDate, endDate) ->
-		console.dir '********* searchProperties ************'
-
 		qry = {}
 
 		console.dir 'minBeds: ' + minBeds

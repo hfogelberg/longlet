@@ -1,0 +1,22 @@
+<template name='myContactRequests'>
+	<h2>My Contact Requests</h2>
+	
+
+		<table>
+			<tbody>
+				{{#each requests}}
+					<tr>
+						{{>request}}
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+</template>
+
+<template name='request'>
+	<td>
+		{{_id}}
+	</td>
+
+
+</template>
