@@ -1,4 +1,7 @@
 Meteor.startup ->
+	Meteor.publish 'requestsByProperty', (propertyId) ->
+		Properties.find({username: username}, {_id: 1, contact: 1})
+
 	Meteor.publish 'myContactRequests', (username) ->
 		Properties.find({username: username}, {_id: 1, island: 1, city: 1, address: 1, contact: 1})
 

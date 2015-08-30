@@ -112,8 +112,16 @@ Router.map ->
       waitOn: ->
         @subscribe 'myContactRequests', Meteor.user().username
       data: requests: ->
-        Contacts.find()
+        Properties.find()
 
+    @route 'contactRequests',
+      template: 'contactRequests',
+      path: 'contactRequests/:propertyId'
+      waitOn: ->
+        @subscribe 'contactRequests', @params.propertyId
+      data: contactRequests: ->
+        Properties.find()
+ 
   return
 
 
