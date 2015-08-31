@@ -6,39 +6,28 @@ Meteor.startup ->
 		Properties.find({username: username}, {contacts: false})
 
 	Meteor.publish 'getHeadlineProperties', (limit) ->
-		console.dir 'getHeadlineProperties'
-		console.dir 'Properties found: ' + Properties.find().count()
 		if limit > Properties.find().count()
 			limit = 0
 		Properties.find({}, {limit: limit})
 
 	Meteor.publish 'getIslands', ->
-		console.dir 'Gettings islands'
 		Islands.find()
 
 	Meteor.publish 'getPropertiesByIsland', (limit, island) ->
-		console.dir 'getPropertiesByIsland ' + island + ' ' + limit
-		console.dir 'Found ' + Properties.find({island: island}, {limit: limit}).count()
 		Properties.find({island: island}, {limit: limit})
 
 	Meteor.publish 'getCitiesOnIsland', (island) ->
-		console.dir 'getCitiesOnIsland ' + island
 		Locations.find({islandEn: island}, {islandEn: 1})
 
 	Meteor.publish 'getPropertiesByCity', (limit, island, city) ->
-		console.dir 'getPropertiesByCity ' + island + ' ' + city
 		Properties.find({island: island, city: city}, {limit: limit})
 
 	Meteor.publish 'getPropertyDetails', (id) ->
-		console.dir 'getPropertyDetails ' + id
 		Properties.find({'_id': id})
 
 Meteor.methods 
 	searchProperties: (island, city, minBeds, minBath, pets, maxPrice, fromDate, endDate) ->
 		qry = {}
-
-		console.dir 'minBeds: ' + minBeds
-		console.dir 'minBath: ' + minBath
 
 		qry['island'] = island unless island is ''
 		qry['city'] = city unless city is ''
@@ -50,7 +39,6 @@ Meteor.methods
 		#qry[''], endDate
 		console.dir qry
 
-		console.dir 'Found ' + Properties.find(qry).count()
 		return  Properties.find(qry).fetch()
 
 

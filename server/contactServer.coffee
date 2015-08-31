@@ -1,7 +1,5 @@
 Meteor.startup ->
 	Meteor.publish 'contactRequestsByProperty', (propertyId) ->
-		console.dir 'contactRequestsByProperty ' + propertyId
-		console.dir 'Found properties ' + Properties.find({_id: propertyId}, {_id: 1, contact: 1}).count()
 		Properties.find({_id: propertyId}, {_id: 1, contact: 1})
 
 	Meteor.publish 'myContactRequests', (username) ->
@@ -43,9 +41,7 @@ Meteor.methods
 				}
 			}
 
-	contactOwner: (username, propertyId, firstName, lastName, email, message, fromDate, endDate) ->
-		console.dir 'contactOwner'
-		
+	contactOwner: (username, propertyId, firstName, lastName, email, message, fromDate, endDate) ->	
 		Properties.update
 			_id: propertyId,{
 				$set:{
