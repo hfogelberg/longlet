@@ -1,0 +1,10 @@
+<template name='propertyBookings'>
+	{{#if bookings}}
+		<h3>Bookings</h3>
+		<ul class='list-unstyled'>
+			{{#each bookings}}
+				<li>{{fromDate}} - {{toDate}}</li>
+			{{/each}}
+		</ul>
+	{{/if}}
+</template>
