@@ -3,8 +3,7 @@ Meteor.startup ->
 		Locations.find()
 
 	Meteor.publish 'getMyPropertiesList', (username) ->
-		Properties.find({username: username})
-
+		Properties.find({username: username}, {contacts: false})
 
 	Meteor.publish 'getHeadlineProperties', (limit) ->
 		console.dir 'getHeadlineProperties'
