@@ -1,3 +1,25 @@
 <template name='contactRequests'>
 	<h2>Contact requests for property</h2>
+
+	{{#with contactRequests}}
+		<ul class='list-unstyled'>
+			{{#each contacts}}
+				{{>request}}
+			{{/each}}
+		</ul>
+	{{/with}}
+</template>
+
+
+<template name='request'>
+	<li>
+		<p><b>Name: </b>{{firstName}} {{lastName}}</p>
+		<p><b>Email: </b>{{email}}</p>
+		<p><b>Message: </b>{{message}}</p>
+		<p><b>Start date: </b>{{fromDate}}</p>
+		<p><b>End date:</b>{{endDate}}</p>
+		<p><b>Message sent: </b>{{sentDate}}</p>
+		<a href={{email}} onclick = "this.href=this.href" class='btn-btn-default btn-lg'>Email</a>
+		<hr>
+	</li>
 </template>

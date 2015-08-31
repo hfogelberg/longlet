@@ -106,21 +106,34 @@ Router.map ->
       data: property: ->
         Properties.findOne({'_id': Session.get('contactPropertyId')})
 
-    @route 'myContactRequests',
-      template: 'myContactRequests',
-      path: 'myContactRequests'
-      waitOn: ->
-        @subscribe 'myContactRequests', Meteor.user().username
-      data: requests: ->
-        Properties.find()
+    # @route 'myContactRequests',
+    #   template: 'myContactRequests',
+    #   path: 'myContactRequests'
+    #   waitOn: ->
+    #     @subscribe 'myContactRequests', Meteor.user().username
+    #   data: requests: ->
+    #     Properties.find()
 
     @route 'contactRequests',
       template: 'contactRequests',
       path: 'contactRequests/:propertyId'
+      onBeforeAction: ->
+        Meteor.call 'resetRequests', @params.propertyId, (error) ->
+        this.next()
       waitOn: ->
-        @subscribe 'contactRequests', @params.propertyId
+        Session.set 'requestsPropertyId', @params.propertyId
+        console.log 'contactRequests. propertyId: ' + Session.get('requestsPropertyId')
+        @subscribe 'contactRequestsByProperty', Session.get('requestsPropertyId')
       data: contactRequests: ->
-        Properties.find()
+        Properties.findOne()
+
+    @route 'createBooking',
+      template: 'createBooking',
+      path: 'createBooking/:propertyId'
+      onBeforeAction: ->
+        Session.set 'bookingPropertyId',  @params.propertyId
+        this.next()
+
  
   return
 

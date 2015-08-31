@@ -1,0 +1,126 @@
+<template name='createBooking'>
+	<h1>New booking</h1>
+
+	<form class='createBooking form-horizontal'>
+
+		<div class='form-group'>
+			<label for='firstName' class='col-sm-2'>First name</label>
+			<div class='col-sm-10'>
+				<input type='text' class='form-control firstName' name='firstName'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='lastName' class='col-sm-2'>Last name</label>
+			<div class='col-sm-10'>
+				<input type='text' class='form-control lastName' name='lastName'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='email' class='col-sm-2'>Email</label>
+			<div class='col-sm-10'>
+				<input type='email' class='form-control email' name='email'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='phone' class='col-sm-2'>Phone</label>
+			<div class='col-sm-10'>
+				<input type='tel' class='form-control phone' name='phone'>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class='form-group'>
+			<label for='fromDate' class='col-sm-2'>From date</label>
+			<div class='col-sm-10'>
+				<input type='date' class='form-control fromDate' name='fromDate'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='toDate' class='col-sm-2'>To date</label>
+			<div class='col-sm-10'>
+				<input type='date' class='form-control toDate' name='toDate'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='agreedPricePerMonth' class='col-sm-2'>Price per month</label>
+			<div class='col-sm-10'>
+				<input type='number' class='form-control agreedPricePerMonth' name='agreedPricePerMonth' placeholder='Euros'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='agreedAditionalWeek' class='col-sm-2'>Price for additional week</label>
+			<div class='col-sm-10'>
+				<input type='number' class='form-control agreedAditionalWeek' name='agreedAditionalWeek' placeholder='Euros'>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label for='' class='col-sm-2'>Price for additional days</label>
+			<div class='col-sm-10'>
+				<input type='number' class='form-control agreedAditionalDays' name='agreedAditionalDays'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='deposit' class='col-sm-2'>Deposit</label>
+			<div class='col-sm-10'>
+				<input type='number' class='form-control deposit' name='deposit' placeholder='Euors'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='depositDueDate' class='col-sm-2'>Deposit due</label>
+			<div class='col-sm-10'>
+				<input type='date' class='form-control depostDueDate' name='depositDueDate'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='careTakerName' class='col-sm-2'>Care taker name</label>
+			<div class='col-sm-10'>
+				<input type='text' class='form-control careTakerName' name='careTakerName'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='caretakerPhone' class='col-sm-2'>Care taker phone</label>
+			<div class='col-sm-10'>
+				<input type='text' class='form-control caretakerPhone' name='caretakerPhone'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='careTakerMail' class='col-sm-2'>Care taker email</label>
+			<div class='col-sm-10'>
+				<input type='text' class='form-control careTakerMail' name='careTakerMail'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='keyHandling' class='col-sm-2'>Keys handling</label>
+			<div class='col-sm-10'>
+				<input type='text' class='form-control keyHandling' name='keyHandling'>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='additionalTerms' class='col-sm-2'>Additional terms</label>
+			<div class='col-sm-10'>
+				<textarea class='form-control additionalTerms' rows='5' name='additionalTerms'></textarea>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<div class='col-sm-offset-2 col-sm-10'>
+				<input type='button' class='btn btn-primary btnCreateBooking' value='save'>
+			</div>
+		</div>
+
+	</form>
+</template>
