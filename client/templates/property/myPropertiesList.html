@@ -7,6 +7,11 @@
 					<td>{{city}}</td>
 					<td><a href='/editProperty/{{_id}}' class='btn btn-primary'>Edit</a></td>
 					<td>
+						{{#if bookings}}
+							<a href='/bookingsForProperty/{{_id}}' class='btn btn-primary'>Bookings</a>
+						{{/if}}
+					</td>
+					<td>
 						{{#if newRequest}}
 							New Request!
 						{{/if}}

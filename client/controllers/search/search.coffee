@@ -1,7 +1,14 @@
-Template.searchResult.helpers foundProperties: ->
-	console.log 'foundProperties helper'
-	console.log Session.get 'foundProperties'
-	return Session.get 'foundProperties'
+Template.searchResult.helpers 
+	foundProperties: ->
+		console.log 'foundProperties helper'
+		console.log Session.get 'foundProperties'
+		return Session.get 'foundProperties'
+
+	island: ->
+		Session.get 'island'
+
+	city: ->
+		Session.get 'city'
 
 Template.search.rendered = ->
 	Meteor.typeahead.inject()

@@ -134,6 +134,14 @@ Router.map ->
         Session.set 'bookingPropertyId',  @params.propertyId
         this.next()
 
+    @route 'bookingsForProperty',
+      template: 'bookingsForProperty'
+      path: '/bookingsForProperty/:propertyId'
+      waitOn: ->
+        console.log 'bookingsForProperty. propertyId: ' + @params.propertyId
+        @subscribe 'getBookingsForProperty', @params.propertyId
+      data: bookingsForProperty: ->
+        Properties.findOne()
  
   return
 

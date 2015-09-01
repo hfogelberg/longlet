@@ -1,0 +1,38 @@
+<template name='bookingsForProperty'>
+	<h2>Bookings</h2>
+	{{#with bookingsForProperty}}
+		<ul class='list-unstyled'>
+			{{#each bookings}}
+				{{>booking}}
+			{{/each}}
+		</ul>
+	{{/with}}
+</template>
+
+
+<template name='booking'>
+	<li>
+		<div class='well'>
+			<p><b>Name: </b>{{firstName}} {{lastName}}</p>
+			<p><b>Email: </b>{{email}}</p>
+			<p><b>Message: </b>{{message}}</p>
+			<p><b>Phone: </b>{{phone}}</p>
+			<p><b>Start date: </b>{{fromDate}}</p>
+			<p><b>End date:</b>{{endDate}}</p>
+			<p><b>Price per month:</b>{{agreedPricePerMonth}}</p>
+			<p><b>Price per aditional week: </b>{{agreedAditionalWeek}}</p>
+			<p><b>Price per aditional day: </b>{{agreedAditionalDays}}</p>
+			<p><b>Deposit: </b>{{deposit}}</p>
+			<p><b>Deposit due: </b>{{depositDueDate}}</p>
+			<hr>
+			<p><b>Care taker: </b>{{careTakerName}}</p>
+			<p><b>Email: </b>{{caretakerPhone}}</p>
+			<p><b>Key handling: </b>{{keyHandling}}</p>
+			<p><b>Additional terms: </b>{{additionalTerms}}</p>
+			<!-- <p><b>Message sent: </b>{{sentDate}}</p> -->
+			<a href={{email}} onclick = "this.href=this.href" class='btn-btn-default btn-lg'>Email</a>
+		</div>
+	</li>
+</template>
+
+
