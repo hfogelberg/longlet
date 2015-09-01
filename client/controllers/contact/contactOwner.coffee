@@ -10,4 +10,8 @@ Template.contactOwner.events
 		username = template.find('.username').value
 
 		Meteor.call 'contactOwner', username, Session.get('contactPropertyId'), firstName, lastName, email, message, fromDate, endDate, (error) ->
+			if(error)
+				console.log error
+			else
+				Router.go('/')
 

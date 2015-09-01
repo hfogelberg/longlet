@@ -135,7 +135,24 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test1"
+		bookings: [
+			firstName: "Kalle",
+			lastName: "Anka",
+			email: "kalle@anka.se",
+			phone: "111222",
+			fromDate: "2015-09-01",
+			toDate: "2016-01-01",
+			agreedPricePerMonth: "550",
+			agreedAditionalWeek: "200",
+			agreedAditionalDays: "25",
+			deposit: "400",
+			depositDueDate: "2015-08-31",
+			careTakerName: "Janne Långben",
+			caretakerPhone: "333444555",
+			careTakerMail: "333444555",
+			keyHandling: "Lorem ipsum",
+			additionalTerms: "Ipsum veggie"]
 
 	Properties.insert
 		island: "Tenerife"
@@ -188,7 +205,24 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "Bills up to €50 per month included"
-		username: "henfo"
+		username: "test1"		
+		bookings: [
+			firstName: "Mr",
+			lastName: "Walker",
+			email: "mr@walker.com",
+			phone: "111222",
+			fromDate: "2016-02-01",
+			toDate: "2016-11-01",
+			agreedPricePerMonth: "550",
+			agreedAditionalWeek: "200",
+			agreedAditionalDays: "25",
+			deposit: "400",
+			depositDueDate: "2015-08-31",
+			careTakerName: "Janne Långben",
+			caretakerPhone: "333444555",
+			careTakerMail: "333444555",
+			keyHandling: "Lorem ipsum",
+			additionalTerms: "Ipsum veggie"]
 
 
 	Properties.insert
@@ -242,7 +276,16 @@ if Properties.find().count() is 0
 		electricityIncluded: false
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test1"
+		newRequest: true
+		contacts: [
+			firstName: "Joakim",
+			lastName: "von Anka",
+			email: "joakim@anka.kv",
+			message: "Vad kostar det?",
+			fromDate: "2015-10-01",
+			endDate: "2016-01-03",
+			sentDate: "2015-09-01"]
 
 	Properties.insert
 		island: "Tenerife"
@@ -295,7 +338,34 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test2"		
+		bookings: [
+			firstName: "Tessan",
+			lastName: "Testsson",
+			email: "tessan@testsson.se",
+			phone: "111222",
+			fromDate: "2015-09-01",
+			toDate: "2016-01-01",
+			agreedPricePerMonth: "550",
+			agreedAditionalWeek: "200",
+			agreedAditionalDays: "25",
+			deposit: "400",
+			depositDueDate: "2015-08-31",
+			careTakerName: "Janne Långben",
+			caretakerPhone: "333444555",
+			careTakerMail: "333444555",
+			keyHandling: "Lorem ipsum",
+			additionalTerms: "Ipsum veggie"
+	]
+
+	contacts: [
+			firstName: "Kalle",
+			lastName: "Anka",
+			email: "kalle@anka.kv",
+			message: "Kvack!",
+			fromDate: "2015-10-01",
+			endDate: "2016-01-03",
+			sentDate: "2015-09-01"]
 
 	Properties.insert
 		island: "Tenerife"
@@ -348,7 +418,7 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test2"
 
 	Properties.insert
 		island: "Tenerife"
@@ -401,7 +471,15 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test2"
+		contacts: [
+			firstName: "Joakim",
+			lastName: "von Anka",
+			email: "joakim@anka.kv",
+			message: "Vad kostar det?",
+			fromDate: "2015-10-01",
+			endDate: "2016-01-03",
+			sentDate: "2015-09-01"]
 
 	Properties.insert
 		island: "Tenerife"
@@ -454,7 +532,7 @@ if Properties.find().count() is 0
 		electricityIncluded: false
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test1"
 
 
 	Properties.insert
@@ -508,7 +586,7 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test2"
 
 	Properties.insert
 		island: "Fuerteventura"
@@ -561,7 +639,7 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test1"
 
 	Properties.insert
 		island: "Gran Canary"
@@ -614,7 +692,7 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test1"
 
 	Properties.insert
 		island: "Gran Canary"
@@ -654,7 +732,7 @@ if Properties.find().count() is 0
 		hasSatCable: ""
 		internet: "None"
 		internetComment: ""
-		petsConsidered: "No pets"
+		petsConsidered: false
 		petComment: ""
 		suitableForElderly: true
 		suitableForHandicapped: true
@@ -667,7 +745,7 @@ if Properties.find().count() is 0
 		electricityIncluded: "on"
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test2"
 
 
 	Properties.insert
@@ -708,7 +786,7 @@ if Properties.find().count() is 0
 		hasSatCable: ""
 		internet: "Fibre"
 		internetComment: ""
-		petsConsidered: "No pets"
+		petsConsidered: true
 		petComment: ""
 		suitableForElderly: true
 		suitableForHandicapped: true
@@ -721,6 +799,14 @@ if Properties.find().count() is 0
 		electricityIncluded: "on"
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "henfo"
+		username: "test2"	
+		contacts: [
+			firstName: "Mr",
+			lastName: "Walker",
+			email: "mr@walker.org",
+			message: "Får man ta med varg?",
+			fromDate: "2015-10-01",
+			endDate: "2016-01-03",
+			sentDate: "2015-09-01"]
 else
 	console.dir 'No need to seed properties'

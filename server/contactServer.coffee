@@ -42,12 +42,10 @@ Meteor.methods
 			}
 
 	contactOwner: (username, propertyId, firstName, lastName, email, message, fromDate, endDate) ->	
+		console.dir 'Create contact'
+
 		Properties.update
-			_id: propertyId,{
-				$set:{
-						newRequest: true
-					}
-				},
+			_id: propertyId,
 			{$push: {contacts:
 				firstName: firstName
 				lastName: lastName
@@ -56,3 +54,10 @@ Meteor.methods
 				fromDate: fromDate
 				endDate: endDate
 				sentDate: new Date()}}
+
+		Properties.update
+			_id: propertyId,
+			{
+				$set:{ newRequest: true}
+			}
+
