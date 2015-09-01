@@ -13,7 +13,7 @@ Template.createBooking.events
 		depostDueDate = template.find('.depostDueDate').value
 		careTakerName = template.find('.careTakerName').value
 		caretakerPhone = template.find('.caretakerPhone').value
-		careTakerMail = template.find('.caretakerPhone').value
+		careTakerMail = template.find('.careTakerMail').value
 		keyHandling = template.find('.keyHandling').value
 		additionalTerms = template.find('.additionalTerms').value
 
