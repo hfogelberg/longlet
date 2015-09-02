@@ -3,24 +3,24 @@ Meteor.startup ->
 		Locations.find()
 
 	Meteor.publish 'getMyPropertiesList', (username) ->
-		Properties.find({username: username}, {contacts: false})
+		Properties.find({username: username, status: STATUS_PUBLISHED}, {contacts: false})
 
 	Meteor.publish 'getHeadlineProperties', (limit) ->
 		if limit > Properties.find().count()
 			limit = 0
-		Properties.find({}, {limit: limit})
+		Properties.find({status: STATUS_PUBLISHED}, {limit: limit})
 
 	Meteor.publish 'getIslands', ->
 		Islands.find()
 
 	Meteor.publish 'getPropertiesByIsland', (limit, island) ->
-		Properties.find({island: island}, {limit: limit})
+		Properties.find({island: island, status: STATUS_PUBLISHED}, {limit: limit})
 
 	Meteor.publish 'getCitiesOnIsland', (island) ->
-		Locations.find({islandEn: island}, {islandEn: 1})
+		Locations.find({islandEn: island, status: STATUS_PUBLISHED}, {islandEn: 1})
 
 	Meteor.publish 'getPropertiesByCity', (limit, island, city) ->
-		Properties.find({island: island, city: city}, {limit: limit})
+		Properties.find({island: island, city: city, status: STATUS_PUBLISHED}, {limit: limit})
 
 	Meteor.publish 'getPropertyDetails', (id) ->
 		Properties.find({'_id': id})
@@ -37,6 +37,7 @@ Meteor.methods
 		qry['petsConsidered'] = true if pets is true
 		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
 		qry['bookings']= "$exists": false
+		qry['status'] = STATUS_PUBLISHED
 		console.dir qry
 		console.dir Properties.find(qry).count()
 		console.dir '*****************************************'
@@ -54,6 +55,7 @@ Meteor.methods
 		qry['petsConsidered'] = true if pets is true
 		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
 		qry['bookings']= "$exists": true
+		qry['status'] = STATUS_PUBLISHED
 		console.dir qry
 		console.dir Properties.find(qry).count()
 		console.dir '*****************************************'
@@ -73,6 +75,7 @@ Meteor.methods
 		# qry['bookings.fromDate']= "$gte": fromDate unless fromDate is ''
 		qry['bookings']= "$exists": true
 		qry['bookings.toDate']= "$gte": fromDate unless fromDate is ''
+		qry['status'] = STATUS_PUBLISHED
 		console.dir qry
 		console.dir Properties.find(qry).count()
 		console.dir '*****************************************'
@@ -92,6 +95,7 @@ Meteor.methods
 		qry['petsConsidered'] = true if pets is true
 		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
 		qry['bookings.fromDate']= "$lte": toDate unless toDate is ''
+		qry['status'] = STATUS_PUBLISHED
 		console.dir qry
 		console.dir Properties.find(qry).count()
 		console.dir '*****************************************'
