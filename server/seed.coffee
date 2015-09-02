@@ -7,11 +7,11 @@ if Locations.find().count() is 0
 
 	Locations.insert
 		islandEn: 'Tenerife'
-		city: 'Playa del las Americas'
+		city: 'Playa de las Americas'
 
 	Locations.insert
 		islandEn: 'Tenerife'
-		city: 'Palm Mar'
+		city: 'Palmar'
 
 	Locations.insert
 		islandEn: 'Tenerife'
@@ -136,13 +136,14 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test1"
+		status: "STATUS_PUBLISHED"
 		bookings: [
 			firstName: "Kalle",
 			lastName: "Anka",
 			email: "kalle@anka.se",
 			phone: "111222",
-			fromDate: "2015-09-01",
-			toDate: "2016-01-01",
+			fromDate: 20150901,
+			toDate: 20160101,
 			agreedPricePerMonth: "550",
 			agreedAditionalWeek: "200",
 			agreedAditionalDays: "25",
@@ -150,7 +151,7 @@ if Properties.find().count() is 0
 			depositDueDate: "2015-08-31",
 			careTakerName: "Janne Långben",
 			caretakerPhone: "333444555",
-			careTakerMail: "333444555",
+			careTakerMail: "janne@langben.org",
 			keyHandling: "Lorem ipsum",
 			additionalTerms: "Ipsum veggie"]
 
@@ -205,14 +206,15 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "Bills up to €50 per month included"
-		username: "test1"		
+		username: "test1"
+		status: "STATUS_PUBLISHED"
 		bookings: [
 			firstName: "Mr",
 			lastName: "Walker",
 			email: "mr@walker.com",
 			phone: "111222",
-			fromDate: "2016-02-01",
-			toDate: "2016-11-01",
+			fromDate: 20160201,
+			toDate: 20161101,
 			agreedPricePerMonth: "550",
 			agreedAditionalWeek: "200",
 			agreedAditionalDays: "25",
@@ -220,7 +222,7 @@ if Properties.find().count() is 0
 			depositDueDate: "2015-08-31",
 			careTakerName: "Janne Långben",
 			caretakerPhone: "333444555",
-			careTakerMail: "333444555",
+			careTakerMail: "janne@langben.org",
 			keyHandling: "Lorem ipsum",
 			additionalTerms: "Ipsum veggie"]
 
@@ -277,6 +279,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test1"
+		status: "STATUS_PUBLISHED"
 		newRequest: true
 		contacts: [
 			firstName: "Joakim",
@@ -289,7 +292,61 @@ if Properties.find().count() is 0
 
 	Properties.insert
 		island: "Tenerife"
-		city: "Playa del las Americas"
+		city: "Playa de las Americas"
+		address: ""
+		floor: 1
+		locationType: "City"
+		closestMini: 200
+		closestSuper: 800
+		carNecessary: "Not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand"
+		disturbance: "Some"
+		areaDescription: "Lots of bars"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 2
+		numBathRooms: 1
+		gardenType: "Balcony"
+		pool: "Shared"
+		aptDescription: "Tacky"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: false
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: true
+		hasWashMachine: "Washing machine"
+		hasDishWasher: true
+		hasOven: true
+		hasMicro: true
+		hasHob: false
+		equipmentComment: "Basic kitchen"
+		hasSatCable: true
+		internet: "None"
+		internetComment: ""
+		petsConsidered: true
+		petComment: "Only rhinos"
+		suitableForElderly: false
+		suitableForHandicapped: false
+		suitableForChildren: true
+		pricePerMonth: 850
+		aditionalWeekPrice: 300
+		aditionalDayPrice: 100
+		minimumStay: 3
+		waterIncluded: true
+		electricityIncluded: true
+		discounts: "No discounts"
+		priceComment: "price comments"
+		username: "test1"		
+		status: "STATUS_PUBLISHED"
+
+	Properties.insert
+		island: "Tenerife"
+		city: "Playa de las Americas"
 		address: ""
 		floor: 1
 		locationType: "City"
@@ -338,14 +395,15 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "test2"		
+		username: "test2"
+		status: "STATUS_PUBLISHED"	
 		bookings: [
 			firstName: "Tessan",
 			lastName: "Testsson",
 			email: "tessan@testsson.se",
 			phone: "111222",
-			fromDate: "2015-09-01",
-			toDate: "2016-01-01",
+			fromDate: 20151001,
+			toDate: 20160101,
 			agreedPricePerMonth: "550",
 			agreedAditionalWeek: "200",
 			agreedAditionalDays: "25",
@@ -353,11 +411,10 @@ if Properties.find().count() is 0
 			depositDueDate: "2015-08-31",
 			careTakerName: "Janne Långben",
 			caretakerPhone: "333444555",
-			careTakerMail: "333444555",
+			careTakerMail: "janne@langben.org",
 			keyHandling: "Lorem ipsum",
 			additionalTerms: "Ipsum veggie"
 	]
-
 	contacts: [
 			firstName: "Kalle",
 			lastName: "Anka",
@@ -419,6 +476,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test2"
+		status: "STATUS_PUBLISHED"
 
 	Properties.insert
 		island: "Tenerife"
@@ -472,6 +530,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test2"
+		status: "STATUS_PUBLISHED"
 		contacts: [
 			firstName: "Joakim",
 			lastName: "von Anka",
@@ -533,6 +592,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test1"
+		status: "STATUS_PUBLISHED"
 
 
 	Properties.insert
@@ -578,8 +638,8 @@ if Properties.find().count() is 0
 		suitableForElderly: true
 		suitableForHandicapped: false
 		suitableForChildren: true
-		pricePerMonth: 550
-		aditionalWeekPrice: 100
+		pricePerMonth: 700
+		aditionalWeekPrice: 200
 		aditionalDayPrice: 25
 		minimumStay: 2
 		waterIncluded: true
@@ -587,6 +647,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test2"
+		status: "STATUS_PUBLISHED"
 
 	Properties.insert
 		island: "Fuerteventura"
@@ -631,7 +692,7 @@ if Properties.find().count() is 0
 		suitableForElderly: true
 		suitableForHandicapped: true
 		suitableForChildren: true
-		pricePerMonth: 550
+		pricePerMonth: 450
 		aditionalWeekPrice: 100
 		aditionalDayPrice: 25
 		minimumStay: 2
@@ -640,6 +701,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test1"
+		status: "STATUS_PUBLISHED"
 
 	Properties.insert
 		island: "Gran Canary"
@@ -693,6 +755,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test1"
+		status: "STATUS_PUBLISHED"
 
 	Properties.insert
 		island: "Gran Canary"
@@ -737,8 +800,8 @@ if Properties.find().count() is 0
 		suitableForElderly: true
 		suitableForHandicapped: true
 		suitableForChildren: true
-		pricePerMonth: 550
-		aditionalWeekPrice: 100
+		pricePerMonth: 850
+		aditionalWeekPrice: 2500
 		aditionalDayPrice: 25
 		minimumStay: 2
 		waterIncluded: "on"
@@ -746,7 +809,7 @@ if Properties.find().count() is 0
 		discounts: "discounts"
 		priceComment: "price comments"
 		username: "test2"
-
+		status: "STATUS_PUBLISHED"
 
 	Properties.insert
 		island: "Gran Canary"
@@ -791,15 +854,16 @@ if Properties.find().count() is 0
 		suitableForElderly: true
 		suitableForHandicapped: true
 		suitableForChildren: true
-		pricePerMonth: 550
-		aditionalWeekPrice: 100
+		pricePerMonth: 600
+		aditionalWeekPrice: 200
 		aditionalDayPrice: 25
 		minimumStay: 2
-		waterIncluded: "on"
-		electricityIncluded: "on"
+		waterIncluded: true
+		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
-		username: "test2"	
+		username: "test2"
+		status: "STATUS_PUBLISHED"
 		contacts: [
 			firstName: "Mr",
 			lastName: "Walker",

@@ -4,14 +4,14 @@
 	{{#with contactRequests}}
 		<ul class='list-unstyled'>
 			{{#each contacts}}
-				{{>request}}
+				{{>contactRequest}}
 			{{/each}}
 		</ul>
 	{{/with}}
 </template>
 
 
-<template name='request'>
+<template name='contactRequest'>
 	<li>
 		<p><b>Name: </b>{{firstName}} {{lastName}}</p>
 		<p><b>Email: </b>{{email}}</p>

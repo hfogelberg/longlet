@@ -1,26 +1,71 @@
 Template.searchResult.helpers 
-	foundProperties: ->
-		console.log 'foundProperties helper'
-		console.log Session.get 'foundProperties'
-		return Session.get 'foundProperties'
+	bookingsNoDate: ->
+		console.log 'bookingsNoDate helper'
+		nd = Session.get 'bookingsNoDate'
+		console.log nd
+		console.log '#####'
+		return nd
 
-	island: ->
-		Session.get 'island'
+	noBookings: ->
+		console.log 'noBookings helper'
+		nb = Session.get 'noBookings'
+		console.log nb
+		console.log '#####'
+		return nb
 
-	city: ->
-		Session.get 'city'
+	bookingsBefore: ->
+		console.log 'bookingsBefore helper'
+		bb = Session.get 'bookingsBefore'
+		console.log bb
+		console.log '#####'
+		return bb
+
+	bookingsAfter: ->
+		console.log 'bookingsAfter helper'
+		ba = Session.get 'bookingsAfter'
+		console.log ba
+		console.log '#####'
+		return ba
 
 Template.search.rendered = ->
 	Meteor.typeahead.inject()
 
-Template.search.helpers 
-  islands: ->
-    Locations.find().fetch().map (location) ->
-      location.islandEn
+Template.search.helpers
+	islands: ->
+  	Locations.find().fetch().map (location) ->
+    	location.islandEn
 
-   cities: ->
-    Locations.find().fetch().map (location) ->
-      location.city
+	cities: ->
+		Locations.find().fetch().map (location) ->
+			location.city
+
+	selectedIsland: ->
+		Session.get 'island'
+
+	selectedCity: ->
+		#Don't know why I need to take this extra step. Bug in Meteor?
+		c = Session.get 'city'
+		return c
+
+  # petsPossible: ->
+  # 	Session.get 'pets'
+
+  selectedMinBeds: ->
+		b = Session.get 'minBeds'
+		console.log 'minBeds: ' + b
+		return b
+
+	selectedMinBath: ->
+		Session.get 'minBath'
+
+	selectedMaxPrice: ->
+		Session.get 'maxPrice'
+
+	selectedFromDate: ->
+		Session.get 'fromDate'
+
+	selectedToDate: ->
+		Session.get 'endDate'
 
 Template.search.events
 	'click .btnSearch': (event, template) ->
@@ -28,16 +73,55 @@ Template.search.events
 
 		island = template.find('#island').value
 		city = template.find('#city').value		
-		pets = template.find('.petsPossible').value
+		pets = true if template.find('.petsPossible').checked
 		minBeds = template.find('.minBedRooms').value
 		minBath = template.find('.minBathRooms').value
 		maxPrice = template.find('.maxPrice').value
-		fromDate = template.find('.fromDate').value
-		endDate = template.find('.endDate').value
+		fromDate = template.find('.fromDate').value.split('-').join('')
+		toDate = template.find('.endDate').value.split('-').join('')
 
-		Meteor.call 'searchProperties', island, city, minBeds, minBath, pets, maxPrice, fromDate, endDate, (err, ret) ->
+		Session.set 'island', island
+		Session.set 'city', city
+		Session.set 'pets', pets
+		Session.set 'minBeds', minBeds
+		Session.set 'minBath', minBath
+		Session.set 'maxPrice', maxPrice
+		Session.set 'fromDate', fromDate
+		Session.set 'toDate', toDate
+
+		console.log 'From date: ' + fromDate
+		console.log 'To date: ' + toDate
+
+		Session.set 'bookingsNoDate'
+		Session.set 'noBookings'
+		Session.set 'bookingsBefore'
+		Session.set 'bookingsAfter'
+		
+		if fromDate == ''
+			if toDate == ''
+				Meteor.call 'searchPropertiesWithBookingsNoDates', island, city, minBeds, minBath, pets, maxPrice, (err, ret) ->
+					console.log 'searchPropertiesWithBookingsNoDates'
+					console.log err
+					console.log ret
+					Session.set 'bookingsNoDate', ret
+
+		if toDate != ''
+			Meteor.call 'searchPropertiesWithBookingsBefore', island, city, minBeds, minBath, pets, maxPrice, fromDate, toDate, (err, ret) ->
+				console.log  'searchPropertiesWithBookingsBefore'
+				console.log err
+				console.log ret
+				Session.set 'bookingsBefore', ret
+
+		if fromDate != ''
+			Meteor.call 'searchPropertiesWithBookingsAfter', island, city, minBeds, minBath, pets, maxPrice, fromDate, toDate, (err, ret) ->
+				console.log 'searchPropertiesWithBookingsAfter'
+				console.log err
+				console.log ret
+				Session.set 'bookingsAfter', ret
+
+		Meteor.call 'searchPropertiesNoBookings', island, city, minBeds, minBath, pets, maxPrice, (err, ret) ->
+			console.log 'searchPropertiesNoBookings'
 			console.log err
-			Session.set 'foundProperties', ret
-			console.log 'Search'
-			console.log Session.get 'foundProperties'
+			console.log ret
+			Session.set 'noBookings', ret
 

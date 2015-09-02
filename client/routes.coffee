@@ -142,6 +142,14 @@ Router.map ->
         @subscribe 'getBookingsForProperty', @params.propertyId
       data: bookingsForProperty: ->
         Properties.findOne()
+
+    @route 'admin',
+      template: 'admin',
+      path: 'admin'
+      waitOn: ->
+        @subscribe 'getAdsToCheck'
+      data: adsToCheck: ->
+        Properties.find()
  
   return
 

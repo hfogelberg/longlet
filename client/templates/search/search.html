@@ -7,29 +7,31 @@
 	        <input 	class="typeahead" id="island"
 	        				name="island" type="text"
 	        				autocomplete="off" spellcheck="off"
-	                data-source="islands"/>
+	                data-source="islands"
+	                value="{{selectedIsland}}"/>
 					</div>
 				
 				<div class='form-group'>
 					<label for='city'>City</label>
 	        <input 	class="typeahead" id="city" name="city" type="text"
 	                autocomplete="off" spellcheck="off"
-	                data-source="cities"/>
+	                data-source="cities"
+	                value="{{selectedCity}}"/>
 				</div>
 
 				<div class='form-group'>
 					<label for='minBedrooms'>Bed- rooms</label>
-					<input class='minBedRooms' type='number' placeholder='Minimum'>
+					<input class='minBedRooms' type='number' placeholder='Minimum' min='0' value="{{selectedMinBeds}}"/>
 				</div>
 
 				<div class='form-group'>
 					<label for='minBedrooms'>Bath- rooms</label>
-					<input class='minBathRooms' type='number' placeholder='Minimum'>
+					<input class='minBathRooms' type='number' placeholder='Minimum' min='0' value="{{selectedMinBath}}"/>
 				</div>
 
 				<div class='form-group'>
 					<label for='petsPossible'>Pets possible</label>
-					<input class='petsPossible' type='checkbox'>
+					<input class='petsPossible' type='checkbox'/>
 				</div>
 
 				<div class='form-group'>
@@ -59,10 +61,17 @@
 	</div>
 </template>
 
-
-
 <template name='searchResult'>
-	{{#each foundProperties}}
+	{{#each bookingsNoDate}}
+		{{>property}}
+	{{/each}}
+	{{#each noBookings}}
+		{{>property}}
+	{{/each}}
+	{{#each bookingsBefore}}
+		{{>property}}
+	{{/each}}
+	{{#each bookingsAfter}}
 		{{>property}}
 	{{/each}}
 </template>

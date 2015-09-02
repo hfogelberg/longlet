@@ -26,21 +26,77 @@ Meteor.startup ->
 		Properties.find({'_id': id})
 
 Meteor.methods 
-	searchProperties: (island, city, minBeds, minBath, pets, maxPrice, fromDate, endDate) ->
-		qry = {}
+	searchPropertiesNoBookings: (island, city, minBeds, minBath, pets, maxPrice) ->
+		console.dir '*** searchPropertiesNoBookings ***' 
 
+		qry = {}
 		qry['island'] = island unless island is ''
 		qry['city'] = city unless city is ''
 		qry['numBedRooms'] = '$gte': +minBeds unless minBeds is ''
 		qry['numBathRooms'] = '$gte': +minBath unless minBath is ''
-		#qry['petsConsidered'] = pets unless
+		qry['petsConsidered'] = true if pets is true
 		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
-		#qry[''], fromDate
-		#qry[''], endDate
+		qry['bookings']= "$exists": false
 		console.dir qry
+		console.dir Properties.find(qry).count()
+		console.dir '*****************************************'
 
 		return  Properties.find(qry).fetch()
 
+	searchPropertiesWithBookingsNoDates: (island, city, minBeds, minBath, pets, maxPrice) ->
+		console.dir '*** searchPropertiesWithBookingsNoDates ***'
+		
+		qry = {}
+		qry['island'] = island unless island is ''
+		qry['city'] = city unless city is ''
+		qry['numBedRooms'] = '$gte': +minBeds unless minBeds is ''
+		qry['numBathRooms'] = '$gte': +minBath unless minBath is ''
+		qry['petsConsidered'] = true if pets is true
+		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
+		qry['bookings']= "$exists": true
+		console.dir qry
+		console.dir Properties.find(qry).count()
+		console.dir '*****************************************'
+
+		return  Properties.find(qry).fetch()
+
+	searchPropertiesWithBookingsAfter: (island, city, minBeds, minBath, pets, maxPrice, fromDate, toDate) ->
+		console.dir '*** searchPropertiesWithBookingsAfter ***'
+
+		qry = {}
+		qry['island'] = island unless island is ''
+		qry['city'] = city unless city is ''
+		qry['numBedRooms'] = '$gte': +minBeds unless minBeds is ''
+		qry['numBathRooms'] = '$gte': +minBath unless minBath is ''
+		qry['petsConsidered'] = true if pets is true
+		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
+		# qry['bookings.fromDate']= "$gte": fromDate unless fromDate is ''
+		qry['bookings']= "$exists": true
+		qry['bookings.toDate']= "$gte": fromDate unless fromDate is ''
+		console.dir qry
+		console.dir Properties.find(qry).count()
+		console.dir '*****************************************'
+
+		return  Properties.find(qry).fetch()
+
+
+	searchPropertiesWithBookingsBefore: (island, city, minBeds, minBath, pets, maxPrice, toDate) ->
+		console.dir '*** searchPropertiesWithBookingsBefore ***'
+		console.dir 'toDate: ' + toDate
+
+		qry = {}
+		qry['island'] = island unless island is ''
+		qry['city'] = city unless city is ''
+		qry['numBedRooms'] = '$gte': +minBeds unless minBeds is ''
+		qry['numBathRooms'] = '$gte': +minBath unless minBath is ''
+		qry['petsConsidered'] = true if pets is true
+		qry['pricePerMonth'] = '$lte': +maxPrice unless maxPrice is ''
+		qry['bookings.fromDate']= "$lte": toDate unless toDate is ''
+		console.dir qry
+		console.dir Properties.find(qry).count()
+		console.dir '*****************************************'
+
+		return  Properties.find(qry).fetch()
 
 	createLocation: (island, city) ->
 		if Locations.find({island: island, city: city}).count() == 0
