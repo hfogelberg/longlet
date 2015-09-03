@@ -7,7 +7,15 @@
   <div class='container-fluid'>
   	{{> navbar}}
   	<div class='longLet'>
-			{{> yield}}
+  		{{#if currentUser}}
+				{{> yield}}
+			{{else}}
+				<div>
+					<h4>
+						This is a test site and only accessible to signed up users.
+					</h4>
+				</div>
+			{{/if}}
 		</div>
 	</div>
 </template>
