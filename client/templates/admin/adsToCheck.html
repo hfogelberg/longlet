@@ -1,0 +1,24 @@
+<template name='adsToCheck'>
+	<h2>Ads to check</h2>
+
+	<h3>(Requires admin status to see)</h3>
+	<br>
+	<br>
+	<table>
+		<tbody>
+			{{#each adsToCheck}}
+				{{>adToCheck}}
+			{{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name='adToCheck'>
+	<tr>
+		<td>{{island}}</td>
+		<td>{{city}}</td>
+		<td>{{username}}</td>
+		<td>{{formatDate dateCreated}}</td>
+		<td><a href='/reviewAd/{{_id}}' class='btn btn-default'>Check</a></td>
+	</tr>
+</template>

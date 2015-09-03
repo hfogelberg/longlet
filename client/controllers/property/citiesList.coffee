@@ -1,2 +1,2 @@
-Template.cities.helpers island: ->
-	Session.get('island')
+# Template.cities.helpers island: ->
+# 	Session.get('island')

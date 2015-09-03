@@ -143,9 +143,9 @@ Router.map ->
       data: bookingsForProperty: ->
         Properties.findOne()
 
-    @route 'admin',
-      template: 'admin',
-      path: 'admin'
+    @route 'adsToCheck',
+      template: 'adsToCheck',
+      path: 'adsToCheck'
       waitOn: ->
         @subscribe 'getAdsToCheck'
       data: adsToCheck: ->

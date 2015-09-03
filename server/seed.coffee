@@ -137,6 +137,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test1"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 		bookings: [
 			firstName: "Kalle",
 			lastName: "Anka",
@@ -208,6 +209,7 @@ if Properties.find().count() is 0
 		priceComment: "Bills up to €50 per month included"
 		username: "test1"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 		bookings: [
 			firstName: "Mr",
 			lastName: "Walker",
@@ -281,6 +283,7 @@ if Properties.find().count() is 0
 		username: "test1"
 		status: "STATUS_PUBLISHED"
 		newRequest: true
+		dateCreated: new Date()
 		contacts: [
 			firstName: "Joakim",
 			lastName: "von Anka",
@@ -397,6 +400,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test2"
 		status: "STATUS_PUBLISHED"	
+		dateCreated: new Date()
 		bookings: [
 			firstName: "Tessan",
 			lastName: "Testsson",
@@ -477,6 +481,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test2"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 
 	Properties.insert
 		island: "Tenerife"
@@ -531,6 +536,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test2"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 		contacts: [
 			firstName: "Joakim",
 			lastName: "von Anka",
@@ -593,7 +599,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test1"
 		status: "STATUS_PUBLISHED"
-
+		dateCreated: new Date()
 
 	Properties.insert
 		island: "Fuerteventura"
@@ -648,6 +654,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test2"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 
 	Properties.insert
 		island: "Fuerteventura"
@@ -702,6 +709,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test1"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 
 	Properties.insert
 		island: "Gran Canary"
@@ -756,6 +764,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test1"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 
 	Properties.insert
 		island: "Gran Canary"
@@ -810,6 +819,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test2"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 
 	Properties.insert
 		island: "Gran Canary"
@@ -864,6 +874,7 @@ if Properties.find().count() is 0
 		priceComment: "price comments"
 		username: "test2"
 		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
 		contacts: [
 			firstName: "Mr",
 			lastName: "Walker",
@@ -872,5 +883,115 @@ if Properties.find().count() is 0
 			fromDate: "2015-10-01",
 			endDate: "2016-01-03",
 			sentDate: "2015-09-01"]
+
+	Properties.insert
+		island: "Gran Canary"
+		city: "Play Anglesia"
+		address: ""
+		floor: 2
+		locationType: "City"
+		closestMini: 100
+		closestSuper: 600
+		carNecessary: "Not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand"
+		disturbance: "Some"
+		areaDescription: "Nice beach"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 1
+		numBathRooms: 1
+		gardenType: "Balcony"
+		pool: "Shared"
+		aptDescription: "Simple but nice"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: ""
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Small kitchen"
+		hasSatCable: ""
+		internet: "Fibre"
+		internetComment: ""
+		petsConsidered: true
+		petComment: ""
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
+		pricePerMonth: 750
+		aditionalWeekPrice: 200
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: true
+		electricityIncluded: true
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "test2"
+		status: "STATUS_CREATED"
+		dateCreated: new Date()
+
+	Properties.insert
+		island: "Tenerife"
+		city: "Cota Adedje"
+		address: ""
+		floor: 2
+		locationType: "City"
+		closestMini: 100
+		closestSuper: 600
+		carNecessary: "Not necessary"
+		distanceToSea: 300
+		distanceToBeach: 300
+		beachType: "Sand"
+		disturbance: "Some"
+		areaDescription: "Nice beach"
+		propertyType: "Apartment"
+		isStudio: false
+		numBedRooms: 1
+		numBathRooms: 1
+		gardenType: "Balcony"
+		pool: "Shared"
+		aptDescription: "Simple but nice"
+		hasAC: ""
+		hasCeilingFan: ""
+		hasTV: "TV"
+		hasDvd: ""
+		hasCoffeeMaker: "Coffee maker"
+		hasKettle: ""
+		hasFridge: "Fridge"
+		hasFreezer: ""
+		hasWashMachine: ""
+		hasDishWasher: ""
+		hasOven: ""
+		hasMicro: "Micro wave"
+		hasHob: "Has hob"
+		equipmentComment: "Small kitchen"
+		hasSatCable: ""
+		internet: "Fibre"
+		internetComment: ""
+		petsConsidered: true
+		petComment: ""
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
+		pricePerMonth: 600
+		aditionalWeekPrice: 200
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: true
+		electricityIncluded: true
+		discounts: "discounts"
+		priceComment: "price comments"
+		username: "test1"
+		status: "STATUS_CREATED"
+		dateCreated: new Date()
 else
 	console.dir 'No need to seed properties'

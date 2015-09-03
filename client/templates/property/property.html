@@ -1,11 +1,9 @@
 <template name='property'>
 	<div class='well'>
-		<h3>{{island}}</h3> 
-		<h4>{{city}}</h4>
 		{{#if isStudio}}
-			<p>Studio apartment</p>
-		{{else}}		
-			<p>{{numBedRooms}} bed rooms</p>
+			<h2>Studio apartment in {{city}} on {{island}}</h2>
+		{{else}}
+			<h2>{{numBedRooms}} bedrooms apartment in {{city}} on {{island}}</h2>
 		{{/if}}
 		<p>{{numBathRooms}} bath rooms</p>
 
@@ -13,6 +11,6 @@
 
 		{{>propertyBookings}}
 
-		<a href='/showProprety/{{_id}}' class='btn btn-primary btn-large'>Show more</a>
+		<a href='/showProprety/{{_id}}' class='btn btn-primary btn-large'>Read more</a>
 	</div>
 </template>

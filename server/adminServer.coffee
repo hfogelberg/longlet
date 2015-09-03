@@ -1,3 +1,3 @@
 Meteor.startup ->
 	Meteor.publish 'getAdsToCheck', ->
-		Properties.find({status: 'STATUS_CREATED'})
+		Properties.find({status: {'$ne': STATUS_CREATED}})
