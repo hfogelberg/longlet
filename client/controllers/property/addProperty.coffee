@@ -1,8 +1,34 @@
+$.cloudinary.config
+	cloud_name: Meteor.settings.public.cloud_name
+
+images = new Array()
+
+Template.addProperty.helpers
+	files: ->
+		Cloudinary.collection.find()
+
+	complete: ->
+		@status is "complete"
+
 Template.addProperty.rendered = ->
   Meteor.typeahead.inject()
   return
 
 Template.addProperty.events
+	'change .file_bag': (e) ->
+		console.log  'change .file_bag'
+		files = e.currentTarget.files
+		# $('.addArtworkBtn').attr('disabled', 'disabled')
+
+		Cloudinary.upload files,
+			folder: 'longlet'
+			(err,res) ->
+				console.log "Upload Error: #{err}"
+				console.log "Upload Result: #{res}"
+				console.log res.public_id
+				images.push res.public_id
+				# $('.addArtworkBtn').removeAttr('disabled')
+
 	'click .btnAddProperty': (event, template) ->
 		event.preventDefault
 

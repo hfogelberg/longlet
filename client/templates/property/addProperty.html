@@ -292,12 +292,34 @@
 			<h2>Photos</h2>
 			<h3>Of the surroundings</h3>
 			<bold>(at least one)</bold>
+			<div>
+				{{>fileUpload}}
+			</div>
 
 			<h3>Exterior</h3>
 			<bold>(at least one)</bold>
+			{{>fileUpload}}
 
 			<h3>Interior</h3>
 			<bold>(at least one per room)</bold>
+			{{>fileUpload}}
+
+			<div class='images'>
+				{{#each files}}
+					<div>
+						{{#if complete}}
+							<img src="https://res.cloudinary.com/ginkgo/image/upload/w_90/{{response.public_id}}">
+							<div class='deleteImage btn btn-danger'><i class='glyphicon glyphicon-trash'></i>Delete</div>
+						{{else}}
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+							    {{percent_uploaded}} %
+							  </div>
+							</div>
+						{{/if}}
+					</div>
+				{{/each}}
+			</div>
 		</div> <!-- Photos well -->
 
 		<!-- PETS -->
