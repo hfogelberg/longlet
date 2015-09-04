@@ -41,6 +41,9 @@ Template.addProperty.events
 		liftElem = template.find('input:radio[name=lift]:checked')
 		hasLift = $(liftElem).val()
 
+		# Summary
+		sumamry = template.find('#sumamry').value
+
 		# Area
 		locationElem = template.find('input:radio[name=locationType]:checked')
 		locationType = $(locationElem).val()
@@ -152,7 +155,7 @@ Template.addProperty.events
 
 		Meteor.call 'createLocation', island, city, (error) ->
 		console.log 'Calling createProperty'
-		Meteor.call 'createProperty', island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, (error) ->
+		Meteor.call 'createProperty', summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, (error) ->
 		Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 
