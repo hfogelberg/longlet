@@ -99,6 +99,7 @@ if Properties.find().count() is 0
 		disturbance: "Quiet"
 		areaDescription: "Beautiful"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
@@ -171,6 +172,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Beautiful view"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
@@ -233,7 +235,7 @@ if Properties.find().count() is 0
 		island: "Tenerife"
 		city: "Los Cristianos"
 		address: "By the square"
-		floor: 1
+		floor: 4
 		locationType: "City"
 		closestMini: 50
 		closestSuper: 100
@@ -244,6 +246,7 @@ if Properties.find().count() is 0
 		disturbance: "Lively"
 		areaDescription: "Plenty of people around"
 		propertyType: "Apartment"
+		hasLift: true
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
@@ -308,6 +311,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Lots of bars"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
@@ -351,7 +355,7 @@ if Properties.find().count() is 0
 		island: "Tenerife"
 		city: "Playa de las Americas"
 		address: ""
-		floor: 1
+		floor: 11
 		locationType: "City"
 		closestMini: 200
 		closestSuper: 800
@@ -362,6 +366,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Beautiful view"
 		propertyType: "Apartment"
+		hasLift: true
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
@@ -432,7 +437,7 @@ if Properties.find().count() is 0
 		island: "Tenerife"
 		city: "Palmar"
 		address: ""
-		floor: 1
+		floor: 2
 		locationType: "Village"
 		closestMini: 200
 		closestSuper: 800
@@ -443,6 +448,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Beautiful view"
 		propertyType: "Villa"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 2
 		numBathRooms: 1
@@ -561,6 +567,7 @@ if Properties.find().count() is 0
 		disturbance: "Lively"
 		areaDescription: "Plenty of shops"
 		propertyType: "Apartment"
+		hasLift: true
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
@@ -671,6 +678,7 @@ if Properties.find().count() is 0
 		disturbance: "Quiet"
 		areaDescription: "Nice beach"
 		propertyType: "Bungalow"
+		hasLift: false
 		isStudio: true
 		numBedRooms: 0
 		numBathRooms: 1
@@ -726,6 +734,7 @@ if Properties.find().count() is 0
 		disturbance: "Quiet"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
@@ -781,6 +790,7 @@ if Properties.find().count() is 0
 		disturbance: "Quiet"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
@@ -836,6 +846,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
@@ -899,6 +910,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
@@ -943,7 +955,7 @@ if Properties.find().count() is 0
 		island: "Tenerife"
 		city: "Cota Adedje"
 		address: ""
-		floor: 2
+		floor: 3
 		locationType: "City"
 		closestMini: 100
 		closestSuper: 600
@@ -954,6 +966,7 @@ if Properties.find().count() is 0
 		disturbance: "Some"
 		areaDescription: "Nice beach"
 		propertyType: "Apartment"
+		hasLift: false
 		isStudio: false
 		numBedRooms: 1
 		numBathRooms: 1
