@@ -148,6 +148,10 @@ Router.map ->
         @subscribe 'getAdsToCheck'
       data: adsToCheck: ->
         Properties.find()
+
+    @route 'reviewAd',
+      template: 'reviewAd',
+      path: 'reviewAd/:propertyId'
  
   return
 
