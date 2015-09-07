@@ -6,4 +6,4 @@ Template.reviewAd.events
 		statusElem = template.find('input:radio[name=adStatus]:checked')
 		status = $(statusElem).val()
 
-		Meteor.call 'updateReview': Session.get('reviewPropertyId'), comment, status, (err) ->
+		Meteor.call 'updateReview', Session.get('reviewPropertyId'), comment, status, (err) ->

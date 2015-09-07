@@ -7,11 +7,17 @@ Meteor.methods
 	updateReview: (propertyId, comment, status) ->
 		console.dir 'update review ' + propertyId
 
-		Property.update
-			_id: propertyId
-			{
-				$set: {
+		Properties.update
+			_id: propertyId,
+			{$set: {
+				status: status
+				}}
+
+			
+		Properties.update
+			_id: propertyId,
+			{$push: {
+				adminComments:
 					comment: comment
 					status: status
-				}
-			}
+					sentDate: new Date()}}
