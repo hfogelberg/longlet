@@ -43,16 +43,14 @@ Router.map ->
     template: 'propertiesByCity',
     path: 'propertiesByCity/:island/:city'
     onBeforeAction: ->
-        Session.set('island', @params.island)
-        Session.set('city', @params.city)
-        console.log @params.city
-        Session.setDefault 'limit', ITEMS_INCREMENT
-        this.next()
-      waitOn: ->
-        @subscribe 'getPropertiesByCity', Session.get('limit'), Session.get('island'), Session.get('city')
-        @subscribe 'getCitiesOnIsland', Session.get('island')
-      data: citiesOnIslandList: ->
-        Locations.find()
+      Session.set('city', @params.city)
+      Session.setDefault 'limit', ITEMS_INCREMENT
+      this.next()
+    waitOn: ->
+      @subscribe 'getPropertiesByCity', Session.get('limit'), Session.get('island'), Session.get('city')
+      @subscribe 'getCitiesOnIsland', Session.get('island')
+    data: citiesOnIslandList: ->
+      Locations.find()
 
   @route 'showProprety',
     template: 'showProprety',

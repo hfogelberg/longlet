@@ -24,5 +24,6 @@ Template.propertiesByIsland.helpers
 		island = Session.get('island')
 		Properties.find({island: island}, {limit: limit})
 
-	island: ->
+	selectedIsland: ->
+    console.log 'island helper: ' + Session.get('island')
 		Session.get 'island'
