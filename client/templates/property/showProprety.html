@@ -38,7 +38,11 @@
 			<li>Number of bath rooms: {{numBathRooms}}</li>
 			<li>Balcony or garden: {{gardenType}}</li>
 			<li>Pool: {{pool}}</li>
-			<li>{{aptDescription}}</li>
+			<li>
+				<div class='pre'>
+					{{aptDescription}}
+				</div>
+			</li>
 		</ul>
 		<hr>
 		<h3>Equipment</h3>
@@ -82,7 +86,11 @@
 			{{#if hasHob}}
 				<li>Hob</li>
 			{{/if}}
-			<li>{{equipmentComment}}</li>
+			<li>
+				<div class='pre'>
+					{{equipmentComment}}
+				</div>
+			</li>
 		</ul>
 		<hr>
 		<h3>Internet and communications</h3>
@@ -98,7 +106,11 @@
 		<ul class='list-unstyled'>
 			{{#if petsConsidered}}
 				<li>Pets considered on request</li>
-				<li>{{petComment}}</li>
+				<li>
+					<div class='pre'>
+						{{petComment}}
+					</div>
+				</li>
 			{{else}}
 				<li>No pets allowed</li>
 			{{/if}}
@@ -134,7 +146,11 @@
 			{{/if}}
 			<li>Minimum stay: {{minimumStay}} months</li>
 			<li>Discounts: {{discounts}}</li>
-			<li>Comment: {{priceComment}}</li>
+			<li>
+				<div class='pre'>
+					{{priceComment}}
+				</div>
+			</li>
 		</ul>
 		<hr>
 		{{>propertyBookings}}
