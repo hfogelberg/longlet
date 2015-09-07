@@ -42,7 +42,7 @@ Template.addProperty.events
 		hasLift = $(liftElem).val()
 
 		# Summary
-		sumamry = template.find('#sumamry').value
+		summary = template.find('#summary').value
 
 		# Area
 		locationElem = template.find('input:radio[name=locationType]:checked')
@@ -120,6 +120,8 @@ Template.addProperty.events
 
 		internetELem = template.find('input:radio[name=internet]:checked')
 		internet = $(internetELem).val()
+
+		internetComment = template.find('.internetComment').value
 
 		# Pets
 		petsConsidered = false
