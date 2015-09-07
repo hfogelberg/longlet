@@ -52,9 +52,9 @@ Router.map ->
     data: citiesOnIslandList: ->
       Locations.find()
 
-  @route 'showProprety',
-    template: 'showProprety',
-    path: 'showProprety/:_id'
+  @route 'showProperty',
+    template: 'showProperty',
+    path: 'showProperty/:_id'
     onBeforeAction: ->
       Session.set('propertyId', @params._id)
       this.next()
