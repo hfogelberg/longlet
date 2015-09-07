@@ -24,6 +24,7 @@ Meteor.startup ->
 		Properties.find({island: island, city: city, status: STATUS_PUBLISHED}, {limit: limit})
 
 	Meteor.publish 'getPropertyDetails', (id) ->
+		console.dir 'getPropertyDetails: ' + id
 		Properties.find({'_id': id})
 
 Meteor.methods 

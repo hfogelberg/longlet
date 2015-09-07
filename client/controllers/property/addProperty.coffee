@@ -71,7 +71,6 @@ Template.addProperty.events
 
 		isStudio = false
 		if template.find('.isStudio').checked then isStudio = true
-		alert isStudio
 
 		numBedRooms = template.find('.numBedRooms').value
 		numBathRooms = template.find('.numBathRooms').value

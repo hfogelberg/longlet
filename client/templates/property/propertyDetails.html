@@ -1,0 +1,164 @@
+<template name='propertyDetails'>
+
+	{{#with details}}
+		<h2>{{city}}, {{island}}</h2>
+		<ul class='list-unstyled'>
+			<li>Address: {{address}}</li>
+			<li>Floor: {{floor}}</li>
+		</ul>
+		<hr>
+		<p>
+			<div class='pre'>
+				{{summary}}
+			</div>
+		</p>
+		<hr>
+		{{#each images}}
+			<img class='image img-responsive' src='https://res.cloudinary.com/ginkgo/image/upload/w_600,c_fill/{{this}}'>
+		{{/each}}
+		<hr>
+		<h3>Area</h3>
+		<ul class='list-unstyled'>
+			<li>Type of area: {{areaType}}</li>
+			<li>Closest mini market: {{closestMini}}</li>
+			<li>Closest super market: {{closestSuper}}</li>
+			<li>Car: {{carNecessary}}</li>
+			<li>Distance to sea: {{distanceToSea}}</li>
+			<li>Distance to beach: {{distanceToBeach}}</li>
+			<li>Type of beach: {{beachType}}</li>
+			<li>Disturnaces: {{disturbance}}</li>
+			<li>Description of area: {{areaDescription}}</li>
+		</ul>
+		<hr>
+		<h3>Property</h3>
+		<ul class='list-unstyled'>
+			<li>Type of proprety: {{propertyType}}</li>
+			{{#if isStudio}}
+				<li>Studio apartment</li>
+			{{else}}
+				<li>Number of bed rooms: {{numBedRooms}}</li>
+			{{/if}}
+			<li>Number of bath rooms: {{numBathRooms}}</li>
+			<li>Balcony or garden: {{gardenType}}</li>
+			<li>Pool: {{pool}}</li>
+			<li>
+				<div class='pre'>
+					{{aptDescription}}
+				</div>
+			</li>
+		</ul>
+		<hr>
+		<h3>Equipment</h3>
+		<ul class='list-unstyled'>
+			{{#if hasAC}}
+				<li>Air conditioning</li>
+			{{/if}}
+			{{#if hasCeilingFan}}
+				<li>Ceiling fan</li>
+			{{/if}}
+			{{#if hasTV}}
+				<li>TV</li>
+			{{/if}}
+			{{#if hasDvd}}
+				<li>DVD or Blue ray</li>
+			{{/if}}
+			{{#if hasCoffeeMaker}}
+				<li>Coffee maker</li>
+			{{/if}}
+			{{#if hasKettle}}
+				<li>Kettle</li>
+			{{/if}}
+			{{#if hasFridge}}
+				<li>Fridge</li>
+			{{/if}}
+			{{#if hasFreezer}}
+				<li>Freezer</li>
+			{{/if}}
+			{{#if hasWashMachine}}
+				<li>Washing machine</li>
+			{{/if}}
+			{{#if hasDishWasher}}
+				<li>Dish washer</li>
+			{{/if}}
+			{{#if hasOven}}
+				<li>Oven</li>
+			{{/if}}
+			{{#if hasMicro}}
+				<li>Micro wave</li>
+			{{/if}}
+			{{#if hasHob}}
+				<li>Hob</li>
+			{{/if}}
+			<li>
+				<div class='pre'>
+					{{equipmentComment}}
+				</div>
+			</li>
+		</ul>
+		<hr>
+		<h3>Internet and communications</h3>
+		<ul class='list-unstyled'>
+			{{#if hasSatCable}}
+				<li>Satelite or cable TV</li>
+			{{/if}}
+			<li>Internet connection: {{internet}}</li>
+			<li>{{internetComment}}</li>
+		</ul>
+		<hr>
+		<h3>Pets</h3>
+		<ul class='list-unstyled'>
+			{{#if petsConsidered}}
+				<li>Pets considered on request</li>
+				<li>
+					<div class='pre'>
+						{{petComment}}
+					</div>
+				</li>
+			{{else}}
+				<li>No pets allowed</li>
+			{{/if}}
+		</ul>
+		<hr>
+		<h3>Suitability</h3>
+		<ul class='list-unstyled'>
+			{{#if suitableForElderly}}
+				<li>Suitable for elderly</li>
+			{{/if}}
+			{{#if suitableForHandicapped}}
+				<li>Suitable for handicapped with mobility problems</li>
+			{{/if}}
+			{{#if suitableForChildren}}
+				<li>Suitable for smaller children</li>
+			{{/if}}
+		</ul>
+		<hr>
+		<h3>Price</h3>
+		<ul class='list-unstyled'>
+			<li>Price per month: € {{pricePerMonth}}</li>
+			<li>Additional week: € {{aditionalWeekPrice}}</li>
+			<li>Additional day: € {{aditionalDayPrice}}</li>
+			{{#if electricityIncluded}}
+				<li>Electricity included</li>
+			{{else}}
+				<li>Electricity not included</li>
+			{{/if}}
+			{{#if waterIncluded}}
+				<li>Water included</li>
+			{{else}}
+				<li>Water not included</li>
+			{{/if}}
+			<li>Minimum stay: {{minimumStay}} months</li>
+			<li>Discounts: {{discounts}}</li>
+			<li>
+				<div class='pre'>
+					{{priceComment}}
+				</div>
+			</li>
+		</ul>
+		<hr>
+		{{>propertyBookings}}
+		<hr>
+		<div>{{username}} {{formatDate dateCreated}}</div>
+		<a href='/contactOwner/{{_id}}' class='btn btn-lg btn-warning>'>Contact owner</a>
+	{{/with}}
+</template>

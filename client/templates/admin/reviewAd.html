@@ -1,3 +1,38 @@
 <template name='reviewAd'>
-	<h2>Review advert</h2>
+
+	<form class='reviewForm form-horizontal'>
+		<h2>Review Advert</h2>
+		<div class='formGroup'>
+			<label for='reviewComment' class='col-sm-2'>Review comment</label>
+			<div class='col-sm-10'>
+				<textarea class='form-control' id='reviewComment' rows='5' name='summary' placeholder='Required if ad is not accepted for publication.'></textarea>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label for='status' class='col-sm-2'>Status</label>
+			<div class='col-sm-10'>
+				<label class='radio-inline'><input type='radio' value='STATUS_CREATED' name='adStatus'>Created</label>
+				<label class='radio-inline'><input type='radio' value='STATUS_PUBLISHED' name='adStatus'>Published</label>
+				<label class='radio-inline'><input type='radio' value='STATUS_CHANGES_REQUIRED' name='adStatus'>Changes required</label>
+				<label class='radio-inline'><input type='radio' value='STATUS_UPDATED' name='adStatus'>Updated</label>
+			</div>
+		</div>
+
+		<div class='col-sm-offset-2 col-sm-2'>
+			<div>
+				<input type='button' class='btnCancel btn btn-danger' value='Cancel'>
+				<span>
+					<input type='button' class='btnUpdateReview btn btn-primary' value='Save'>
+				</span>
+			</div>
+		</div>
+
+		<hr/>
+	</form>
+	
+	<br>
+	<p>
+		{{>propertyDetails}}
+	</p>
 </template>

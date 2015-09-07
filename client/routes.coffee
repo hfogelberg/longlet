@@ -152,6 +152,12 @@ Router.map ->
     @route 'reviewAd',
       template: 'reviewAd',
       path: 'reviewAd/:propertyId'
+      waitOn: ->
+        console.log 'reviewAd. propertyId: ' + @params.propertyId
+        Session.set 'reviewPropertyId', @params.propertyId
+        @subscribe 'getPropertyDetails', @params.propertyId
+      data: details: ->
+        Properties.findOne()
  
   return
 
