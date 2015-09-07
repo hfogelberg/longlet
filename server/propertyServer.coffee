@@ -8,7 +8,8 @@ Meteor.startup ->
 	Meteor.publish 'getHeadlineProperties', (limit) ->
 		if limit > Properties.find().count()
 			limit = 0
-		Properties.find({status: STATUS_PUBLISHED}, {limit: limit})
+		#Properties.find({status: STATUS_PUBLISHED}, {limit: limit})
+		Properties.find()
 
 	Meteor.publish 'getIslands', ->
 		Islands.find()
@@ -108,7 +109,7 @@ Meteor.methods
 				islandEn: island
 				city: city
 
-	createProperty: (summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet , internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift) ->
+	createProperty: (summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, images) ->
 		console.dir 'createProperty'
 
 		Properties.insert
@@ -164,6 +165,7 @@ Meteor.methods
 			electricityIncluded: electricityIncluded
 			discounts: discounts
 			priceComment: priceComment
+			images: images
 			username: username
 			dateCreated: new Date()
 			status: STATUS_CREATED

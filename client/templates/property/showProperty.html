@@ -14,6 +14,10 @@
 			{{summary}}
 		</div>
 		<hr>
+		{{#each images}}
+			<img class='image img-responsive' src='https://res.cloudinary.com/ginkgo/image/upload/w_600,c_fill/{{this}}'>
+		{{/each}}
+		<hr>
 		<h3>Area</h3>
 		<ul class='list-unstyled'>
 			<li>Type of area: {{areaType}}</li>

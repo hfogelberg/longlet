@@ -18,7 +18,7 @@ Template.addProperty.events
 	'change .file_bag': (e) ->
 		console.log  'change .file_bag'
 		files = e.currentTarget.files
-		# $('.addArtworkBtn').attr('disabled', 'disabled')
+		$('.btnAddProperty').attr('disabled', 'disabled')
 
 		Cloudinary.upload files,
 			folder: 'longlet'
@@ -27,7 +27,7 @@ Template.addProperty.events
 				console.log "Upload Result: #{res}"
 				console.log res.public_id
 				images.push res.public_id
-				# $('.addArtworkBtn').removeAttr('disabled')
+				$('.btnAddProperty').removeAttr('disabled')
 
 	'click .btnAddProperty': (event, template) ->
 		event.preventDefault
@@ -154,11 +154,14 @@ Template.addProperty.events
 
 		username = Meteor.user().username
 
-
 		Meteor.call 'createLocation', island, city, (error) ->
 		console.log 'Calling createProperty'
-		Meteor.call 'createProperty', summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, (error) ->
-		Router.go('/myPropertiesList')
+		Meteor.call 'createProperty', summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, images, (error) ->
+				if error 
+					console.log 'Error: ' + error
+				else
+					console.log 'Property created'
+					Router.go('/myPropertiesList')
 
 Template.addProperty.helpers 
   islands: ->
