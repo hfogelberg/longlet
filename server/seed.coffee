@@ -248,7 +248,7 @@ Eu non, rhoncus velit a sed odio pid! Ac, aliquet odio phasellus magnis ac penat
 	Properties.insert
 		island: "Tenerife"
 		city: "Los Cristianos"
-		city: 'Augue lectus, mus ac, ultrices egestas, magnis nisi, sed turpis nascetur? Porta proin? Augue cursus ut. Integer sed, porttitor phasellus eu mattis odio platea velit, nunc augue elementum turpis nunc.
+		summary: 'Augue lectus, mus ac, ultrices egestas, magnis nisi, sed turpis nascetur? Porta proin? Augue cursus ut. Integer sed, porttitor phasellus eu mattis odio platea velit, nunc augue elementum turpis nunc.
 
 Phasellus pulvinar rhoncus penatibus, enim, ac elementum elementum arcu turpis, ridiculus sit penatibus magnis aliquet, urna sed. Nisi pulvinar eros tristique urna magna adipiscing pulvinar et odio? Placerat? Ut.
 

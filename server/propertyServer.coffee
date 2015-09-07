@@ -17,7 +17,7 @@ Meteor.startup ->
 		Properties.find({island: island, status: STATUS_PUBLISHED}, {limit: limit})
 
 	Meteor.publish 'getCitiesOnIsland', (island) ->
-		Locations.find({islandEn: island, status: STATUS_PUBLISHED}, {islandEn: 1})
+		Locations.find({islandEn: island}, {islandEn: 1})
 
 	Meteor.publish 'getPropertiesByCity', (limit, island, city) ->
 		Properties.find({island: island, city: city, status: STATUS_PUBLISHED}, {limit: limit})
