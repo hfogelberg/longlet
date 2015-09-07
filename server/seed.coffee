@@ -17,7 +17,6 @@ if Locations.find().count() is 0
 		islandEn: 'Tenerife'
 		city: 'Costa Silencio'
 
-
 	Locations.insert
 		islandEn: 'Gran Canary'
 		city: 'San Agustin'
@@ -866,21 +865,21 @@ if Properties.find().count() is 0
 		gardenType: "Balcony"
 		pool: "Shared"
 		aptDescription: "Simple but nice"
-		hasAC: ""
-		hasCeilingFan: ""
-		hasTV: "TV"
-		hasDvd: ""
-		hasCoffeeMaker: "Coffee maker"
-		hasKettle: ""
-		hasFridge: "Fridge"
-		hasFreezer: ""
-		hasWashMachine: ""
-		hasDishWasher: ""
-		hasOven: ""
-		hasMicro: "Micro wave"
-		hasHob: "Has hob"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: false
+		hasDishWasher: false
+		hasOven: false
+		hasMicro: true
+		hasHob: true
 		equipmentComment: "Small kitchen"
-		hasSatCable: ""
+		hasSatCable: false
 		internet: "Fibre"
 		internetComment: ""
 		petsConsidered: true
@@ -896,6 +895,78 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
+		username: "test2"
+		status: "STATUS_PUBLISHED"
+		dateCreated: new Date()
+		contacts: [
+			firstName: "Mr",
+			lastName: "Walker",
+			email: "mr@walker.org",
+			message: "Får man ta med varg?",
+			fromDate: "2015-10-01",
+			endDate: "2016-01-03",
+			sentDate: "2015-09-01"]
+
+
+	Properties.insert
+		island: "La Gomera"
+		city: "Playa de Santiago"
+		summary: 'Odio placerat ac in nec magna! Dis elementum facilisis phasellus ut sed sed, pulvinar montes a! Tempor lacus, ridiculus magna, penatibus nec magna in! Sed in nunc odio! Nec turpis.\n\nUrna nisi dapibus platea amet duis parturient lectus a! Dolor dignissim adipiscing augue. Rhoncus porttitor amet cum turpis dolor phasellus ultrices mattis aliquet velit lacus auctor proin nunc elementum.\n\nDictumst, augue? Mauris! Augue sit, velit ultricies sit integer? Dapibus aenean! Lectus! Cras augue, aenean nascetur et elementum elementum mus scelerisque arcu nisi. Integer hac auctor scelerisque nec hac.\n\nDis tincidunt augue duis mid, nec habitasse integer, risus vel auctor nunc odio turpis natoque mattis placerat sagittis natoque pellentesque, lorem in aenean dapibus enim et odio, nec, sagittis.'
+		address: ""
+		floor: 0
+		locationType: "Village"
+		closestMini: 100
+		closestSuper: 400
+		carNecessary: "Recomended"
+		distanceToSea: 200
+		distanceToBeach: 600
+		beachType: "Sand"
+		disturbance: "Quiet"
+		areaDescription: "Very relaxing"
+		propertyType: "Villa"
+		hasLift: false
+		isStudio: false
+		numBedRooms: 3
+		numBathRooms: 1
+		gardenType: "Garden"
+		pool: "None"
+		aptDescription: "Simple but nice"
+		hasAC: false
+		hasCeilingFan: false
+		hasTV: true
+		hasDvd: false
+		hasCoffeeMaker: true
+		hasKettle: false
+		hasFridge: true
+		hasFreezer: false
+		hasWashMachine: false
+		hasDishWasher: false
+		hasOven: false
+		hasMicro: true
+		hasHob: true
+		equipmentComment: "Small kitchen"
+		hasSatCable: false
+		internet: "None"
+		internetComment: ""
+		petsConsidered: true
+		petComment: ""
+		suitableForElderly: true
+		suitableForHandicapped: true
+		suitableForChildren: true
+		pricePerMonth: 600
+		aditionalWeekPrice: 200
+		aditionalDayPrice: 25
+		minimumStay: 2
+		waterIncluded: true
+		electricityIncluded: true
+		discounts: "discounts"
+		priceComment: "price comments"
+		images: [
+			"longlet/nkbjmixwkdkcgmkaaf0g",
+			"longlet/tevib8t7ytl5mt87z4vd",
+			"longlet/jyoh9hyetdkgbjujkpku",
+			"longlet/saesmpmzajjirbi0fm1g"
+		]
 		username: "test2"
 		status: "STATUS_PUBLISHED"
 		dateCreated: new Date()

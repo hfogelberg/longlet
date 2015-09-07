@@ -10,9 +10,11 @@
 			<li>Floor: {{floor}}</li>
 		</ul>
 		<hr>
-		<div class='pre'>
-			{{summary}}
-		</div>
+		<p>
+			<div class='pre'>
+				{{summary}}
+			</div>
+		</p>
 		<hr>
 		{{#each images}}
 			<img class='image img-responsive' src='https://res.cloudinary.com/ginkgo/image/upload/w_600,c_fill/{{this}}'>
@@ -159,7 +161,7 @@
 		<hr>
 		{{>propertyBookings}}
 		<hr>
-		<div>{{username}} {{dateCreated}}</div>
+		<div>{{username}} {{formatDate dateCreated}}</div>
 		<a href='/contactOwner/{{_id}}' class='btn btn-lg btn-warning>'>Contact owner</a>
 	{{/with}}
 </template>
