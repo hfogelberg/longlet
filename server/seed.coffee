@@ -351,6 +351,8 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "No discounts"
 		priceComment: "price comments"
+		firstImage: 'longlet/PA2_akxlez'
+		images: ['longlet/PA3_u1uac8', 'longlet/PA1_byoyxq']
 		username: "test1"		
 		status: "STATUS_PUBLISHED"
 
