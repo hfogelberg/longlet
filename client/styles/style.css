@@ -31,3 +31,8 @@
 	margin-bottom: 10px;
 	/*background-color: #C2D6D6;*/
 }
+
+.textWrapLeft {
+	float: left;
+	margin: 10px; 
+}

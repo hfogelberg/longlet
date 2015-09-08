@@ -7,3 +7,6 @@ Template.reviewAd.events
 		status = $(statusElem).val()
 
 		Meteor.call 'updateReview', Session.get('reviewPropertyId'), comment, status, (err) ->
+
+	'click .btnCancel': (event, template) ->
+		Router.go('/adsToCheck')

@@ -961,8 +961,8 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
+		firstImage: "longlet/nkbjmixwkdkcgmkaaf0g"
 		images: [
-			"longlet/nkbjmixwkdkcgmkaaf0g",
 			"longlet/tevib8t7ytl5mt87z4vd",
 			"longlet/jyoh9hyetdkgbjujkpku",
 			"longlet/saesmpmzajjirbi0fm1g"

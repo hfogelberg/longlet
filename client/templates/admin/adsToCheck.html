@@ -5,6 +5,13 @@
 	<br>
 	<br>
 	<table div class='table table-striped table-hover table-responsive'>
+		<thead>
+			<td>Island</td>
+			<td>City</td>
+			<td>Status</td>
+			<td>User</td>
+			<td>Created date</td>
+		</thead>
 		<tbody>
 			{{#each adsToCheck}}
 				{{>adToCheck}}
@@ -17,6 +24,7 @@
 	<tr>
 		<td>{{island}}</td>
 		<td>{{city}}</td>
+		<td>{{status}}</td>
 		<td>{{username}}</td>
 		<td>{{formatDate dateCreated}}</td>
 		<td><a href='/reviewAd/{{_id}}' class='btn btn-default'>Check</a></td>

@@ -1,46 +1,62 @@
 <template name='editProperty'>
 	{{#with details}}
-		<div class='well'>
-			<h1>Edit property</h1>
-		</div>
-
 		<form class='addProperty form-horizontal'>
+			<!-- SUMMARY -->
+			<div class='well'>
+				<h2>Summary</h2>
+				<div class='form-group'>
+					<label for='summary' class='col-sm-2'>Summary</label>
+					<div class='col-sm-10'>
+						<textarea class='form-control' id='summary' value={{summary}} rows='5' name='summary' placeholder='Write a summary. This will be displayed on the first page'></textarea>
+					</div>
+				</div>
+			</div>
+			
 			<!-- LOCATION -->
 			<div class='well'>
 				<h2>Where is the property?</h2>
 				<div class='form-group'>
 					<label for='island' class='col-sm-2'>Island</label>
 					<div class='col-sm-10'>
-		        <input 	class="form-control typeahead" id="island"
-		        				name="island" type="text"
-		        				autocomplete="off" spellcheck="off"
-		                data-source="islands"
-		                value="{{island}}"/>
+		        <input 	class='form-control typeahead' id='island'
+		        				name='island' type='text'
+		        				autocomplete='off' spellcheck='off'
+		                data-source='islands' value='{{island}}'/>
 					</div>
 				</div>
 				
 				<div class='form-group'>
 					<label for='city' class='col-sm-2'>City</label>
 					<div class='col-sm-10'>
-		        <input 	class="form-control typeahead" id="city" name="city" type="text"
-		                autocomplete="off" spellcheck="off"
-		                data-source="cities"
-		                value="{{city}}"/>
+		        <input 	class='form-control typeahead' id='city' name='city' type='text'
+		                autocomplete='off' spellcheck='off'
+		                data-source='cities' value='city'/>
 					</div>
 				</div>
 
-				<h2>Postal address</h2>
 				<div class='form-group'>
-					<label for='street' class='col-sm-2'>Adress</label>
+					<label for='street' class='col-sm-2'>Postal adress</label>
 					<div class='col-sm-10'>
-						<textarea class='form-control' id='propertyAddress' rows='5' name='adress' value="{{address}}"></textarea>
+						<textarea class='form-control' id='propertyAddress' rows='5' name='adress' value='address'></textarea>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='floor' class='col-sm-2'>Which floor?</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control floor' min='0' value="{{floor}}">
+						<input type='number' class='floor' min='0' value='{{floor}}'/>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label for='lift' class='col-sm-2'>Lift</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'>
+						  <input type='radio' value='No' name='lift' checked>No
+						</label>
+						<label class='radio-inline'>
+						  <input type='radio' value='Yes' name='lift'>Yes
+						</label>
 					</div>
 				</div>
 
@@ -52,19 +68,16 @@
 				<h2>Describe the area</h2>
 
 				<div class='form-group'>
-					<label for='areaType' class='col-sm-2'>Area type</label>
+					<label for='areaType' class='col-sm-2'>Location</label>
 					<div class='col-sm-10'>
 						<label class='radio-inline'>
-						  <input type='radio' class='cityLocation'>City
+						  <input type='radio' value='City' name='locationType' checked>City
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='villageLocation'>Village
+						  <input type='radio' value='Village' name='locationType'>Village
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='ruralLocation'>Rural
-						</label>
-						<label class='radio-inline'>
-						  <input type='radio' class='seaLocation'>Sea
+						  <input type='radio' value='Rural' name='locationType'>Rural
 						</label>
 					</div>
 				</div>
@@ -72,28 +85,28 @@
 				<div class='form-group'>
 					<label for='closestMini' class='col-sm-2'>Closest mini market</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control closestMini' placeholder='Meters'>
+						<input type='number' class='closestMini' placeholder='Meters' value='{{closestMini}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='closestMini' class='col-sm-2'>Closest super market</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control closestSuper' placeholder='Meters'>
+						<input type='number' class='closestSuper' placeholder='Meters' value='{{closestSuper}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
-					<label for='carRecomended' class='col-sm-2'>Car necessary</label>
+					<label for='carRecomended' class='col-sm-2'>Car</label>
 					<div class='col-sm-10'>
 						<label class='radio-inline'>
-						  <input type='radio' class='noCarNecessaryOption'>Not necessary
+						  <input type='radio' value='Necessary' name='car' checked>Necessary
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='carRecomendedOption'>Recomended
+						  <input type='radio' value='Recomended' name='car'>Recomended
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='carNecessaryOption'>Necessary
+						  <input type='radio' value='Not necessary' name='car'>Not necessary
 						</label>
 					</div>
 				</div>
@@ -102,14 +115,14 @@
 				<div class='form-group'>
 					<label for='distanceToSea' class='col-sm-2'>Distance to sea</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control distanceToSea' placeholder='meters'/>
+						<input type='number' class='distanceToSea' placeholder='Meters' value='{{distanceToSea}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='distanceToBeach' class='col-sm-2'>Distance to beach</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control distanceToBeach' placeholder='meters'/>
+						<input type='number' class='distanceToBeach' placeholder='Meters' value='{{distanceToBeach}}'/>
 					</div>
 				</div>
 
@@ -117,31 +130,31 @@
 					<label for='beachType' class='col-sm-2'>Type of beach</label>
 					<div class='col-sm-10'>			
 						<label class='radio-inline'>
-						  <input type='radio' class='noBeachOption' checked>No beach
+						  <input type='radio' value='None' name='beachType' checked>None
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='sandBeachOption'>Sand beach
+						  <input type='radio' value='Sand' name='beachType'>Sand
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='rockBeachOption'>Rock beach
+						  <input type='radio' value='Rocks' name='beachType'>Rocks
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='pebbleBeachOption'>Pebble beach
+						  <input type='radio' value='Pebbles' name='beachType'>Pebbles
 						</label>
 					</div>
 				</div>
 
 				<div class='form-group'>
-					<label for='noise' class='col-sm-2'>Noise</label>
+					<label for='noise' class='col-sm-2'>Disturbances</label>
 					<div class='col-sm-10'>
 						<label class='radio-inline'>
-						  <input type='radio' class='quietOption'>Quiet
+						  <input type='radio' value='Lively' name='noise' checked>Lively
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='someDisturbancesOption'>Some disturbances
+						  <input type='radio' value='Some' name='noise'>Some disturbances
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='livelyOption'>Lively
+						  <input type='radio' value='Quiet' name='noise'>Quiet
 						</label>
 					</div>
 				</div>
@@ -149,7 +162,7 @@
 				<div class='form-group'>
 					<label for='description' class='col-sm-2'>In your own words</label>
 					<div class='col-sm-10'>
-						<textarea class='form-control areaDescription' rows='5' name='areaDescription'></textarea>
+						<textarea class='form-control areaDescription' rows='5' name='areaDescription' value='{{areaDescription}}'></textarea>
 					</div> 
 				</div>
 			</div>  <!-- Area well -->
@@ -161,11 +174,11 @@
 				<div class='form-group'>
 					<label for='propertyType' class='col-sm-2'>Property type</label>
 					<div class='col-sm-10'>
-						<label class='radio-inline'><input type='radio' class='apartmentOption'>Apartment</label>
-						<label class='radio-inline'><input type='radio' class='bungalowOption'>Bungalow</label>
-						<label class='radio-inline'><input type='radio' class='townHouseOption'>Town house</label>
-						<label class='radio-inline'><input type='radio' class='villaOption'>Villa</label>
-						<label class='radio-inline'><input type='radio' class='fincaOption'>Finca</label>
+						<label class='radio-inline'><input type='radio' value='Apartment' name='propertyType' checked>Apartment</label>
+						<label class='radio-inline'><input type='radio' value='Bungalow' name='propertyType'>Bungalow</label>
+						<label class='radio-inline'><input type='radio' value='Town house' name='propertyType'>Town house</label>
+						<label class='radio-inline'><input type='radio' value='Villa' name='propertyType'>Villa</label>
+						<label class='radio-inline'><input type='radio' value='Finca' name='propertyType'>Finca</label>
 					</div>
 				</div>
 
@@ -179,23 +192,24 @@
 				<div class='form-group'>
 					<label for='numBedRooms' class='col-sm-2'>Bed rooms</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control numBedRooms' min='0'>
+						<input type='number' class='numBedRooms' min='0' value='{{numBedRooms}}'/>
 					</div>
 				</div>
 				
 				<div class='form-group'>
 					<label for='numBathRooms' class='col-sm-2'>Bath rooms</label>
 					<div class='col-sm-10'>
-						<input type='number' class='form-control numBathRooms' min='0'>
+						<input type='number' class='numBathRooms' min='0' value='{{numBathRooms}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
-					<label for='floor' class='col-sm-2'>Exterior</label>
+					<label for='externalSpace' class='col-sm-2'>Exterior</label>
 					<div class='col-sm-10'>
-						<label class='radio-inline'><input type='radio' class='hasGarden'>Garden</label>
-						<label class='radio-inline'><input type='radio' class='hasVeranda'>Veranda</label>
-						<label class='radio-inline'><input type='radio' class='hasBalcony'>Balcony</label>
+						<label class='radio-inline'><input type='radio' value='None' name='externalSpace' checked>No external space</label>
+						<label class='radio-inline'><input type='radio' value='Garden' name='externalSpace'>Garden</label>
+						<label class='radio-inline'><input type='radio' value='Veranda' name='externalSpace'>Veranda</label>
+						<label class='radio-inline'><input type='radio' value='Balcony' name='externalSpace'>Balcony</label>
 					</div>
 				</div>
 
@@ -203,13 +217,13 @@
 					<label for='pool' class='col-sm-2'>Pool</label>
 					<div class='col-sm-10'>
 						<label class='radio-inline'>
-						  <input type='radio' class='noPoolOption'>No Pool
+						  <input type='radio' value='None' name='pool' checked>No Pool
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='sharedPoolOption'>Shared Pool
+						  <input type='radio' value='Shared' name='pool'>Shared Pool
 						</label>
 						<label class='radio-inline'>
-						  <input type='radio' class='privatePoolOption'>Private Pool
+						  <input type='radio' value='Private' name='pool'>Private Pool
 						</label>
 					</div>
 				</div>
@@ -217,7 +231,7 @@
 				<div class='form-group'>
 					<label for='description' class='col-sm-2'>Property description</label>
 					<div class='col-sm-10'>
-						<textarea class='form-control description aptDescription' rows='5' name='aptDescription'></textarea>
+						<textarea class='form-control description aptDescription' rows='5' name='aptDescription' value='{{aptDescription}}'></textarea>
 					</div> 
 				</div>
 			</div>  <!-- Prop description well -->
@@ -227,45 +241,46 @@
 				<h2>Equipment</h2>
 
 				<div class='row'>
-					<div class='col-sm-4'>
-						<ul class='list-unstyled'>
-							<li><label><input type='checkbox' class='hasAC'> Air conditioning</label></li>
-							<li><label><input type='checkbox' class='hasCeilingFan'> Ceiling fan</label></li>
-							<li><label><input type='checkbox' class='hasTV'> TV</label></li>
-							<li><label><input type='checkbox' class='hasDvd'> DVD</label></li>
-						</ul>
-					</div>
-					<div class='col-sm-4'>
-						<ul class='list-unstyled'>
-							<li><label><input type='checkbox' class='hasCoffeeMaker'> Coffee maker</label></li>
-							<li><label><input type='checkbox' class='hasKettle'> Kettle</label></li>
-							<li><label><input type='checkbox' class='hasFridge'> Fridge</label></li>
-							<li><label><input type='checkbox' class='hasFreezer'> Freezer</label></li>
-							<li><label><input type='checkbox' class='hasWashMachine'> Washing machine</label></li>
-						</ul>
-					</div>
-					<div class='col-sm-4'>
-						<ul class='list-unstyled'> 
-							<li><label><input type='checkbox' class='hasDishWasher'> Dish washer</label></li>
-							<li><label><input type='checkbox' class='hasOven'> Oven</label></li>
-							<li><label><input type='checkbox' class='hasMicro'> Microwave</label></li>
-							<li><label><input type='checkbox' class='hasHob'> Hob</label></li>
-						</ul>
+					<div class='form-group'>
+						<div class='col-sm-offset-2 col-sm-3'>
+							<ul class='list-unstyled'>
+								<li><label><input type='checkbox' class='hasAC'> Air conditioning</label></li>
+								<li><label><input type='checkbox' class='hasCeilingFan'> Ceiling fan</label></li>
+								<li><label><input type='checkbox' class='hasTV'> TV</label></li>
+								<li><label><input type='checkbox' class='hasDvd'> DVD</label></li>
+							</ul>
+						</div>
+						<div class='col-sm-3'>
+							<ul class='list-unstyled'>
+								<li><label><input type='checkbox' class='hasCoffeeMaker'> Coffee maker</label></li>
+								<li><label><input type='checkbox' class='hasKettle'> Kettle</label></li>
+								<li><label><input type='checkbox' class='hasFridge'> Fridge</label></li>
+								<li><label><input type='checkbox' class='hasFreezer'> Freezer</label></li>
+								<li><label><input type='checkbox' class='hasWashMachine'> Washing machine</label></li>
+							</ul>
+						</div>
+						<div class='col-sm-3'>
+							<ul class='list-unstyled'> 
+								<li><label><input type='checkbox' class='hasDishWasher'> Dish washer</label></li>
+								<li><label><input type='checkbox' class='hasOven'> Oven</label></li>
+								<li><label><input type='checkbox' class='hasMicro'> Microwave</label></li>
+								<li><label><input type='checkbox' class='hasHob'> Hob</label></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='equipmentComment' class='col-sm-2'>Comment</label>
 					<div class='col-sm-10'>
-						<textarea class='form-control equipmentComment' rows='5' name='areaDescription'></textarea>
+						<textarea class='form-control equipmentComment' rows='5' name='equipmentComment'></textarea>
 					</div>
 				</div>
 			</div> <!-- Equipment well -->
 
 			<!-- INTERNET -->
 			<div class='well'>
-				<h2>Internet and communication</h2>
-
+				<h2>Communication</h2>
 
 				<div class='form-group'>
 					<label class='col-sm-2'>Satelite or cable</label>
@@ -275,23 +290,18 @@
 				</div>
 
 				<div class='form-group'>
-					<label class='col-sm-2'>DSL</label>
-					<div class='col-sm-2'>
-						<input type='checkbox' class='hasDsl'>
-					</div>
-				</div>
-
-				<div class='form-group'>
-					<label class='col-sm-2'>High speed fibre</label>
-					<div class='col-sm-2'>
-						<input type='checkbox' class='hasFibre'>
+					<label class='col-sm-2'>Internet</label>
+					<div class='col-sm-10'>
+						<label class='radio-inline'><input type='radio' value='None' name='internet' checked>No internet</label>
+						<label class='radio-inline'><input type='radio' value='DSL' name='internet'>DSL</label>
+						<label class='radio-inline'><input type='radio' value='Fibre' name='internet'>Fibre</label>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='internetComment' class='col-sm-2'>Comment</label>
 					<div class='col-sm-10'>
-						<textarea class='form-control internetComment' rows='5' name='areaDescription'></textarea>
+						<textarea class='form-control internetComment' rows='5' name='internetComment' value='{{internetComment}}'></textarea>
 					</div>
 				</div>
 			</div> 
@@ -300,14 +310,16 @@
 			<!-- PHOTOS -->
 			<div class='well'>
 				<h2>Photos</h2>
-				<h3>Of the surroundings</h3>
-				<bold>(at least one)</bold>
-
-				<h3>Exterior</h3>
-				<bold>(at least one)</bold>
-
-				<h3>Interior</h3>
-				<bold>(at least one per room)</bold>
+				<table class='table'>
+					<tbody>
+						{{#each images}}
+							<tr>
+								<td><img src="https://res.cloudinary.com/ginkgo/image/upload/w_90/{{this}}"></td>
+								<td><div class='deleteImage btn btn-danger'><i class='glyphicon glyphicon-trash'></i> Delete</div></td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
 			</div> <!-- Photos well -->
 
 			<!-- PETS -->
@@ -322,7 +334,7 @@
 				<div class='form-group'>
 					<label for='petsComment' class='col-sm-2'>Comment</label>
 					<div class='col-sm-10'>
-						<textarea class='form-control petComment' rows='5' name='petComment'></textarea>
+						<textarea class='form-control petComment' rows='5' name='petComment' value='{{petComment}}'></textarea>
 					</div>
 				</div>
 			</div>  <!-- Pets well -->
@@ -359,28 +371,28 @@
 				<div class='form-group'>
 					<label for='pricePerMonth' class='col-sm-2'>Price per month</label>
 					<div class='col-sm-10'>
-						<input type='number' class='pricePerMonth' placeholder='Euros'>
+						<input type='number' class='pricePerMonth' placeholder='Euros' value='{{pricePerMonth}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='aditionalWeek' class='col-sm-2'>Aditional week</label>
 					<div class='col-sm-10'>
-						<input type='number' class='aditionalWeekPrice' placeholder='Euros'>
+						<input type='number' class='aditionalWeekPrice' placeholder='Euros' value='{{aditionalWeekPrice}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='aditionalDay' class='col-sm-2'>Aditional day</label>
 					<div class='col-sm-10'>
-						<input type='number' class='aditionalDayPrice' placeholder='Euros'>
+						<input type='number' class='aditionalDayPrice' placeholder='Euros' value='{{aditionalDayPrice}}'/>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='minimumStay' class='col-sm-2'>Minimum stay</label>
 					<div class='col-sm-10'>
-						<input type='number' class='minimumStay' min='1' placeholder='months'>
+						<input type='number' class='minimumStay' min='1' placeholder='Months' value='{{minimumStay}}'/>
 					</div>
 				</div>
 
@@ -401,17 +413,16 @@
 				<div class='form-group'>
 					<label for='discounts' class='col-sm-2'>Discounts</label>
 					<div class='col-sm-10'>			
-						<textarea class='form-control discounts' rows='5' name='discounts'></textarea>
+						<textarea class='form-control discounts' rows='5' name='discounts' value='{{discounts}}'></textarea>
 					</div>
 				</div>
 
 				<div class='form-group'>
 					<label for='priceComment' class='col-sm-2'>Comment</label>
 					<div class='col-sm-10'>			
-						<textarea class='form-control priceComment' rows='5' name='priceComment'></textarea>
+						<textarea class='form-control priceComment' rows='5' name='priceComment' value='{{priceComment}}'></textarea>
 					</div>
 				</div>
-
 			</div>  <!-- Price well -->
 
 			<div class='col-sm-offset-2 col-sm-2'>

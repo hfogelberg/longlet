@@ -26,7 +26,8 @@ Meteor.methods
 						caretakerPhone: caretakerPhone
 						careTakerMail: careTakerMail
 						keyHandling: keyHandling
-						additionalTerms: additionalTerms
+						additionalTerms: additionalTerm
+						signedByOwner: new Date()
 					}
 				}
 			}
