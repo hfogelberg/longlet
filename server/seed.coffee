@@ -136,6 +136,11 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
+		firstImage: "longlet/pb_1"
+		images: [
+			"longlet/pb2",
+			"longlet/pb2"
+		]
 		username: "test1"
 		status: "STATUS_PUBLISHED"
 		dateCreated: new Date()
@@ -210,6 +215,8 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "Bills up to €50 per month included"
+		firstImage: 'longlet/longlet/ni6sgens2maryboqnlic'
+		images: 'longlet/ni6sgens2maryboqnlic'
 		username: "test1"
 		status: "STATUS_PUBLISHED"
 		dateCreated: new Date()
@@ -285,6 +292,8 @@ if Properties.find().count() is 0
 		electricityIncluded: false
 		discounts: "discounts"
 		priceComment: "price comments"
+		firstImage: 'longlet/longlet/ni6sgens2maryboqnlic'
+		images: 'longlet/ni6sgens2maryboqnlic'
 		username: "test1"
 		status: "STATUS_PUBLISHED"
 		newRequest: true
@@ -351,8 +360,8 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "No discounts"
 		priceComment: "price comments"
-		firstImage: 'longlet/PA2_akxlez'
-		images: ['longlet/PA3_u1uac8', 'longlet/PA1_byoyxq']
+		firstImage: 'PA2_akxlez'
+		images: ['PA3_u1uac8', 'PA1_byoyxq']
 		username: "test1"		
 		status: "STATUS_PUBLISHED"
 
@@ -492,6 +501,8 @@ if Properties.find().count() is 0
 		electricityIncluded: true
 		discounts: "discounts"
 		priceComment: "price comments"
+		firstImage: 'longlet/pm1'
+		images: ['longlet/pm1']
 		username: "test2"
 		status: "STATUS_PUBLISHED"
 		dateCreated: new Date()
