@@ -10,7 +10,6 @@ twbs:bootstrap
 coffeescript
 multiply:iron-router-progress
 accounts-password
-ian:accounts-ui-bootstrap-3
 yasaricli:slugify
 sergeyt:typeahead
 copleykj:mesosphere
