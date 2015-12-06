@@ -27,9 +27,9 @@ Meteor.startup ->
 		console.dir 'getPropertyDetails: ' + id
 		Properties.find({'_id': id})
 
-Meteor.methods 
+Meteor.methods
 	searchPropertiesNoBookings: (island, city, minBeds, minBath, pets, maxPrice) ->
-		console.dir '*** searchPropertiesNoBookings ***' 
+		console.dir '*** searchPropertiesNoBookings ***'
 
 		qry = {}
 		qry['island'] = island unless island is ''
@@ -48,7 +48,7 @@ Meteor.methods
 
 	searchPropertiesWithBookingsNoDates: (island, city, minBeds, minBath, pets, maxPrice) ->
 		console.dir '*** searchPropertiesWithBookingsNoDates ***'
-		
+
 		qry = {}
 		qry['island'] = island unless island is ''
 		qry['city'] = city unless city is ''
@@ -110,64 +110,7 @@ Meteor.methods
 				islandEn: island
 				city: city
 
-	createProperty: (summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, images, areaType) ->
+	createProperty: (params) ->
 		console.dir 'createProperty'
 
-		Properties.insert
-			summary: summary
-			island: island
-			city: city
-			address: address
-			floor: floor
-			hasLift: hasLift
-			locationType: locationType
-			closestMini: closestMini
-			closestSuper: closestSuper
-			carNecessary: carNecessary
-			distanceToSea: distanceToSea
-			distanceToBeach: distanceToBeach
-			beachType: beachType
-			disturbance: disturbance
-			areaDescription: areaDescription
-			propertyType: propertyType
-			isStudio: isStudio
-			numBedRooms: numBedRooms
-			numBathRooms: numBathRooms
-			gardenType: gardenType
-			pool: pool
-			aptDescription: aptDescription
-			hasAC: hasAC
-			hasCeilingFan: hasCeilingFan
-			hasTV: hasTV
-			hasDvd: hasDvd
-			hasCoffeeMaker: hasCoffeeMaker
-			hasKettle: hasKettle
-			hasFridge: hasFridge
-			hasFreezer: hasFreezer
-			hasWashMachine: hasWashMachine
-			hasDishWasher: hasDishWasher
-			hasOven: hasOven
-			hasMicro: hasMicro
-			hasHob: hasHob
-			equipmentComment: equipmentComment
-			hasSatCable: hasSatCable
-			internet: internet
-			internetComment: internetComment
-			petsConsidered: petsConsidered
-			petComment: petComment
-			suitableForElderly: suitableForElderly
-			suitableForHandicapped: suitableForHandicapped
-			suitableForChildren: suitableForChildren
-			pricePerMonth: pricePerMonth
-			aditionalWeekPrice: aditionalWeekPrice
-			aditionalDayPrice: aditionalDayPrice
-			minimumStay: minimumStay
-			waterIncluded: waterIncluded
-			electricityIncluded: electricityIncluded
-			discounts: discounts
-			priceComment: priceComment
-			images: images
-			areaType: areaType
-			username: username
-			dateCreated: new Date()
-			status: STATUS_CREATED
+		Properties.insert params

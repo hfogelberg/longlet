@@ -29,64 +29,22 @@ Template.addProperty.events
 				images.push res.public_id
 				$('.btnAddProperty').removeAttr('disabled')
 
-	'click .btnAddProperty': (event, template) ->
+	'click .btnAddProperty': (event) ->
 		event.preventDefault
 
-		#Property location
-		island = template.find('#island').value
-		city = template.find('#city').value
-		address = template.find('#propertyAddress').value
-		floor = template.find('.floor').value
-
-		liftElem = template.find('input:radio[name=lift]:checked')
-		hasLift = $(liftElem).val()
-
-		# Summary
-		summary = template.find('#summary').value
-
-		# Area
-		locationElem = template.find('input:radio[name=locationType]:checked')
-		locationType = $(locationElem).val()
-
-		closestMini = template.find('.closestMini').value
-		closestSuper = template.find('.closestSuper').value
-
-		carElem = template.find('input:radio[name=car]:checked')
-		carNecessary = $(carElem).val()
-
-		distanceToSea = template.find('.distanceToSea').value
-		distanceToBeach = template.find('.distanceToBeach').value
-
-		beachElem = template.find('input:radio[name=beachType]:checked')
-		beachType = $(beachElem).val()
-
-		noiseElem = template.find('input:radio[name=noise]:checked')
-		disturbance = $(noiseElem).val()
-
-		areaTypeElem = template.find('input:radio[name=areaType:checked')
-		areaType = $(areaTypeElem).val()
-
-		areaDescription = template.find('.areaDescription').value
-
-		# Property
-		propertyElem = template.find('input:radio[name=propertyType]:checked')
-		propertyType = $(propertyElem).val()
+		liftElem = $('input:radio[name=lift]:checked')
+		locationElem = $('input:radio[name=locationType]:checked')
+		carElem = $('input:radio[name=car]:checked')
+		beachElem = $('input:radio[name=beachType]:checked')
+		noiseElem = $('input:radio[name=noise]:checked')
+		areaTypeElem = $('input:radio[name=areaType]:checked')
+		propertyElem = $('input:radio[name=propertyType]:checked')
+		externalElem = $('input:radio[name=externalSpace]:checked')
+		poolElem = $('input:radio[name=pool]:checked')
 
 		isStudio = false
-		if template.find('.isStudio').checked then isStudio = true
+		if $('#isStudio').checked then isStudio = true
 
-		numBedRooms = template.find('.numBedRooms').value
-		numBathRooms = template.find('.numBathRooms').value
-
-		externalElem = template.find('input:radio[name=externalSpace]:checked')
-		gardenType = $(externalElem).val()
-
-		poolElem = template.find('input:radio[name=pool]:checked')
-		pool = $(poolElem).val()
-
-		aptDescription = template.find('.aptDescription').value
-
-		# Equipment
 		hasAC = false
 		hasCeilingFan = false
 		hasTV = false
@@ -100,72 +58,116 @@ Template.addProperty.events
 		hasOven = false
 		hasMicro = false
 		hasHob = false
-		
-		if template.find('.hasAC').checked then hasAC = true
-		if template.find('.hasCeilingFan').checked then hasCeilingFan = true
-		if template.find('.hasTV').checked then hasTV = true
-		if template.find('.hasDvd').checked then hasDvd = true
-		if template.find('.hasCoffeeMaker').checked then hasCoffeeMaker = true
-		if template.find('.hasKettle').checked then hasKettle = true
-		if template.find('.hasFridge').checked then hasFridge = true
-		if template.find('.hasFreezer').checked then hasFreezer = true
-		if template.find('.hasWashMachine').checked then hasWashMachine = true
-		if template.find('.hasDishWasher').checked then hasDishWasher = true
-		if template.find('.hasOven').checked then hasOven = true
-		if template.find('.hasMicro').checked then hasMicro = true
-		if template.find('.hasHob').checked then hasHob = true
-		equipmentComment = template.find('.equipmentComment').value
 
-		# Internet and communicatuion
+		if $('#hasAC').checked then hasAC = true
+		if $('#hasCeilingFan').checked then hasCeilingFan = true
+		if $('#hasTV').checked then hasTV = true
+		if $('#hasDvd').checked then hasDvd = true
+		if $('#hasCoffeeMaker').checked then hasCoffeeMaker = true
+		if $('#hasKettle').checked then hasKettle = true
+		if $('#hasFridge').checked then hasFridge = true
+		if $('#hasFreezer').checked then hasFreezer = true
+		if $('#hasWashMachine').checked then hasWashMachine = true
+		if $('#hasDishWasher').checked then hasDishWasher = true
+		if $('#hasOven').checked then hasOven = true
+		if $('#hasMicro').checked then hasMicro = true
+		if $('#hasHob').checked then hasHob = true
+
 		hasSatCable = ''
-		if template.find('.hasSatCable').checked then hasSatCable = 'Satelite or cable TV'
+		if $('#hasSatCable').checked then hasSatCable = 'Satelite or cable TV'
 
-		internetELem = template.find('input:radio[name=internet]:checked')
-		internet = $(internetELem).val()
+		internetELem = $('input:radio[name=internet]:checked')
 
-		internetComment = template.find('.internetComment').value
-
-		# Pets
 		petsConsidered = false
-		if template.find('.petsConsidered').checked then petsConsidered = true
-		petComment = template.find('.petComment').value
+		if $('#petsConsidered').checked then petsConsidered = true
 
-		# Suitability
 		suitableForElderly = false
-		if template.find('.elderlyCheck').checked then suitableForElderly = true
+		if $('#elderlyCheck').checked then suitableForElderly = true
 
 		suitableForHandicapped = false
-		if template.find('.motionCheck').checked then suitableForHandicapped = true
+		if $('#motionCheck').checked then suitableForHandicapped = true
 
 		suitableForChildren = false
-		if template.find('.childrenCheck').checke then suitableForChildren = true
-
-		# Price
-		pricePerMonth = template.find('.pricePerMonth').value
-		aditionalWeekPrice = template.find('.aditionalWeekPrice').value
-		aditionalDayPrice = template.find('.aditionalDayPrice').value
-		minimumStay = template.find('.minimumStay').value
+		if $('#childrenCheck').checke then suitableForChildren = true
 
 		waterIncluded = false
-		if template.find('.waterIncluded').checked then waterIncluded = true
+		if $('#waterIncluded').checked then waterIncluded = true
+
 
 		electricityIncluded = false
-		if template.find('.electricityIncluded').checked then	electricityIncluded = true
-		discounts = template.find('.discounts').value
-		priceComment = template.find('.priceComment').value
+		if $('#electricityIncluded').checked then	electricityIncluded = true
 
-		username = Meteor.user().username
 
-		Meteor.call 'createLocation', island, city, (error) ->
+		params = {
+			island: $('#island').val()
+			city: $('#city').val()
+			address: $('#propertyAddress').val()
+			floor: $('.floor').val()
+			hasLift: $(liftElem).val()
+			summary: $('#summary').val()
+			locationType: $(locationElem).val()
+			closestMini: $('#closestMini').val()
+			closestSuper: $('#closestSuper').val()
+			carNecessary: $(carElem).val()
+			distanceToSea: $('#distanceToSea').val()
+			distanceToBeach: $('#distanceToBeach').val()
+			beachType: $(beachElem).val()
+			disturbance: $(noiseElem).val()
+			areaType: $(areaTypeElem).val()
+			areaDescription: $('#areaDescription').val()
+			propertyType: $(propertyElem).val()
+			isStudio: isStudio
+			numBedRooms: $('#numBedRooms').val()
+			numBathRooms: $('#numBathRooms').val()
+			gardenType: $(externalElem).val()
+			pool: $(poolElem).val()
+			aptDescription: $('#aptDescription').val()
+			hasAC: hasAC
+			hasCeilingFan: hasCeilingFan
+			hasTV: hasTV
+			hasDvd: hasDvd
+			hasCoffeeMaker: hasCoffeeMaker
+			hasKettle: hasKettle
+			hasFridge: hasFridge
+			hasFreezer: hasFreezer
+			hasWashMachine: hasWashMachine
+			hasDishWasher: hasDishWasher
+			hasOven: hasOven
+			hasMicro: hasMicro
+			hasHob: hasHob
+			equipmentComment: $('#equipmentComment').val()
+			hasSatCable: hasSatCable
+			internet: $(internetELem).val()
+			internetComment: $('#internetComment').val()
+			petsConsidered: petsConsidered
+			petComment: $('#petComment').val()
+			suitableForElderly: suitableForElderly
+			suitableForChildren: suitableForChildren
+			suitableForHandicapped: suitableForHandicapped
+			pricePerMonth: $('#pricePerMonth').val()
+			aditionalWeekPrice: $('#aditionalWeekPrice').val()
+			aditionalDayPrice: $('#aditionalDayPrice').val()
+			minimumStay: $('#minimumStay').val()
+			waterIncluded: waterIncluded
+			electricityIncluded: electricityIncluded
+			discounts: $('#discounts').val()
+			priceComment: $('#priceComment').val()
+			status: STATUS_CREATED
+			username: Meteor.user().username
+			dateCreated: new Date()
+			dateChanged: new Date()
+		}
+
+		Meteor.call 'createLocation', params.island, params.city, (error) ->
 		console.log 'Calling createProperty'
-		Meteor.call 'createProperty', summary, island, city, address, floor, locationType, closestMini, closestSuper, carNecessary,  distanceToSea, distanceToBeach, beachType, disturbance, areaDescription, propertyType, isStudio, numBedRooms, numBathRooms, gardenType, pool, aptDescription, hasAC, hasCeilingFan, hasTV, hasDvd, hasCoffeeMaker, hasKettle, hasFridge, hasFreezer, hasWashMachine, hasDishWasher, hasOven, hasMicro, hasHob, equipmentComment, hasSatCable, internet, internetComment, petsConsidered, petComment, suitableForElderly, suitableForHandicapped, suitableForChildren, username, pricePerMonth, aditionalWeekPrice, aditionalDayPrice, minimumStay, waterIncluded, electricityIncluded, discounts, priceComment, hasLift, images, areaType, (error) ->
-				if error 
-					console.log 'Error: ' + error
-				else
-					console.log 'Property created'
-					Router.go('/myPropertiesList')
+		Meteor.call 'createProperty', params, (error) ->
+			if error
+				console.log 'Error: ' + error
+			else
+				console.log 'Property created'
+				Router.go('/myPropertiesList')
 
-Template.addProperty.helpers 
+Template.addProperty.helpers
   islands: ->
     Locations.find().fetch().map (location) ->
       location.islandEn

@@ -14,40 +14,35 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- LOCATION -->
 		<div class='well'>
 			<h2>Where is the property?</h2>
 			<div class='form-group'>
 				<label for='island' class='col-sm-2'>Island</label>
 				<div class='col-sm-10'>
-	        <input 	class="form-control typeahead" id="island"
-	        				name="island" type="text"
-	        				autocomplete="off" spellcheck="off"
-	                data-source="islands"/>
+	        <input 	class="form-control typeahead" id="island" type="text" autocomplete="off" spellcheck="off" data-source="islands"/>
 				</div>
 			</div>
-			
+
 			<div class='form-group'>
 				<label for='city' class='col-sm-2'>City</label>
 				<div class='col-sm-10'>
-	        <input 	class="form-control typeahead" id="city" name="city" type="text"
-	                autocomplete="off" spellcheck="off"
-	                data-source="cities"/>
+	        <input 	class="form-control typeahead" id="city" type="text" autocomplete="off" spellcheck="off" data-source="cities"/>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='street' class='col-sm-2'>Postal adress</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control' id='propertyAddress' rows='5' name='adress'></textarea>
+					<textarea class='form-control' id='propertyAddress' rows='5'></textarea>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='floor' class='col-sm-2'>Which floor?</label>
 				<div class='col-sm-10'>
-					<input type='number' class='floor' min='0'>
+					<input type='number' id='floor' min='0'>
 				</div>
 			</div>
 
@@ -103,14 +98,14 @@
 			<div class='form-group'>
 				<label for='closestMini' class='col-sm-2'>Closest mini market</label>
 				<div class='col-sm-10'>
-					<input type='number' class='closestMini' placeholder='Meters'>
+					<input type='number' id='closestMini' placeholder='Meters'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='closestMini' class='col-sm-2'>Closest super market</label>
 				<div class='col-sm-10'>
-					<input type='number' class='closestSuper' placeholder='Meters'>
+					<input type='number' id='closestSuper' placeholder='Meters'>
 				</div>
 			</div>
 
@@ -133,20 +128,20 @@
 			<div class='form-group'>
 				<label for='distanceToSea' class='col-sm-2'>Distance to sea</label>
 				<div class='col-sm-10'>
-					<input type='number' class='distanceToSea' placeholder='Meters'/>
+					<input type='number' id='distanceToSea' placeholder='Meters'/>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='distanceToBeach' class='col-sm-2'>Distance to beach</label>
 				<div class='col-sm-10'>
-					<input type='number' class='distanceToBeach' placeholder='Meters'/>
+					<input type='number' id='distanceToBeach' placeholder='Meters'/>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='beachType' class='col-sm-2'>Type of beach</label>
-				<div class='col-sm-10'>			
+				<div class='col-sm-10'>
 					<label class='radio-inline'>
 					  <input type='radio' value='None' name='beachType' checked>None
 					</label>
@@ -180,8 +175,8 @@
 			<div class='form-group'>
 				<label for='description' class='col-sm-2'>In your own words</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control areaDescription' rows='5' name='areaDescription'></textarea>
-				</div> 
+					<textarea class='form-control' rows='5' id='areaDescription'></textarea>
+				</div>
 			</div>
 		</div>  <!-- Area well -->
 
@@ -203,21 +198,21 @@
 			<div class='form-group'>
 				<label for='isStudio' class='col-sm-2'>Studio</label>
 				<div class='col-sm-10'>
-					<input type='checkbox' class='isStudio'>
+					<input type='checkbox' id='isStudio'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='numBedRooms' class='col-sm-2'>Bed rooms</label>
 				<div class='col-sm-10'>
-					<input type='number' class='numBedRooms' min='0'>
+					<input type='number' id='numBedRooms' min='0'>
 				</div>
 			</div>
-			
+
 			<div class='form-group'>
 				<label for='numBathRooms' class='col-sm-2'>Bath rooms</label>
 				<div class='col-sm-10'>
-					<input type='number' class='numBathRooms' min='0'>
+					<input type='number' id='numBathRooms' min='0'>
 				</div>
 			</div>
 
@@ -249,8 +244,8 @@
 			<div class='form-group'>
 				<label for='description' class='col-sm-2'>Property description</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control description aptDescription' rows='5' name='aptDescription'></textarea>
-				</div> 
+					<textarea class='form-control description' rows='5' id='aptDescription'></textarea>
+				</div>
 			</div>
 		</div>  <!-- Prop description well -->
 
@@ -278,7 +273,7 @@
 						</ul>
 					</div>
 					<div class='col-sm-3'>
-						<ul class='list-unstyled'> 
+						<ul class='list-unstyled'>
 							<li><label><input type='checkbox' class='hasDishWasher'> Dish washer</label></li>
 							<li><label><input type='checkbox' class='hasOven'> Oven</label></li>
 							<li><label><input type='checkbox' class='hasMicro'> Microwave</label></li>
@@ -291,7 +286,7 @@
 			<div class='form-group'>
 				<label for='equipmentComment' class='col-sm-2'>Comment</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control equipmentComment' rows='5' name='equipmentComment'></textarea>
+					<textarea class='form-control' rows='5' id='equipmentComment'></textarea>
 				</div>
 			</div>
 		</div> <!-- Equipment well -->
@@ -303,7 +298,7 @@
 			<div class='form-group'>
 				<label class='col-sm-2'>Satelite or cable</label>
 				<div class='col-sm-2'>
-					<input type='checkbox' class='hasSatCable'>
+					<input type='checkbox' id='hasSatCable'>
 				</div>
 			</div>
 
@@ -319,10 +314,10 @@
 			<div class='form-group'>
 				<label for='internetComment' class='col-sm-2'>Comment</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control internetComment' rows='5' name='internetComment'></textarea>
+					<textarea class='form-control' rows='5' id='internetComment'></textarea>
 				</div>
 			</div>
-		</div> 
+		</div>
 		<!-- Internet well -->
 
 		<!-- PHOTOS -->
@@ -346,7 +341,7 @@
 				{{#each files}}
 					<div>
 						{{#if complete}}
-							<img src="https://res.cloudinary.com/ginkgo/image/upload/w_90/{{response.public_id}}">
+							<img src=IMAGE_ROOT + {{response.public_id}}>
 							<div class='deleteImage btn btn-danger'><i class='glyphicon glyphicon-trash'></i>Delete</div>
 						{{else}}
 							<div class="progress">
@@ -366,13 +361,13 @@
 			<div class='form-group'>
 				<label for='pets' class='col-sm-2'>Pets considered</label>
 				<div class='col-sm-10'>
-					<input type='checkbox' class='petsConsidered'>
+					<input type='checkbox' id='petsConsidered'>
 				</div>
 			</div>
 			<div class='form-group'>
 				<label for='petsComment' class='col-sm-2'>Comment</label>
 				<div class='col-sm-10'>
-					<textarea class='form-control petComment' rows='5' name='petComment'></textarea>
+					<textarea class='form-control' rows='5' id='petComment'></textarea>
 				</div>
 			</div>
 		</div>  <!-- Pets well -->
@@ -384,24 +379,24 @@
  			<div class='form-group'>
 				<label for='motion' class='col-sm-2'>Motion handicapped</label>
 				<div class='col-sm-10'>
-					<input type='checkbox' class='motionCheck'>
+					<input type='checkbox' id='motionCheck'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='motion' class='col-sm-2'>Elderly</label>
 				<div class='col-sm-10'>
-					<input type='checkbox' class='elderlyCheck'>
+					<input type='checkbox' id='elderlyCheck'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='motion' class='col-sm-2'>Children</label>
 				<div class='col-sm-10'>
-					<input type='checkbox' class='childrenCheck'>
+					<input type='checkbox' id='childrenCheck'>
 				</div>
-			</div> 
-		</div> <!-- Suitability well --> 
+			</div>
+		</div> <!-- Suitability well -->
 
 		<!-- PRICE -->
 		<div class='well'>
@@ -409,35 +404,35 @@
 			<div class='form-group'>
 				<label for='pricePerMonth' class='col-sm-2'>Price per month</label>
 				<div class='col-sm-10'>
-					<input type='number' class='pricePerMonth' placeholder='Euros'>
+					<input type='number' id='pricePerMonth' placeholder='Euros'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='aditionalWeek' class='col-sm-2'>Aditional week</label>
 				<div class='col-sm-10'>
-					<input type='number' class='aditionalWeekPrice' placeholder='Euros'>
+					<input type='number' id='aditionalWeekPrice' placeholder='Euros'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='aditionalDay' class='col-sm-2'>Aditional day</label>
 				<div class='col-sm-10'>
-					<input type='number' class='aditionalDayPrice' placeholder='Euros'>
+					<input type='number' id='aditionalDayPrice' placeholder='Euros'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='minimumStay' class='col-sm-2'>Minimum stay</label>
 				<div class='col-sm-10'>
-					<input type='number' class='minimumStay' min='1' placeholder='Months'>
+					<input type='number' id='minimumStay' min='1' placeholder='Months'>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='waterIncluded' class='col-sm-2'>Water included</label>
 				<div class='col-sm-10'>
-					<input type='checkbox' class='waterIncluded'>
+					<input type='checkbox' id='waterIncluded'>
 				</div>
 			</div>
 
@@ -450,15 +445,15 @@
 
 			<div class='form-group'>
 				<label for='discounts' class='col-sm-2'>Discounts</label>
-				<div class='col-sm-10'>			
-					<textarea class='form-control discounts' rows='5' name='discounts'></textarea>
+				<div class='col-sm-10'>
+					<textarea class='form-control' rows='5' id='discounts'></textarea>
 				</div>
 			</div>
 
 			<div class='form-group'>
 				<label for='priceComment' class='col-sm-2'>Comment</label>
-				<div class='col-sm-10'>			
-					<textarea class='form-control priceComment' rows='5' name='priceComment'></textarea>
+				<div class='col-sm-10'>
+					<textarea class='form-control' rows='5' id='priceComment'></textarea>
 				</div>
 			</div>
 
